@@ -12,4 +12,6 @@ describe FoodCart do
   it { should validate_presence_of :friday_hours }
   it { should validate_presence_of :saturday_hours }
   it { should validate_presence_of :sunday_hours }
+  it { should have_many :reviews }
+  it { should have_many :tags }
 end
