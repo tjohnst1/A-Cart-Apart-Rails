@@ -43,8 +43,8 @@
         null,
         null,
         1,
-        11,
-        11,
+        13,
+        13,
         null,
         null,
         null,
@@ -307,8 +307,22 @@
         1,
         1,
         null
+      ],
+      "/Users/travisjohnston/Desktop/a_cart_apart_rails/spec/models/review_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/travisjohnston/Desktop/a_cart_apart_rails/app/models/review.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1446600865
+    "timestamp": 1446601088
   }
 }
