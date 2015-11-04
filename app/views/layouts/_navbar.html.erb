@@ -10,8 +10,6 @@
       </button>
       <%= link_to "PDX Food Cart Review", food_carts_path, class: "navbar-brand" %>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
@@ -30,6 +28,12 @@
           </li>
         <% end %>
       </ul>
+      <%= form_tag(food_carts_path, method: :get, class:"navbar-form navbar-right") do %>
+      <div class="form-group">
+        <%= text_field_tag :query, params[:query], class:"form-control", placeholder:"Search" %>
+      </div>
+      <%= submit_tag "Search", name: nil, class: 'btn btn-primary' %>
+      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
