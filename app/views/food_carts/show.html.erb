@@ -10,3 +10,6 @@
 <%= @food_cart.friday_hours %>
 <%= @food_cart.saturday_hours %>
 <%= @food_cart.sunday_hours %>
+
+<%= link_to 'Edit this Entry', edit_food_cart_path(@food_cart) %>
+<%= link_to 'Delete this Entry', food_cart_path(@food_cart), data: {alert: 'Are you sure?', method: 'delete'} %>
