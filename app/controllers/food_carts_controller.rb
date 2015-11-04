@@ -15,8 +15,7 @@ class FoodCartsController < ApplicationController
 
   def create
     @food_cart = FoodCart.create(food_cart_params)
-    @tag = Tag.create(tag_params)
-    @tag.update_attribute(:food_cart_id, @food_cart.id)
+    @tag = @food_cart.tags.create(tag_params)
     if @food_cart.persisted? && @tag.persisted?
       redirect_to food_carts_path
     else
@@ -25,11 +24,10 @@ class FoodCartsController < ApplicationController
   end
 
   def edit
-    @tag = @food_cart.tag
+    @tag = @food_cart.tags
   end
 
   def update
-
     if @food_cart.update(food_cart_params)
       redirect_to food_carts_path
     else
