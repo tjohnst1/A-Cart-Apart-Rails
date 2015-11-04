@@ -1,0 +1,7 @@
+<% if @food_carts.any? %>
+  <% @food_carts.each do |cart| %>
+    <p><%= link_to cart.name, food_cart_path(cart) %></p>
+  <% end %>
+<% else %>
+  <p>Please add some info to the database.</p>
+<% end %>

@@ -1,17 +1,22 @@
 class FoodCartsController < ApplicationController
   def index
+    @food_carts = FoodCart.all
   end
-  
+
+  def show
+    @food_cart = FoodCart.find(params[:id])
+  end
+
   def new
     @food_cart = FoodCart.new
     @tag = Tag.new
   end
 
   def create
-    @food_cart = FoodCart.new(food_cart_params)
-    @tag = Tag.new(tag_params)
-    @tag['food_cart_id'] = @food_cart.id
-    if @food_cart.save && @tag.save
+    @food_cart = FoodCart.create(food_cart_params)
+    @tag = Tag.create(tag_params)
+    @tag.update_attribute(:food_cart_id, @food_cart.id)
+    if @food_cart.persisted? && @tag.persisted?
       redirect_to food_carts_path
     else
       render :new
@@ -25,6 +30,6 @@ class FoodCartsController < ApplicationController
                                         :friday_hours, :saturday_hours, :sunday_hours)
     end
     def tag_params
-      params.require(:tags).permit(:name, :food_cart_id)
+      params.require(:tag).permit(:name, :food_cart_id)
     end
 end
