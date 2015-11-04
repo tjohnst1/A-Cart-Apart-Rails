@@ -1,15 +1,8 @@
-<%= @food_cart.name %>
-<%= @food_cart.address %>
-<%= @food_cart.zip %>
-<%= @food_cart.phone_number %>
-<%= @food_cart.website %>
-<%= @food_cart.monday_hours %>
-<%= @food_cart.tuesday_hours %>
-<%= @food_cart.wednesday_hours %>
-<%= @food_cart.thursday_hours %>
-<%= @food_cart.friday_hours %>
-<%= @food_cart.saturday_hours %>
-<%= @food_cart.sunday_hours %>
+<div id="food-cart-info">
+  <%= render 'show_info' %>
+</div>
 
-<%= link_to 'Edit this Entry', edit_food_cart_path(@food_cart) %>
+<%= link_to 'Edit this Entry', edit_food_cart_path(@food_cart), remote: true %>
 <%= link_to 'Delete this Entry', food_cart_path(@food_cart), data: {alert: 'Are you sure?', method: 'delete'} %>
+
+<%= render 'modal' %>

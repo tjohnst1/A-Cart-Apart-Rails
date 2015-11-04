@@ -1,0 +1,3 @@
+$('#modal-content-container').empty();
+$('#modal-form').modal('toggle');
+$('#cart-list').append('<%= j link_to @food_cart.name, food_cart_path(@food_cart) %>');

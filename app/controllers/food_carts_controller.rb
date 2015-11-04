@@ -11,15 +11,25 @@ class FoodCartsController < ApplicationController
   def new
     @food_cart = FoodCart.new
     @tag = Tag.new
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def create
     @food_cart = FoodCart.create(food_cart_params)
     @tag = @food_cart.tags.create(tag_params)
     if @food_cart.persisted? && @tag.persisted?
-      redirect_to food_carts_path
+      respond_to do |format|
+        format.js
+        format.html { redirect_to food_carts_path }
+      end
     else
-      render :new
+      respond_to do |format|
+        format.js
+        format.html { render :new }
+      end
     end
   end
 
@@ -29,9 +39,15 @@ class FoodCartsController < ApplicationController
 
   def update
     if @food_cart.update(food_cart_params)
-      redirect_to food_carts_path
+      respond_to do |format|
+        format.js
+        format.html { redirect_to food_carts_path }
+      end
     else
-      render :edit
+      respond_to do |format|
+        format.js
+        format.html { render :edit }
+      end
     end
   end
 
