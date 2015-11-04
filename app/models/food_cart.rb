@@ -1,4 +1,6 @@
 class FoodCart < ActiveRecord::Base
+  has_many :tags
+  has_many :reviews
   validates :name, presence: true
   validates :address, presence: true
   validates :zip, presence: true

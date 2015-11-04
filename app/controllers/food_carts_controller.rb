@@ -25,9 +25,11 @@ class FoodCartsController < ApplicationController
   end
 
   def edit
+    @tag = @food_cart.tag
   end
 
   def update
+
     if @food_cart.update(food_cart_params)
       redirect_to food_carts_path
     else
