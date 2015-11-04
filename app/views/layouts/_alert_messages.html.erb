@@ -1,0 +1,8 @@
+<ul class="list-unstyled">
+  <% flash.each do |key, message| %>
+    <div class="alert <%= flashToAlertClass(key) %> alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <li><%= message %></li>
+    </div>
+  <% end %>
+</ul>

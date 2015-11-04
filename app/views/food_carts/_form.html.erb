@@ -1,3 +1,5 @@
+<%= render partial: 'form_alerts', locals: { obj: @food_cart } if @food_cart.errors.any? %>
+
 <%= form_for @food_cart do |f| %>
   <div class="form-group">
     <%= f.label :name %>

@@ -8,7 +8,7 @@
 </head>
   <body>
   <%= render 'layouts/navbar'%>
-  <%= render "layouts/error_messages" if errors %>
+  <%= render 'layouts/alert_messages' if flash %>
   <%= yield %>
   </body>
 </html>
