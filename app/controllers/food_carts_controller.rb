@@ -2,7 +2,7 @@ class FoodCartsController < ApplicationController
   before_action :find_food_cart, except: [:index, :new, :create]
 
   def index
-    gon.food_carts = FoodCart.all()
+    gon.food_carts = FoodCart.text_search(params[:query])
     @food_carts = FoodCart.text_search(params[:query])
   end
 
@@ -59,7 +59,7 @@ class FoodCartsController < ApplicationController
 
   private
     def food_cart_params
-      params.require(:food_cart).permit(:name, :address, :zip, :phone_number, :website, :monday_hours,
+      params.require(:food_cart).permit(:name, :address, :phone_number, :website, :monday_hours,
                                         :tuesday_hours, :wednesday_hours, :thursday_hours,
                                         :friday_hours, :saturday_hours, :sunday_hours)
     end

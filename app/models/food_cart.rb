@@ -1,6 +1,6 @@
 class FoodCart < ActiveRecord::Base
   include PgSearch
-  pg_search_scope :search, against: [:name, :address, :zip ],
+  pg_search_scope :search, against: [:name, :address ],
                            using: { tsearch: { prefix: true, dictionary: "english" }},
                            ignoring: [:accents]
 
