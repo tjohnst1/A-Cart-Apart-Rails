@@ -4,6 +4,9 @@ class FoodCart < ActiveRecord::Base
                            using: { tsearch: { prefix: true, dictionary: "english" }},
                            ignoring: [:accents]
 
+  geocoded_by :address,
+  after_validation :geocode, if: :address_changed?
+
   has_many :tags
   has_many :reviews
   validates :name, presence: true
