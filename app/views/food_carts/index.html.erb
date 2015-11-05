@@ -1,13 +1,13 @@
-<% if @food_carts.any? %>
-  <ul id="cart-list">
-    <% @food_carts.each do |cart| %>
-      <li><%= link_to cart.name, food_cart_path(cart) %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>Please add some info to the database.</p>
-<% end %>
-
-<div id="map" style="width: 300px; height: 300px"></div>
-
+<div class="row">
+  <div class="col-sm-8">
+    <div id="map"></div>
+  </div>
+  <main class="col-sm-4">
+    <ul id="cart-list">
+      <% @food_carts.each do |cart| %>
+        <li><%= link_to cart.name, food_cart_path(cart) %></li>
+      <% end %>
+    </ul>
+  </main>
+</div>
 <%= render 'modal' %>
