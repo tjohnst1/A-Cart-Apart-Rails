@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'responders'
 gem 'devise'
 gem 'pg_search'
+gem 'geocoder'
 
 group :development do
   gem 'byebug'
