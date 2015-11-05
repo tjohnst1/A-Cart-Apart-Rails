@@ -4,8 +4,8 @@ class FoodCart < ActiveRecord::Base
                            using: { tsearch: { prefix: true, dictionary: "english" }},
                            ignoring: [:accents]
 
-  geocoded_by :address,
-  after_validation :geocode, if: :address_changed?
+  geocoded_by :address
+  after_validation :geocode
 
   has_many :tags
   has_many :reviews
@@ -27,4 +27,5 @@ class FoodCart < ActiveRecord::Base
       FoodCart.all
     end
   end
+
 end
