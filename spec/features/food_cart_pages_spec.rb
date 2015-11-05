@@ -10,12 +10,27 @@ describe 'food cart pages' do
     click_button 'Log in'
   end
   it 'should allow a signed in user to add a food cart', login:true, js:true do
-    visit food_carts_path
+    click_on 'Add a Food Cart'
     fill_in 'food_cart_name', with: 'Burger Truck'
     fill_in 'food_cart_address', with: '208 SW 5th Ave'
     fill_in 'tag_name', with: 'burgers'
     click_on 'Submit'
     expect(page).to(have_content('Burger Truck'))
   end
-
+  it 'should allow a signed in user to delete a food cart', login: true, js:true do
+    FactoryGirl.create(:food_cart)
+    visit food_carts_path
+    click_on 'Umai Ramen Cart'
+    click_on 'Delete this Entry'
+    expect(page).to_not(have_content('Umai Ramen Cart'))
+  end
+  it 'should allow a signed in user to edit a food cart entry', login: true, js:true do
+    FactoryGirl.create(:food_cart)
+    visit food_carts_path
+    click_on 'Umai Ramen Cart'
+    click_on 'Edit this Entry'
+    fill_in 'food_cart_name', with: 'that other ramen cart'
+    click_on 'Submit'
+    expect(page).to(have_content('that other ramen cart'))
+  end
 end

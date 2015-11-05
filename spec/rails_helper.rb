@@ -5,17 +5,21 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
+require 'capybara/poltergeist'
 require 'database_cleaner'
 
 Capybara.default_max_wait_time = 5
 
-Capybara.javascript_driver = :selenium
+Capybara.javascript_driver = :poltergeist
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, {js_errors: false})
+end
 
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
