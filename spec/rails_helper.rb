@@ -5,12 +5,12 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
-require 'capybara/poltergeist'
 require 'database_cleaner'
 
 Capybara.default_max_wait_time = 5
 
-Capybara.javascript_driver = :poltergeist
+Capybara.javascript_driver = :selenium
+
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|

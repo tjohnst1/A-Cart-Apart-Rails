@@ -14,6 +14,7 @@ gem 'devise'
 gem 'pg_search'
 gem 'geocoder'
 gem 'gon'
+gem 'selenium-webdriver'
 
 group :development do
   gem 'byebug'
