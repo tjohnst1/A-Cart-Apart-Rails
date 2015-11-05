@@ -1,6 +1,6 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 11,
     center: {lat: 45.5223226, lng: -122.6678265}
   });
   setMarkers(map);
@@ -20,6 +20,12 @@ function setMarkers(map) {
       label: String.fromCharCode("A".charCodeAt(0) + i),
       map: map,
       zIndex: i
-    });
+    })
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+      return function () {
+        map.setZoom(15);
+        map.setCenter(marker.position);
+      }
+    })(marker, i));
   }
 }
