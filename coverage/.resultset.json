@@ -1,26 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/spec/models/food_cart_spec.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/spec/models/food_cart_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
         2,
         2,
         2,
         2,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/spec/rails_helper.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/spec/rails_helper.rb": [
         1,
         1,
         null,
@@ -45,8 +36,8 @@
         null,
         null,
         1,
-        19,
-        19,
+        11,
+        11,
         null,
         null,
         null,
@@ -63,14 +54,14 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/environment.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/application.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/application.rb": [
         1,
         null,
         1,
@@ -107,12 +98,12 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/boot.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/environments/test.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/environments/test.rb": [
         1,
         null,
         null,
@@ -157,7 +148,7 @@
         1,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/assets.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -170,7 +161,7 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/backtrace_silencers.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -179,12 +170,12 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/cookies_serializer.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/devise.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -448,13 +439,13 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/filter_parameter_logging.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/inflections.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -472,18 +463,18 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/mime_types.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/session_store.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/initializers/wrap_parameters.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -499,7 +490,7 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/config/routes.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/config/routes.rb": [
         1,
         1,
         1,
@@ -509,7 +500,7 @@
         1,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/app/models/user.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/app/models/user.rb": [
         1,
         1,
         1,
@@ -541,7 +532,7 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/app/helpers/application_helper.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/app/helpers/application_helper.rb": [
         1,
         1,
         0,
@@ -555,38 +546,32 @@
         null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/app/models/food_cart.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/app/models/food_cart.rb": [
         1,
         1,
         1,
+        null,
+        null,
+        null,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/spec/models/review_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/app/models/review.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/spec/models/tag_spec.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/spec/models/review_spec.rb": [
         1,
         null,
         1,
@@ -595,14 +580,30 @@
         2,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/app/models/tag.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/app/models/review.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/travisjohnston/Desktop/a_cart_apart_rails/spec/models/user_spec.rb": [
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/spec/models/tag_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/app/models/tag.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/travisjohnston/Desktop/A_Cart_Apart/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -610,6 +611,6 @@
         null
       ]
     },
-    "timestamp": 1446618664
+    "timestamp": 1446699693
   }
 }

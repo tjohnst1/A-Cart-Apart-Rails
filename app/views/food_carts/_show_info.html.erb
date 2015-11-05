@@ -1,12 +1,38 @@
-<%= @food_cart.name %>
-<%= @food_cart.address %>
-<%= @food_cart.zip %>
-<%= @food_cart.phone_number %>
-<%= @food_cart.website %>
-<%= @food_cart.monday_hours %>
-<%= @food_cart.tuesday_hours %>
-<%= @food_cart.wednesday_hours %>
-<%= @food_cart.thursday_hours %>
-<%= @food_cart.friday_hours %>
-<%= @food_cart.saturday_hours %>
-<%= @food_cart.sunday_hours %>
+<p>Name: <%= @food_cart.name %></p>
+<p>Address: <%= @food_cart.address %></p>
+<p>Phone Number: <%= @food_cart.phone_number %></p>
+<p>Website: <%= @food_cart.website %></p>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td><%= @food_cart.monday_hours %></td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td><%= @food_cart.tuesday_hours %></td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td><%= @food_cart.wednesday_hours %></td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td><%= @food_cart.thursday_hours %></td>
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td><%= @food_cart.friday_hours %></td>
+  </tr>
+  <tr>
+    <td>Saturday</td>
+    <td><%= @food_cart.saturday_hours %></td>
+  </tr>
+  <tr>
+    <td>Sunday</td>
+    <td><%= @food_cart.sunday_hours %></td>
+  </tr>
+</table>
