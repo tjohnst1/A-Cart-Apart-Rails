@@ -2,6 +2,7 @@ class FoodCartsController < ApplicationController
   before_action :find_food_cart, except: [:index, :new, :create]
 
   def index
+    gon.food_carts = FoodCart.all()
     @food_carts = FoodCart.text_search(params[:query])
   end
 

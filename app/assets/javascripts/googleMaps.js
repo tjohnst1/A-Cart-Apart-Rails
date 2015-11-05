@@ -6,19 +6,13 @@ function initMap() {
   setMarkers(map);
 }
 
-var beaches = [
-['Bondi Beach', -33.890542, 151.274856, 4],
-['Coogee Beach', -33.923036, 151.259052, 5],
-['Cronulla Beach', -34.028249, 151.157507, 3],
-['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-['Maroubra Beach', -33.950198, 151.259302, 1]
-];
+var foodCarts = gon.food_carts
 
 function setMarkers(map) {
-  for (var i = 0; i < beaches.length; i++) {
-    var beach = beaches[i];
+  for (var i = 0; i < foodCarts.length; i++) {
+    var foodCart = foodCarts[i];
     var marker = new google.maps.Marker({
-      position: {lat: beach[1], lng: beach[2]},
+      position: {lat: Number(foodCart.latitude), lng: Number(foodCart.longitude)},
       map: map,
     });
   }
