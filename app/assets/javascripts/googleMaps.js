@@ -21,11 +21,15 @@ function setMarkers(map) {
       map: map,
       zIndex: i
     })
-    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+    google.maps.event.addListener(marker, 'click', (function (marker, i, id) {
       return function () {
+        $('.food-carts').css("color", "black")
         map.setZoom(15);
         map.setCenter(marker.position);
+        $("#food-cart-" + id.toString()).css("color", "red");
       }
-    })(marker, i));
+    })(marker, i, foodCart.id));
+    var url = '<li><a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-carts">' + foodCart.name + '</a></li>'
+    $('#cart-list').append(url);
   }
 }

@@ -1,3 +1,7 @@
+# Accounts
+User.create({username: 'test', email: 'test@test.com', password: 'password'})
+
+# Food Carts
 foodCarts = [
 ["Umai Ramen Cart", "SE 33rd Ave. & Hawthorne Blvd.", "http://umaipdx.com/", "", "", "12pm - 3pm", "12pm - 3pm and 5pm - 8pm", "12pm - 3pm and 5pm - 8pm", "12pm - 3pm and 5pm - 8pm", "12pm - 3pm and 5pm - 8pm"],
 ["The 9", "510 Southeast Martin Luther King Junior Boulevard", "415-335-8475", "https://www.facebook.com/pages/The-9-Food-and-Drink/898649180197745?fref=ts", "11 am - 5 pm", "11 am - 5 pm", "11 am - 5 pm", "11 am - 5 pm", "11 am - 5 pm", "11 am - 5 pm", "11 am - 5 pm"],
