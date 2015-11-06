@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require googleMaps
+//= require evil-icons
+//= require jquery-ui
 //= require_tree .

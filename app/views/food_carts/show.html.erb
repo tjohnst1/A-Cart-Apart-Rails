@@ -1,8 +1,15 @@
-<div id="food-cart-info">
-  <%= render 'show_info' %>
+<div class="row">
+  <div class="col-sm-8"></div>
+  <div class="col-sm-4">
+    <div id="food-cart-info">
+      <%= render 'show_info' %>
+    <% if current_user %>
+      <%= link_to 'Edit this Entry', edit_food_cart_path(@food_cart), class: "btn btn-default", remote: true %>
+      <%= link_to 'Delete this Entry', food_cart_path(@food_cart), class: "btn btn-default", data: {alert: 'Are you sure?', method: 'delete'} %>
+    <% end %>
+    </div>
+  </div>
 </div>
 
-<%= link_to 'Edit this Entry', edit_food_cart_path(@food_cart), remote: true %>
-<%= link_to 'Delete this Entry', food_cart_path(@food_cart), data: {alert: 'Are you sure?', method: 'delete'} %>
 
 <%= render 'modal' %>

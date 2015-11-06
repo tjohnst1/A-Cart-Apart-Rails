@@ -15,6 +15,7 @@ gem 'pg_search'
 gem 'geocoder'
 gem 'gon'
 gem 'selenium-webdriver'
+gem 'jquery-ui-rails'
 
 group :development do
   gem 'byebug'
