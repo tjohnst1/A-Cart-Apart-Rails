@@ -2,6 +2,7 @@ class FoodCartsController < ApplicationController
   before_action :find_food_cart, except: [:index, :new, :create]
 
   def index
+    gon.searchCriteria = FoodCart.pluck(:name)
     gon.food_carts = FoodCart.text_search(params[:query])
     @food_carts = FoodCart.text_search(params[:query])
   end
@@ -12,6 +13,7 @@ class FoodCartsController < ApplicationController
   def new
     @food_cart = FoodCart.new
     @tag = Tag.new
+    gon.tagList = Tag.pluck(:name)
     respond_to do |format|
       format.js
       format.html

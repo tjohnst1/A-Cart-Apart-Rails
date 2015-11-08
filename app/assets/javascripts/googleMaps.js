@@ -21,15 +21,47 @@ function setMarkers(map) {
       map: map,
       zIndex: i
     })
-    google.maps.event.addListener(marker, 'click', (function (marker, i, id) {
+    var contentString =
+    '<div class="info-window tk-rucksack">' +
+      '<div class="info-window-text-container">' +
+          '<h3 class="info-window-heading-text">' + foodCart.name + '</h3>' +
+          '<p class="info-window-subtext-text">' + foodCart.tags + '</p>' +
+      '</div>' +
+      '<div class="info-window-icon-container">' +
+        '<span class="glyphicon glyphicon-info-sign"></span>' +
+      '</div>' +
+    '</div>'
+    // var infowindow = new google.maps.InfoWindow({
+    //   content: contentString
+    // });
+
+    var infobox = new InfoBox({
+         content: contentString,
+         disableAutoPan: false,
+         maxWidth: 0,
+         pixelOffset: new google.maps.Size(0, -60),
+         zIndex: null,
+         closeBoxURL: "",
+         boxStyle: {
+            opacity: 1,
+            background: "url('/triangle.svg') no-repeat",
+            width: "180px",
+        },
+        infoBoxClearance: new google.maps.Size(1, 1)
+    });
+
+    google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox) {
       return function () {
         $('.food-carts').css("color", "black")
         map.setZoom(15);
         map.setCenter(marker.position);
         $("#food-cart-" + id.toString()).css("color", "red");
+        infobox.open(map, marker);
       }
-    })(marker, i, foodCart.id));
+    })(marker, i, foodCart.id, infobox));
     var url = '<li><a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-carts">' + foodCart.name + '</a></li>'
     $('#cart-list').append(url);
   }
 }
+
+google.maps.event.addDomListener(window, 'load', initMap);
