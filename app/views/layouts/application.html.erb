@@ -4,7 +4,8 @@
   <title>A Cart Apart</title>
   <script src="https://use.typekit.net/qlq3jdk.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <%= Gon::Base.render_data %>
+  <%= include_gon(:init => true) %>
+  <%= Gon::Base.render_data({}) %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB_JBTo1AQOiEDbMx7w5wKlXlLsiRCGss" type="text/javascript"></script>

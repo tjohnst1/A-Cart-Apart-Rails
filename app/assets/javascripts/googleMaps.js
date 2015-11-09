@@ -10,6 +10,7 @@ var foodCarts = gon.food_carts
 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var labelIndex = 0;
+var currentWindow;
 
 function setMarkers(map) {
   for (var i = 0; i < foodCarts.length; i++) {
@@ -52,16 +53,25 @@ function setMarkers(map) {
 
     google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox) {
       return function () {
+        if (currentWindow) { currentWindow.close() };
         $('.food-carts').css("color", "black")
         map.setZoom(15);
         map.setCenter(marker.position);
         $("#food-cart-" + id.toString()).css("color", "red");
         infobox.open(map, marker);
+        currentWindow = infobox;
       }
     })(marker, i, foodCart.id, infobox));
-    var url = '<li><a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-carts">' + foodCart.name + '</a></li>'
+    var url = '<li>' +
+                '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-carts">' +
+                  foodCart.name +
+                '</a>' +
+              '</li>'
     $('#cart-list').append(url);
   }
+
 }
+
+
 
 google.maps.event.addDomListener(window, 'load', initMap);

@@ -3,6 +3,7 @@
 @import 'index';
 @import 'jquery-ui';
 @import 'info-window';
+@import 'navbar';
 
 #ui-widget {
     display: block;
@@ -60,4 +61,7 @@
       -webkit-border-radius: 0px;
       -moz-border-radius: 0px;
       background-image: none;
+}
+#flash-messages{
+  margin: 0;
 }
