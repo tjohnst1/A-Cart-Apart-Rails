@@ -14,8 +14,7 @@ gem 'devise'
 gem 'pg_search'
 gem 'geocoder'
 gem 'gon'
-gem 'selenium-webdriver'
-gem 'jquery-ui-rails'
+gem 'acts-as-taggable-on'
 
 group :development do
   gem 'byebug'
