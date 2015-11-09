@@ -1,7 +1,6 @@
 <%= render partial: 'form_alerts', locals: { obj: @food_cart } if @food_cart.errors.any? %>
 
 <%= form_for @food_cart, remote: true do |f| %>
-
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class:'form-control' %>
@@ -46,11 +45,17 @@
     <%= f.label :sunday_hours %>
     <%= f.text_field :sunday_hours, class:'form-control' %>
   </div>
-  <div class="form-group tag-container">
-    <p>Add tags here!</p>
+  <%= f.label :tag_list %>
+  <div class="form-group tag-container form-control">
+    <% @tags.each do |tag| %>
+    <div class="checkbox">
+      <label>
+      <%= f.check_box :tag_list, {multiple: true}, tag.name, nil %>
+      <%= tag.name %>
+      </label>
+    </div>
+    <% end %>
   </div>
-<% end %>
-
   <div class="modal-footer">
     <%= link_to "Cancel", "#", class: "btn btn-default", data: {dismiss: "modal"} %>
     <%= f.submit "Submit", class: 'btn btn-primary' %>
