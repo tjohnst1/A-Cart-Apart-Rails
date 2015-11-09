@@ -46,12 +46,16 @@
     <%= f.label :sunday_hours %>
     <%= f.text_field :sunday_hours, class:'form-control' %>
   </div>
-  <div class="form-group tag-container">
-    
-      <%= tagForm.label 'Tag Name' %>
-      <% @tags.each do |tag| %>
-        <%= tagForm.check_box :name, tag.name %>
-      <% end %>
+  <%= f.label :tag_list %>
+  <div class="form-group tag-container form-control">
+    <% @tags.each do |tag| %>
+    <div class="checkbox">
+      <label>
+      <%= f.check_box :tag_list, {}, tag.name, tag.name %>
+      <%= tag.name %>
+      </label>
+    </div>
+    <% end %>
   </div>
 
   <div class="modal-footer">

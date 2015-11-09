@@ -13,6 +13,7 @@ class FoodCartsController < ApplicationController
   def new
     @food_cart = FoodCart.new
     gon.tagList = Tag.pluck(:name)
+    @tags = Tag.all
     respond_to do |format|
       format.js
       format.html
@@ -21,6 +22,7 @@ class FoodCartsController < ApplicationController
 
   def create
     @food_cart = FoodCart.create(food_cart_params)
+    @tag = @food_cart.tags.create(tag_params)
     if @food_cart.persisted? && @tag.persisted?
       respond_to do |format|
         format.js
@@ -62,7 +64,7 @@ class FoodCartsController < ApplicationController
     def food_cart_params
       params.require(:food_cart).permit(:name, :address, :phone_number, :website, :monday_hours,
                                         :tuesday_hours, :wednesday_hours, :thursday_hours,
-                                        :friday_hours, :saturday_hours, :sunday_hours)
+                                        :friday_hours, :saturday_hours, :sunday_hours, :tag_list)
     end
     def tag_params
       params.require(:tag).permit(:name, :food_cart_id)

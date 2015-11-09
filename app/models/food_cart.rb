@@ -8,7 +8,7 @@ class FoodCart < ActiveRecord::Base
   after_validation :geocode
 
   has_many :reviews
-  acts_as_taggable_on :categories
+  acts_as_taggable
 
   validates :name, presence: true
   validates :address, presence: true
