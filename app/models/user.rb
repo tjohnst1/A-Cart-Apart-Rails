@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :tags
   has_many :reviews
 
   devise :database_authenticatable, :registerable,

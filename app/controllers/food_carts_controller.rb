@@ -12,8 +12,6 @@ class FoodCartsController < ApplicationController
 
   def new
     @food_cart = FoodCart.new
-    @tag = Tag.new
-    @tags = Tag.all
     gon.tagList = Tag.pluck(:name)
     respond_to do |format|
       format.js
@@ -23,7 +21,6 @@ class FoodCartsController < ApplicationController
 
   def create
     @food_cart = FoodCart.create(food_cart_params)
-    @tag = @food_cart.tags.create(tag_params)
     if @food_cart.persisted? && @tag.persisted?
       respond_to do |format|
         format.js
