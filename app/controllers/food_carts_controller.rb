@@ -21,9 +21,9 @@ class FoodCartsController < ApplicationController
   end
 
   def create
-    @food_cart = FoodCart.create(food_cart_params)
-    @tag = @food_cart.tags.create(tag_params)
-    if @food_cart.persisted? && @tag.persisted?
+    @food_cart = FoodCart.new(food_cart_params)
+    @food_cart.tag_list.add(food_cart_params[:tag_list].split(','))
+    if @food_cart.save
       respond_to do |format|
         format.js
         format.html { redirect_to food_carts_path }
@@ -62,9 +62,10 @@ class FoodCartsController < ApplicationController
 
   private
     def food_cart_params
+      params[:food_cart][:tag_list] ||= []
       params.require(:food_cart).permit(:name, :address, :phone_number, :website, :monday_hours,
                                         :tuesday_hours, :wednesday_hours, :thursday_hours,
-                                        :friday_hours, :saturday_hours, :sunday_hours, :tag_list)
+                                        :friday_hours, :saturday_hours, :sunday_hours, tag_list: [])
     end
     def tag_params
       params.require(:tag).permit(:name, :food_cart_id)

@@ -51,7 +51,7 @@
     <% @tags.each do |tag| %>
     <div class="checkbox">
       <label>
-      <%= f.check_box :tag_list, {}, tag.name, tag.name %>
+      <%= f.check_box :tag_list, {multiple: true}, tag.name, nil %>
       <%= tag.name %>
       </label>
     </div>
