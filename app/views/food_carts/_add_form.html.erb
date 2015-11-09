@@ -46,11 +46,11 @@
     <%= f.label :sunday_hours %>
     <%= f.text_field :sunday_hours, class:'form-control' %>
   </div>
-  <div class="form-group">
-      <%= fields_for @tag do |tag|%>
-          <%= tag.label 'Categories' %>
-          <%= tag.text_field :name, id: "add-tag", class: "form-control" %>
-          <div id="ui-widget"></div>
+  <div class="form-group tag-container">
+    
+      <%= tagForm.label 'Tag Name' %>
+      <% @tags.each do |tag| %>
+        <%= tagForm.check_box :name, tag.name %>
       <% end %>
   </div>
 

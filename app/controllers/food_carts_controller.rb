@@ -13,6 +13,7 @@ class FoodCartsController < ApplicationController
   def new
     @food_cart = FoodCart.new
     @tag = Tag.new
+    @tags = Tag.all
     gon.tagList = Tag.pluck(:name)
     respond_to do |format|
       format.js
@@ -38,6 +39,7 @@ class FoodCartsController < ApplicationController
 
   def edit
     @tag = @food_cart.tags
+    @tags = Tag.all
   end
 
   def update
