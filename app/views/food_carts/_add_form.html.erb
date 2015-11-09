@@ -1,7 +1,6 @@
 <%= render partial: 'form_alerts', locals: { obj: @food_cart } if @food_cart.errors.any? %>
 
-  <%= form_for @food_cart, remote: true do |f| %>
-
+<%= form_for @food_cart, remote: true do |f| %>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class:'form-control' %>
@@ -57,10 +56,8 @@
     </div>
     <% end %>
   </div>
-
   <div class="modal-footer">
     <%= link_to "Cancel", "#", class: "btn btn-default", data: {dismiss: "modal"} %>
     <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
-
 <% end %>

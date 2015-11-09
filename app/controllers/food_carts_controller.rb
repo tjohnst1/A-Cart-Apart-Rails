@@ -8,6 +8,7 @@ class FoodCartsController < ApplicationController
   end
 
   def show
+    @tags = @food_cart.tag_list
   end
 
   def new
