@@ -9,7 +9,7 @@
           <%= submit_tag "Search", name: nil, class:"search-box-submit" %>
         <% end %>
         <div id="categories-container">
-          <%= form_tag(food_carts_path, method: :get) do %>
+          <%= form_tag(food_carts_path, method: :get, id: 'filter-by-category') do %>
             <% @tags.each do |tag| %>
               <div class="checkbox">
                 <label>
