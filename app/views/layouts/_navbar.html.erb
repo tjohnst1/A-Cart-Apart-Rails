@@ -12,7 +12,6 @@
     </div>
     <div class="collapse navbar-collapse" id="collapsing-navbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Categories', tags_path %></li>
         <% if current_user %>
           <li><%= link_to 'Add a Food Cart', new_food_cart_path, remote: true, id: 'add-food-cart' %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %></li>
@@ -29,12 +28,6 @@
           </li>
         <% end %>
       </ul>
-      <%= form_tag(food_carts_path, method: :get, class:"navbar-form navbar-right") do %>
-      <div class="form-group">
-        <%= text_field_tag :query, params[:query], class:"form-control", placeholder:"Search" %>
-      </div>
-      <%= submit_tag "Search", name: nil, class: 'btn btn-primary' %>
-      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

@@ -9,4 +9,11 @@ module ApplicationHelper
         "alert-info"
       end
   end
+  def add_query(category)
+    if params[:query]
+      "#{params[:query]}&#{category}"
+    else
+      category
+    end
+  end
 end

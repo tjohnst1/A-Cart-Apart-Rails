@@ -2,7 +2,8 @@ class FoodCart < ActiveRecord::Base
   include PgSearch
   pg_search_scope :search, against: [:name, :address ],
                            using: { tsearch: { prefix: true, dictionary: "english" }},
-                           ignoring: [:accents]
+                           ignoring: [:accents],
+                           associated_against: { tags: :name }
 
   geocoded_by :address
   after_validation :geocode

@@ -5,6 +5,7 @@ class FoodCartsController < ApplicationController
     gon.searchCriteria = FoodCart.pluck(:name)
     gon.food_carts = FoodCart.text_search(params[:query])
     @food_carts = FoodCart.text_search(params[:query])
+    @categories = Tag.all
   end
 
   def show
@@ -59,6 +60,12 @@ class FoodCartsController < ApplicationController
   def destroy
     @food_cart.destroy
     redirect_to food_carts_path
+  end
+
+  def tags
+    gon.food_carts = FoodCart.text_search(params[:query], match_all: true)
+    @food_carts = FoodCart.text_search(params[:query], match_all: true)
+    @categories = Tag.all
   end
 
   private
