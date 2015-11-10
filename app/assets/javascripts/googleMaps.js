@@ -70,5 +70,6 @@ function setMarkers(map) {
 }
 
 
-
+var filterLink = $('.filter-link')
 google.maps.event.addDomListener(window, 'load', initMap);
+google.maps.event.addDomListener(filterLink, 'click', initMap)

@@ -9,8 +9,16 @@
           <%= submit_tag "Search", name: nil, class:"search-box-submit" %>
         <% end %>
         <div id="categories-container">
-          <% @categories.each do |category| %>
-            <%= link_to category.name, query: add_query(category.name) %>
+          <%= form_tag(food_carts_path, method: :get) do %>
+            <% @tags.each do |tag| %>
+              <div class="checkbox">
+                <label>
+                <%= check_box_tag 'query', tag.name %>
+                <%= tag.name %>
+                </label>
+              </div>
+            <% end %>
+            <%= submit_tag "Search", name: nil %>
           <% end %>
         </div>
       </div>

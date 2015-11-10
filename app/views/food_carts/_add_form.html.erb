@@ -48,12 +48,12 @@
   <%= f.label :tag_list %>
   <div class="form-group tag-container form-control">
     <% @tags.each do |tag| %>
-    <div class="checkbox">
-      <label>
-      <%= f.check_box :tag_list, {multiple: true}, tag.name, nil %>
-      <%= tag.name %>
-      </label>
-    </div>
+      <div class="checkbox">
+        <label>
+        <%= f.check_box :tag_list, {multiple: true}, tag.name, nil %>
+        <%= tag.name %>
+        </label>
+      </div>
     <% end %>
   </div>
   <div class="modal-footer">

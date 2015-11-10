@@ -1,11 +1,11 @@
 class FoodCartsController < ApplicationController
-  before_action :find_food_cart, except: [:index, :new, :create]
+  before_action :find_food_cart, except: [:index, :new, :create, :filter]
 
   def index
     gon.searchCriteria = FoodCart.pluck(:name)
     gon.food_carts = FoodCart.text_search(params[:query])
     @food_carts = FoodCart.text_search(params[:query])
-    @categories = Tag.all
+    @tags = Tag.all
   end
 
   def show
@@ -62,10 +62,11 @@ class FoodCartsController < ApplicationController
     redirect_to food_carts_path
   end
 
-  def tags
-    gon.food_carts = FoodCart.text_search(params[:query], match_all: true)
-    @food_carts = FoodCart.text_search(params[:query], match_all: true)
-    @categories = Tag.all
+  def filter
+    gon.searchCriteria = FoodCart.pluck(:name)
+    gon.food_carts = FoodCart.text_search(params[:query])
+    @food_carts = FoodCart.text_search(params[:query])
+    @tags = Tag.all
   end
 
   private
