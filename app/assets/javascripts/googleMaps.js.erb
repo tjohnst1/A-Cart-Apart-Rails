@@ -26,15 +26,12 @@ function setMarkers(map) {
     '<div class="info-window tk-rucksack">' +
       '<div class="info-window-text-container">' +
           '<h3 class="info-window-heading-text">' + foodCart.name + '</h3>' +
-          '<p class="info-window-subtext-text">' + foodCart.tags + '</p>' +
+          '<p class="info-window-subtext-text">' + foodCart.tag_list + '</p>' +
       '</div>' +
       '<div class="info-window-icon-container">' +
         '<span class="glyphicon glyphicon-info-sign"></span>' +
       '</div>' +
     '</div>'
-    // var infowindow = new google.maps.InfoWindow({
-    //   content: contentString
-    // });
 
     var infobox = new InfoBox({
          content: contentString,
