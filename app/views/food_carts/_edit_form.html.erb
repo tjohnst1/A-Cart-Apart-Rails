@@ -45,17 +45,6 @@
     <%= f.label :sunday_hours %>
     <%= f.text_field :sunday_hours, class:'form-control' %>
   </div>
-  <%= f.label :tag_list %>
-  <div class="form-group tag-container form-control">
-    <% current_categories.each do |category| %>
-    <div class="checkbox">
-      <label>
-      <%= f.check_box :tag_list, {multiple: true}, category, nil %>
-      <%= tag.name %>
-      </label>
-    </div>
-    <% end %>
-  </div>
   <div class="modal-footer">
     <%= link_to "Cancel", "#", class: "btn btn-default", data: {dismiss: "modal"} %>
     <%= f.submit "Submit", class: 'btn btn-primary' %>

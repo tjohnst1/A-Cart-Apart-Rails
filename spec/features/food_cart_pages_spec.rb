@@ -13,7 +13,7 @@ describe 'food cart pages' do
     click_on 'Add a Food Cart'
     fill_in 'food_cart_name', with: 'Burger Truck'
     fill_in 'food_cart_address', with: '208 SW 5th Ave'
-    fill_in 'tag_name', with: 'burgers'
+    check 'food_cart_tag_list_american'
     click_on 'Submit'
     expect(page).to(have_content('Burger Truck'))
   end

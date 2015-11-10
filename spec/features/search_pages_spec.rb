@@ -8,7 +8,6 @@ describe 'search function' do
     visit food_carts_path
     fill_in :query, with: 'Umai'
     click_button 'Search'
-    save_and_open_screenshot
     expect(page).to(have_content('Umai'))
     expect(page).to_not(have_content('Juniper'))
   end
