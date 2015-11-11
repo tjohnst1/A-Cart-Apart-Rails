@@ -13,7 +13,7 @@ function initMap() {
   var zoomControl = new ZoomControl(zoomControlDiv, map);
 
   zoomControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(zoomControlDiv);
+  map.controls[google.maps.ControlPosition.LEFT_CENTER].push(zoomControlDiv);
 
 }
 
@@ -28,6 +28,7 @@ function ZoomControl(controlDiv, map) {
   zoomContainer.style.textAlign = 'center';
   zoomContainer.style.width = '32px';
   zoomContainer.style.height = '69px';
+  zoomContainer.setAttribute('id', 'zoom-container')
   controlDiv.appendChild(zoomContainer);
 
   // Set CSS for the zoomIn
