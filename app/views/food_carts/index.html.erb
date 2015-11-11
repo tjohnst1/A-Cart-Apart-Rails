@@ -25,6 +25,9 @@
             <% end %>
           <% end %>
         </div>
+        <div id="tab-view">
+          <%= button_tag "Tab View" %>
+        </div>
       </div>
     </div>
     <div id="map"></div>
@@ -32,8 +35,8 @@
 </div>
 <div class="row">
   <main class="col-sm-12">
-    <ul id="cart-list" class="list-unstyled tk-ff-tisa-web-pro">
-    </ul>
+    <div id="cart-list">
+    </div>
   </main>
 </div>
 <%= render 'modal' %>

@@ -1,7 +1,10 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
-    center: {lat: 45.5223226, lng: -122.6678265}
+    center: {lat: 45.5223226, lng: -122.6678265},
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
   });
   setMarkers(map);
 }
@@ -59,11 +62,11 @@ function setMarkers(map) {
         currentWindow = infobox;
       }
     })(marker, i, foodCart.id, infobox));
-    var url = '<li>' +
-                '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-carts">' +
+    var url = '<div class="food-cart-list-item">' +
+                '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-cart-link">' +
                   foodCart.name +
                 '</a>' +
-              '</li>'
+              '</div>'
     $('#cart-list').append(url);
   }
 

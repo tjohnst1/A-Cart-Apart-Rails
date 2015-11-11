@@ -10,7 +10,7 @@ ready = function() {
 
   if (gon.selectedFilter !== undefined){
     $('#' + gon.selectedFilter + '-filter').parent().addClass('selected-filter');
-  }
+  };
 
   $('#categories-header').on('click', function(){
     $('#categories-container').slideToggle('slow');
@@ -22,7 +22,12 @@ ready = function() {
       $('#categories-header span').removeClass('caret-down')
       $('#categories-header span').addClass('caret-left')
     }
-  })
+  });
+
+  $('#tab-view button').on('click', function(){
+    $('#map').slideToggle("slow");
+  });
+
 }
 
 $(document).ready(ready);
