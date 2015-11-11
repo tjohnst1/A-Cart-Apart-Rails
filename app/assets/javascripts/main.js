@@ -4,9 +4,25 @@ ready = function() {
   //       source: gon.searchCriteria,
   //       noResults: ''
   // });
-  $('.checkbox').on('change',function(){
+  $('.checkbox').on('click',function(){
     $('#filter-by-category').submit();
   });
+
+  if (gon.selectedFilter !== undefined){
+    $('#' + gon.selectedFilter + '-filter').parent().addClass('selected-filter');
+  }
+
+  $('#categories-header').on('click', function(){
+    $('#categories-container').slideToggle('slow');
+    var caret = $('#categories-header span').attr('class')
+    if (caret === 'caret-left'){
+      $('#categories-header span').removeClass('caret-left')
+      $('#categories-header span').addClass('caret-down')
+    } else {
+      $('#categories-header span').removeClass('caret-down')
+      $('#categories-header span').addClass('caret-left')
+    }
+  })
 }
 
 $(document).ready(ready);
