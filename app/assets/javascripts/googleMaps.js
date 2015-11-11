@@ -5,8 +5,61 @@ function initMap() {
     mapTypeControl: false,
     scaleControl: false,
     streetViewControl: false,
+    zoomControl: false,
   });
   setMarkers(map);
+
+  var zoomControlDiv = document.createElement('div');
+  var zoomControl = new ZoomControl(zoomControlDiv, map);
+
+  zoomControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(zoomControlDiv);
+
+}
+
+function ZoomControl(controlDiv, map) {
+
+  // Creating divs & styles for custom zoom control
+  controlDiv.style.padding = '5px';
+
+  // Set CSS for the control wrapper
+  var zoomContainer = document.createElement('div');
+  zoomContainer.style.cursor = 'pointer';
+  zoomContainer.style.textAlign = 'center';
+  zoomContainer.style.width = '32px';
+  zoomContainer.style.height = '69px';
+  controlDiv.appendChild(zoomContainer);
+
+  // Set CSS for the zoomIn
+  var zoomInButton = document.createElement('div');
+  zoomInButton.setAttribute("class", "zoom-button")
+  zoomContainer.appendChild(zoomInButton);
+
+  var plus = document.createElement('span');
+  plus.setAttribute("class", "glyphicon glyphicon-plus")
+  plus.style.margin = "10px";
+  zoomInButton.appendChild(plus);
+
+  // Set CSS for the zoomOut
+  var zoomOutButton = document.createElement('div');
+  zoomOutButton.setAttribute("class", "zoom-button")
+  zoomContainer.appendChild(zoomOutButton);
+
+  var minus = document.createElement('span');
+  minus.setAttribute("class", "glyphicon glyphicon-minus")
+  minus.style.margin = "10px";
+  zoomOutButton.appendChild(minus);
+
+  // Setup the click event listener - zoomIn
+  google.maps.event.addDomListener(zoomInButton, 'click', function() {
+    map.setZoom(map.getZoom() + 1);
+  });
+
+  // Setup the click event listener - zoomOut
+  google.maps.event.addDomListener(zoomOutButton, 'click', function() {
+    map.setZoom(map.getZoom() - 1);
+  });
+
 }
 
 var foodCarts = gon.food_carts
