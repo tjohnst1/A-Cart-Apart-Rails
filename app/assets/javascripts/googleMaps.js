@@ -66,30 +66,40 @@ function ZoomControl(controlDiv, map) {
 
 var foodCarts = gon.food_carts
 
-var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var labelIndex = 0;
 var currentWindow;
+var currentMarker;
 
 function setMarkers(map) {
+
+  // var image = {
+  //   url: '/FoodIcon.svg',
+  //   // This marker is 20 pixels wide by 32 pixels high.
+  //   size: new google.maps.Size(20, 32),
+  //   // The origin for this image is (0, 0).
+  //   origin: new google.maps.Point(0, 0),
+  //   // The anchor for this image is the base of the flagpole at (0, 32).
+  //   anchor: new google.maps.Point(0, 32)
+  // };
+
   for (var i = 0; i < foodCarts.length; i++) {
     var foodCart = foodCarts[i];
     var marker = new google.maps.Marker({
+      // icon: image,
       position: {lat: Number(foodCart.latitude), lng: Number(foodCart.longitude)},
       animation: google.maps.Animation.DROP,
-      label: String.fromCharCode("A".charCodeAt(0) + i),
       map: map,
       zIndex: i
     })
+
     var contentString =
     '<div class="info-window tk-rucksack">' +
       '<div class="info-window-text-container">' +
-          '<h3 class="info-window-heading-text">' + foodCart.name + '</h3>' +
-          '<p class="info-window-subtext-text">' + foodCart.tag_list + '</p>' +
+          '<h3 class="info-window-heading-text">' + '<a href="/food_carts/' + foodCart.id + '">' + foodCart.name + '</a>' + '</h3>' +
       '</div>' +
       '<div class="info-window-icon-container">' +
         '<span class="glyphicon glyphicon-info-sign"></span>' +
       '</div>' +
-    '</div>'
+    '</div>';
 
     var infobox = new InfoBox({
          content: contentString,
@@ -109,12 +119,37 @@ function setMarkers(map) {
     google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox) {
       return function () {
         if (currentWindow) { currentWindow.close() };
-        $('.food-carts').css("color", "black")
+        if (currentMarker) { currentMarker.setVisible(true) };
         map.setZoom(15);
         map.setCenter(marker.position);
-        $("#food-cart-" + id.toString()).css("color", "red");
+        marker.setVisible(false);
+        // $('.food-carts').css("color", "black")
+        // $("#food-cart-" + id.toString()).css("color", "red");
         infobox.open(map, marker);
         currentWindow = infobox;
+        currentMarker = marker;
+        $.ajax({
+            url:'/food_carts/' + id,
+            dataType:'json',
+            data: $(this).attr('id'),
+            type: 'get',
+            success:function(data){
+              for (var key in data){
+                if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
+                  if (key === "tags"){
+                    var tagNames = [];
+                    for (var i = 0; i < data["tags"].length; i++){
+                      tagNames.push(data["tags"][i]["name"]);
+                    };
+                    $(".categories").html(tagNames.join(', '));
+                  } else {
+                    $('.' + key).html(data[key]);
+                  }
+                }
+              }
+              $('#selected-food-cart-container').slideDown();
+            }
+        });
       }
     })(marker, i, foodCart.id, infobox));
     var url = '<div class="food-cart-list-item">' +
@@ -128,7 +163,16 @@ function setMarkers(map) {
 }
 
 
-	var style= [
+// function createEntry(foodCart){
+//    '<div class="selected-food-cart" style="display:none">' +
+//      '<p class="food-cart-name">' + foodCart.name + '</p>' +
+//      '<p class="food-cart-categories"' + foodCart.tag_list + '</p>' +
+//    '</div>';
+// }
+
+
+
+	var style = [
     {
         "featureType": "administrative",
         "elementType": "labels.text.fill",

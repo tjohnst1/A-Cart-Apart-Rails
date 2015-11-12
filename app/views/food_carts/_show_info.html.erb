@@ -1,39 +1,41 @@
-<h1 class="tk-rucksack"><%= @food_cart.name %></h1>
-<p>Address: <%= @food_cart.address %></p>
-<p>Phone Number: <%= @food_cart.phone_number %></p>
-<p>Website: <%= @food_cart.website %></p>
-<p>Categories: <%= @tags %></p>
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>Monday</td>
-    <td><%= @food_cart.monday_hours %></td>
-  </tr>
-  <tr>
-    <td>Tuesday</td>
-    <td><%= @food_cart.tuesday_hours %></td>
-  </tr>
-  <tr>
-    <td>Wednesday</td>
-    <td><%= @food_cart.wednesday_hours %></td>
-  </tr>
-  <tr>
-    <td>Thursday</td>
-    <td><%= @food_cart.thursday_hours %></td>
-  </tr>
-  <tr>
-    <td>Friday</td>
-    <td><%= @food_cart.friday_hours %></td>
-  </tr>
-  <tr>
-    <td>Saturday</td>
-    <td><%= @food_cart.saturday_hours %></td>
-  </tr>
-  <tr>
-    <td>Sunday</td>
-    <td><%= @food_cart.sunday_hours %></td>
-  </tr>
-</table>
+<div class="selected-food-cart">
+  <h1 class="tk-rucksack"><%= @food_cart.name %></h1>
+  <p>Address: <%= @food_cart.address %></p>
+  <p>Phone Number: <%= @food_cart.phone_number %></p>
+  <p>Website: <%= @food_cart.website %></p>
+  <p>Categories: <%= @tags %></p>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Monday</td>
+      <td><%= @food_cart.monday_hours %></td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td><%= @food_cart.tuesday_hours %></td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td><%= @food_cart.wednesday_hours %></td>
+    </tr>
+    <tr>
+      <td>Thursday</td>
+      <td><%= @food_cart.thursday_hours %></td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td><%= @food_cart.friday_hours %></td>
+    </tr>
+    <tr>
+      <td>Saturday</td>
+      <td><%= @food_cart.saturday_hours %></td>
+    </tr>
+    <tr>
+      <td>Sunday</td>
+      <td><%= @food_cart.sunday_hours %></td>
+    </tr>
+  </table>
+</div>

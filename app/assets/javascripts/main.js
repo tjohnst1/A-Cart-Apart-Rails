@@ -35,6 +35,18 @@ ready = function() {
     $('#cart-list').fadeToggle("slow");
   });
 
+  $('#selected-food-cart-details').on('click', function(){
+    if ($('#selected-food-cart-container').css('display') !== 'none'){
+      if ($('.selected-food-cart').css('display') === 'none'){
+        $('.selected-food-cart').slideDown();
+        $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-up"></span> Hide Details');
+      } else {
+        $('.selected-food-cart').slideUp();
+        $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-down"></span> Show Details');
+      }
+    }
+  })
+
 }
 
 $(document).ready(ready);
