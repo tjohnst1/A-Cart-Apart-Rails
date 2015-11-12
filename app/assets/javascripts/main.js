@@ -45,7 +45,7 @@ ready = function() {
         $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-down"></span> Show Details');
       }
     }
-  })
+  });
 
 }
 

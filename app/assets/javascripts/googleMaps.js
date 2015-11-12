@@ -16,6 +16,15 @@ function initMap() {
   zoomControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
+  map.addListener('drag', function(){
+    if ($('#selected-food-cart-container').css('display') !== 'none'){
+      if ($('.selected-food-cart').css('display') !== 'none'){
+        $('.selected-food-cart').slideUp();
+        $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-down"></span> Show Details');
+      }
+    }
+  });
+
 }
 
 function ZoomControl(controlDiv, map) {
@@ -142,16 +151,26 @@ function setMarkers(map) {
                       tagNames.push(data["tags"][i]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
+                  } else if(key === "website") {
+                    $('.' + key).html('<a href="' + data[key] + '">Link</a>');
+                  } else if(key === "phone_number") {
+                    $('.phone-number').html(data[key]);
                   } else {
                     $('.' + key).html(data[key]);
                   }
                 }
               }
-              $('#selected-food-cart-container').slideDown();
+              if ($('#selected-food-cart-container').css('display') === 'none'){
+                $('#selected-food-cart-container').slideDown();
+                $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-up"></span> Hide Details');
+              } else {
+                $('.selected-food-cart').slideDown();
+              }
             }
         });
       }
     })(marker, i, foodCart.id, infobox));
+
     var url = '<div class="food-cart-list-item">' +
                 '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-cart-link">' +
                   foodCart.name +

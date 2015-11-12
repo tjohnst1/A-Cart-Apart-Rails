@@ -6,6 +6,8 @@
   background-color: white;
   margin: 20px 40px;
   width: 350px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.17);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.17);
   #side-panel-logo-container{
     text-align: left;
     background-color: $red;
@@ -60,14 +62,35 @@
     display: none;
     border-top: 1px solid #eee;
     .selected-food-cart{
-      margin: 10px;
-      padding: 10px;
-      .food-cart-name{
+      margin: 10px 10px 0 10px;
+      padding: 0 10px;
+      .name{
         margin: 0;
         font-weight: 600;
       }
+      .address{
+        padding: 0 0 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .metadata{
+        margin: 0;
+        font-style: italic;
+        font-size: 12px;
+        span{
+          font-style: normal;
+        }
+      }
+      table{
+        background: #eee;
+        width: 100%;
+        margin: 10px 0 0 0;
+        td{
+          padding: 2px 0 3px 8px;
+        }
+      }
     }
     #selected-food-cart-details{
+      margin: 10px 0;
       text-align: center;
     }
   }
