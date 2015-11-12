@@ -1,0 +1,16 @@
+<div id="side-panel-container" class="tk-rucksack">
+  <div id="side-panel-logo-container">
+    <%= link_to "A Cart Apart", food_carts_path, id: "side-panel-logo" %>
+    <div id="tab-view" class="pull-right">
+      <%= button_tag "Tab View" %>
+    </div>
+  </div>
+  <div id="search-box-container">
+    <%= form_tag(food_carts_path, method: :get, id:"search-box-form") do %>
+        <%= text_field_tag :query, params[:query], id:"search-box-input", placeholder:"Search" %>
+        <%= button_tag(type: "submit", id:"search-box-submit") do %>
+          <span class="glyphicon glyphicon-search"></span>
+        <% end %>
+    <% end %>
+  </div>
+</div>

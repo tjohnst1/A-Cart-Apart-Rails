@@ -1,4 +1,8 @@
 $dark-blue: #2C3E50;
+$red: #E74C3C;
+$neon-blue: #3498DB;
+$md-blue: #2980B9;
+$off-white: #ECF0F1;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -7,6 +11,7 @@ $dark-blue: #2C3E50;
 @import 'navbar';
 @import 'modal';
 @import 'sidebar';
+@import 'side-panel';
 
 #ui-widget {
     display: block;

@@ -1,15 +1,7 @@
-<div class="row">
-  <div class="col-sm-12">
-    <div id="logo-container">
-    </div>
+<div class="index-container">
+    <%= render "side_panel" %>
     <div id="map-sidebar">
       <div id="search-box-container">
-        <%= form_tag(food_carts_path, method: :get, id:"search-box-form") do %>
-            <%= text_field_tag :query, params[:query], id:"search-box-input", placeholder:"Search" %>
-            <%= button_tag(type: "submit", id:"search-box-submit") do %>
-              <span class="glyphicon glyphicon-search"></span>
-            <% end %>
-        <% end %>
         <div id="categories-header">
           <h3>Categories <span class="caret-left"></span></h3>
         </div>
@@ -25,18 +17,9 @@
             <% end %>
           <% end %>
         </div>
-        <div id="tab-view">
-          <%= button_tag "Tab View" %>
-        </div>
       </div>
     </div>
     <div id="map"></div>
-  </div>
-</div>
-<div class="row">
-  <main class="col-sm-12">
-    <div id="cart-list">
-    </div>
-  </main>
+    <div id="cart-list"></div>
 </div>
 <%= render 'modal' %>
