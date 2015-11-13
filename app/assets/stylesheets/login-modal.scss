@@ -1,0 +1,44 @@
+.modal-content{
+}
+
+#login-modal{
+  text-align: center;
+  font-family: 'Rucksack', sans-serif;
+}
+.modal-top-third{
+  background-color: $dark-blue;
+  color: white;
+  padding: 20px;
+}
+.form-control{
+  background-color: $off-white;
+  color: $dark-blue;
+  border: none;
+}
+.form-control:hover{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.modal-headline{
+  font-size: 34px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.login-modal-form{
+  text-align: left;
+  label{
+    font-weight: 400;
+    color: $off-white;
+  }
+}
+
+.authentication-btn{
+  width: 100%;
+  background-color: $red;
+  color: white;
+}
+
+.submit-container{
+  padding: 20px;
+}
