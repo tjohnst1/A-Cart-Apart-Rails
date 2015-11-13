@@ -21,8 +21,10 @@
       <div id="account-container">
         <div id="account-button-container">
           <div id="account-button">
-            <%= link_to account_food_carts_path, remote: true do %>
-              <span class="glyphicon glyphicon-user"></span>
+            <% if !current_user %>
+              <%= link_to 'Login', new_user_session_path %>
+            <% else %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
             <% end %>
           </div>
         </div>
@@ -32,3 +34,4 @@
     <div id="cart-list"></div>
 </div>
 <%= render 'modal' %>
+<%= render 'account_info_modal' %>
