@@ -10,9 +10,10 @@ $off-white: #ECF0F1;
 @import 'info-window';
 @import 'navbar';
 @import 'modal';
-@import 'sidebar';
 @import 'side-panel';
+@import 'login-categories';
 @import 'account';
+@import 'authentication';
 
 #ui-widget {
     display: block;

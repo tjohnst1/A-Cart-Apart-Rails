@@ -1,0 +1,26 @@
+.authentication{
+  text-align: center;
+  // font-family: "rucksack";
+  font-weight: 800;
+  background-color: $dark-blue;
+  height: 100%;
+  .authentication-heading{
+    color: $off-white;
+  }
+  .authentication-panel{
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    .authentication-btn{
+      background-color: $red;
+      color: white;
+      width: 100%;
+    }
+  }
+}
+.authentication-links{
+  color: $off-white;
+  display: inline-block;
+}
