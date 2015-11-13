@@ -47,6 +47,11 @@ ready = function() {
     }
   });
 
+  $("#new-account").on('click', function(){
+    $('#login-modal').modal('hide');
+    $('#signup-modal').modal('show');  
+  })
+
 }
 
 $(document).ready(ready);
