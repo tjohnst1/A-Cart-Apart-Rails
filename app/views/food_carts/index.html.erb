@@ -1,11 +1,11 @@
 <div class="index-container">
     <%= render "side_panel" %>
-    <div id="map-sidebar">
-      <div id="search-box-container">
+    <div id="map-sidebar" class="tk-rucksack">
+      <div id="categories-container">
         <div id="categories-header">
           <h3>Categories <span class="caret-left"></span></h3>
         </div>
-        <div id="categories-container">
+        <div id="categories-list">
           <%= form_tag(food_carts_path, method: :get, id: 'filter-by-category') do %>
             <% @tags.each do |tag| %>
               <div class="checkbox">
@@ -16,6 +16,15 @@
               </div>
             <% end %>
           <% end %>
+        </div>
+      </div>
+      <div id="account-container">
+        <div id="account-button-container">
+          <div id="account-button">
+            <%= link_to account_food_carts_path, remote: true do %>
+              <span class="glyphicon glyphicon-user"></span>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

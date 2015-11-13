@@ -95,24 +95,3 @@
     }
   }
 }
-
-.caret-left{
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid white;
-  border-top: 5px solid transparent;
-}
-.caret-down{
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 5px solid white;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-}

@@ -1,5 +1,5 @@
 class FoodCartsController < ApplicationController
-  before_action :find_food_cart, except: [:index, :new, :create, :filter]
+  before_action :find_food_cart, except: [:index, :new, :create, :account]
 
   def index
     gon.searchCriteria = FoodCart.pluck(:name)
@@ -65,6 +65,13 @@ class FoodCartsController < ApplicationController
   def destroy
     @food_cart.destroy
     redirect_to food_carts_path
+  end
+
+  def account
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   private

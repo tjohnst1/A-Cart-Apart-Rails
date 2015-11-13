@@ -1,0 +1,33 @@
+#account-button-container{
+  display: inline-block;
+}
+
+#account-button{
+  z-index: 1;
+  margin: 0 0 0 10px;
+  padding: 8px 11px;
+  border: 1px solid;
+  border-radius: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#account-button:hover{
+  color: red;
+}
+
+#account-container{
+  display: block;
+  text-align: right;
+  #account-info-container{
+    display: none;
+    padding: 10px;
+    margin: 5px 0 0 0;
+    background-color: white;
+    border-radius: 20px;
+    a{
+      display: block;
+      margin: 5px 0;
+    }
+  }
+}

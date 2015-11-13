@@ -8,7 +8,7 @@
             <%= text_field_tag :query, params[:query], class:"search-box-input", placeholder:"Search" %>
           <%= submit_tag "Search", name: nil, class:"search-box-submit" %>
         <% end %>
-        <div id="categories-container">
+        <div id="categories-list">
           <% @tags.each do |tag| %>
             <%= link_to tag.name, filter_food_carts_path, query: tag.name, class: "filter-link" %>
           <% end %>

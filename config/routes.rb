@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :food_carts do
     collection do
       get :filter
+      get :account
     end
     resources :reviews
   end

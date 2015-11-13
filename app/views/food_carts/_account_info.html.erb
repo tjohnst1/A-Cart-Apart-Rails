@@ -1,0 +1,11 @@
+<% if current_user %>
+  <%= link_to 'Add a Food Cart', new_food_cart_path, remote: true, id: 'add-food-cart' %>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+<% else %>
+    <%= link_to new_user_registration_path do %>
+      <span class="glyphicon glyphicon-user"></span> Sign Up
+    <% end %>
+    <%= link_to new_user_session_path do %>
+      <span class="glyphicon glyphicon-log-in"></span> Sign In
+    <% end %>
+<% end %>

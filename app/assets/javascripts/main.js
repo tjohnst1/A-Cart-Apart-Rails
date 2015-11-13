@@ -13,7 +13,7 @@ ready = function() {
   };
 
   $('#categories-header').on('click', function(){
-    $('#categories-container').slideToggle('slow');
+    $('#categories-list').slideToggle('slow');
     var caret = $('#categories-header span').attr('class')
     if (caret === 'caret-left'){
       $('#categories-header span').removeClass('caret-left')
