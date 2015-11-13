@@ -43,6 +43,22 @@
   color: white;
 }
 
+.authentication-btn:hover{
+  background-color: #b83c30;
+  color: white;
+}
+
 .submit-container{
   padding: 20px;
+}
+
+.close-btn{
+  width: 100%;
+  background-color: #eee;
+  color: black;
+}
+
+.close-btn:hover{
+  background-color: #D0D0D0;
+  color: black;
 }
