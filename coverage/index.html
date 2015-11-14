@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-10T14:33:01-08:00">2015-11-10T14:33:01-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-13T11:00:58-08:00">2015-11-13T11:00:58-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">71.16%</span></span>
+    (<span class="covered_percent"><span class="red">69.47%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>23</b> files in total.
-    <b>215</b> relevant lines. 
-    <span class="green"><b>153</b> lines covered</span> and
-    <span class="red"><b>62</b> lines missed </span>
+    <b>226</b> relevant lines. 
+    <span class="green"><b>157</b> lines covered</span> and
+    <span class="red"><b>69</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,11 +62,11 @@
       
       <tr>
         <td class="strong"><a href="#ae1751a64dc41a1ea64f120327fb29420dce5eba" class="src_link" title="app/controllers/food_carts_controller.rb">app/controllers/food_carts_controller.rb</a></td>
-        <td class="red strong">35.42 %</td>
-        <td>78</td>
-        <td>48</td>
-        <td>17</td>
-        <td>31</td>
+        <td class="red strong">33.93 %</td>
+        <td>90</td>
+        <td>56</td>
+        <td>19</td>
+        <td>37</td>
         <td>0.4</td>
       </tr>
       
@@ -243,9 +243,9 @@
       <tr>
         <td class="strong"><a href="#af90be4e38d6b82bbbed10e16fb5d4fcf16c5120" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>8</td>
-        <td>8</td>
+        <td>12</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -262,22 +262,22 @@
       
       <tr>
         <td class="strong"><a href="#5a9f521dd2bd754d0ba796c7f2d254369e6a634f" class="src_link" title="spec/features/filter_pages_spec.rb">spec/features/filter_pages_spec.rb</a></td>
-        <td class="red strong">66.67 %</td>
-        <td>16</td>
-        <td>12</td>
+        <td class="red strong">57.14 %</td>
+        <td>18</td>
+        <td>14</td>
         <td>8</td>
-        <td>4</td>
-        <td>0.7</td>
+        <td>6</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#510b64d637063521cb3767dde31307efc49a7a2f" class="src_link" title="spec/rails_helper.rb">spec/rails_helper.rb</a></td>
-        <td class="green strong">96.15 %</td>
+        <td class="green strong">100.0 %</td>
         <td>43</td>
         <td>26</td>
-        <td>25</td>
-        <td>1</td>
-        <td>1.0</td>
+        <td>26</td>
+        <td>0</td>
+        <td>1.1</td>
       </tr>
       
     </tbody>
@@ -377,11 +377,11 @@
         <div class="source_table" id="ae1751a64dc41a1ea64f120327fb29420dce5eba">
   <div class="header">
     <h3>app/controllers/food_carts_controller.rb</h3>
-    <h4><span class="red">35.42 %</span> covered</h4>
+    <h4><span class="red">33.93 %</span> covered</h4>
     <div>
-      <b>48</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>31</b> lines missed.</span>
+      <b>56</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>37</b> lines missed.</span>
     </div>
   </div>
   
@@ -397,7 +397,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_action :find_food_cart, except: [:index, :new, :create, :filter]</code>
+          <code class="ruby">  before_action :find_food_cart, except: [:index, :new, :create, :account]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -427,163 +427,163 @@
         <li class="covered" data-hits="2" data-linenumber="7">
           <span class="hits">2</span>
           
-          <code class="ruby">    @food_carts = FoodCart.text_search(params[:query])</code>
+          <code class="ruby">    gon.selectedFilter = params[:query]</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
-          <code class="ruby">    @tags = Tag.all</code>
+          <code class="ruby">    @food_carts = FoodCart.text_search(params[:query])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @tags = Tag.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
           <code class="ruby">    @tags = @food_cart.tag_list</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def new</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">    @food_cart = FoodCart.new</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">    gon.tagList = Tag.pluck(:name)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">    @tags = Tag.all</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">      format.js</code>
+          <code class="ruby">      format.json{ render json: @food_cart, include: :tags }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def create</code>
+          <code class="ruby">  def new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">    @food_cart = FoodCart.new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">    gon.tagList = Tag.pluck(:name)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">    @tags = Tag.all</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">      format.js</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">    @food_cart = FoodCart.new(food_cart_params)</code>
+          <code class="ruby">      format.html</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">    @food_cart.tag_list.add(food_cart_params[:tag_list].split(&#39;,&#39;))</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">    if @food_cart.save</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">      respond_to do |format|</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        format.js</code>
+          <code class="ruby">  def create</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="31">
           
           
-          <code class="ruby">        format.html { redirect_to food_carts_path }</code>
+          <code class="ruby">    @food_cart = FoodCart.new(food_cart_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="32">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">    @food_cart.tag_list.add(food_cart_params[:tag_list].split(&#39;,&#39;))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="missed" data-hits="0" data-linenumber="33">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">    if @food_cart.save</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="34">
@@ -601,7 +601,7 @@
         <li class="missed" data-hits="0" data-linenumber="36">
           
           
-          <code class="ruby">        format.html { render :new }</code>
+          <code class="ruby">        format.html { redirect_to food_carts_path }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -613,37 +613,37 @@
         <li class="never" data-hits="" data-linenumber="38">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">        format.js</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="41">
+          
+          
+          <code class="ruby">        format.html { render :new }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def edit</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">    @tag = @food_cart.tags</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
-          
-          <code class="ruby">    @tags = Tag.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
@@ -661,43 +661,43 @@
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update</code>
+          <code class="ruby">  def edit</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="47">
           
           
-          <code class="ruby">    if @food_cart.update(food_cart_params)</code>
+          <code class="ruby">    @tag = @food_cart.tags</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="48">
           
           
-          <code class="ruby">      respond_to do |format|</code>
+          <code class="ruby">    @tags = Tag.all</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">        format.js</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">        format.html { redirect_to food_carts_path }</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">  def update</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="missed" data-hits="0" data-linenumber="52">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">    if @food_cart.update(food_cart_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="53">
@@ -715,7 +715,7 @@
         <li class="missed" data-hits="0" data-linenumber="55">
           
           
-          <code class="ruby">        format.html { render :edit }</code>
+          <code class="ruby">        format.html { redirect_to food_carts_path }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
@@ -727,37 +727,37 @@
         <li class="never" data-hits="" data-linenumber="57">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="59">
+          
+          
+          <code class="ruby">        format.js</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
+          
+          <code class="ruby">        format.html { render :edit }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="60">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def destroy</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="61">
-          
-          
-          <code class="ruby">    @food_cart.destroy</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="62">
-          
-          
-          <code class="ruby">    redirect_to food_carts_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
@@ -775,55 +775,55 @@
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="66">
           
-          <code class="ruby">    def food_cart_params</code>
+          
+          <code class="ruby">    @food_cart.destroy</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="67">
           
           
-          <code class="ruby">      params[:food_cart][:tag_list] ||= []</code>
+          <code class="ruby">    redirect_to food_carts_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">      params.require(:food_cart).permit(:name, :address, :phone_number, :website, :monday_hours,</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">                                        :tuesday_hours, :wednesday_hours, :thursday_hours,</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby">                                        :friday_hours, :saturday_hours, :sunday_hours, tag_list: [])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">    def tag_params</code>
+          <code class="ruby">  def account</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="71">
+          
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
+          
+          <code class="ruby">      format.js</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="73">
           
           
-          <code class="ruby">      params.require(:tag).permit(:name, :food_cart_id)</code>
+          <code class="ruby">      format.html</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -832,25 +832,97 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
-          <code class="ruby">    def find_food_cart</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="76">
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      @food_cart = FoodCart.find(params[:id])</code>
+          <code class="ruby">    def food_cart_params</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="missed" data-hits="0" data-linenumber="79">
+          
+          
+          <code class="ruby">      params[:food_cart][:tag_list] ||= []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="80">
+          
+          
+          <code class="ruby">      params.require(:food_cart).permit(:name, :address, :phone_number, :website, :monday_hours,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">                                        :tuesday_hours, :wednesday_hours, :thursday_hours,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">                                        :friday_hours, :saturday_hours, :sunday_hours, tag_list: [])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def tag_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="85">
+          
+          
+          <code class="ruby">      params.require(:tag).permit(:name, :food_cart_id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def find_food_cart</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="88">
+          
+          
+          <code class="ruby">      @food_cart = FoodCart.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">end</code>
@@ -4231,8 +4303,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4270,37 +4342,43 @@
           <code class="ruby">      get :filter</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get :account</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">    resources :reviews</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  resources :tags</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">  root &#39;food_carts#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
@@ -4451,11 +4529,11 @@
         <div class="source_table" id="5a9f521dd2bd754d0ba796c7f2d254369e6a634f">
   <div class="header">
     <h3>spec/features/filter_pages_spec.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="red">57.14 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
+      <b>14</b> relevant lines. 
       <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -4483,7 +4561,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;allows a user to filter food carts by category&#39; do</code>
+          <code class="ruby">  it &#39;allows a user to filter food carts by category&#39;, js:true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -4495,64 +4573,76 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    check &#39;Japanese&#39;</code>
+          <code class="ruby">    click_on &#39;categories-header-link&#39;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">    wait 2</code>
+          <code class="ruby">    page.find(&#39;#Japanese-filter&#39;).set(true)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
+          <code class="ruby">    wait 2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
           <code class="ruby">    expect(page).to(have_content(&#39;Umai Ramen Cart&#39;))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &#39;allows a user to filter food carts by category&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit food_carts_path</code>
+          <code class="ruby">  it &#39;allows a user to filter food carts by category&#39;, js:true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    check &#39;Southern&#39;</code>
+          <code class="ruby">    visit food_carts_path</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    wait 2</code>
+          <code class="ruby">    click_on &#39;#categories-header-link&#39;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
+          <code class="ruby">    page.find(&#39;#Southern-filter&#39;).set(true)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">    wait 2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
           <code class="ruby">    expect(page).to_not(have_content(&#39;Umai Ramen Cart&#39;))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">end</code>
@@ -4565,11 +4655,11 @@
         <div class="source_table" id="510b64d637063521cb3767dde31307efc49a7a2f">
   <div class="header">
     <h3>spec/rails_helper.rb</h3>
-    <h4><span class="green">96.15 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>26</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -4660,8 +4750,8 @@
           <code class="ruby">Capybara.register_driver :poltergeist do |app|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">  Capybara::Poltergeist::Driver.new(app, {js_errors: false})</code>
         </li>
