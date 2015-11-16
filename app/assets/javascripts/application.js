@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require infobox.js
 //= require googleMaps
 //= require bootstrap-sprockets
 //= require js-cookie
