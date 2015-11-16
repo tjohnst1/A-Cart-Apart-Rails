@@ -13,8 +13,8 @@ This JavaScript/Rails application allows users to find Portland, OR area food ca
 - `git clone` this file
 - cd into the root of the app
 - run `bundle install`
-- run `rake db:create`, `rake db:migrate`, `rake db:seed` to set up the database
 - start a PostgreSQL server
+- run `rake db:create`, `rake db:migrate`, `rake db:seed` to set up the database
 - run `rails s` to start the rails server
 
 ## Technologies Used
