@@ -1,4 +1,5 @@
 # A Cart Apart
+https://quiet-dusk-8959.herokuapp.com/
 
 ##### A JavaScript/Rails Application that Helps Users Find Food Carts in Portland
 
@@ -7,6 +8,8 @@
 ## Description
 
 This JavaScript/Rails application allows users to find Portland, OR area food carts based off of various categories and preferences. In the near future, it will allow users to leave reviews and to tag certain carts as 'favorites' to make them easier to find at a later date.
+
+Note: This is very much still a work in progress.
 
 ## Setup
 
