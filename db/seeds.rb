@@ -90,7 +90,6 @@ food_carts = [{
     "friday_hours": "11:00 am - 7:00 pm",
     "saturday_hours": "11:00 am - 7:00 pm",
     "sunday_hours": "11:00 am - 7:00 pm",
-    "hours": "Tuesday, 11:00 am-2pm; Thursday-Monday, 11:00 am-7:00 pm",
     "facebook": "https://www.facebook.com/straitskitchenpdx",
     "twitter": "http://twitter.com/straitskitchpdx",
     "website": "http://www.straitskitchenpdx.com/",
@@ -171,7 +170,6 @@ food_carts = [{
     "friday_hours": "10:30 am - 4:00 pm",
     "saturday_hours": "10:30 am - 4:00 pm",
     "sunday_hours": "Closed",
-    "hours": "Lunch daily",
     "facebook": "https://www.facebook.com/Chicharitospdx?fref=ts",
     "twitter": "Not Provided",
     "website": "Not Provided",
@@ -204,7 +202,6 @@ food_carts = [{
     "friday_hours": "11:00 am - 9:00 pm",
     "saturday_hours": "11:00 am - 9:00 pm",
     "sunday_hours": "Closed",
-    "hours": "Tues-Sat, 12-9pm",
     "facebook": "Not Provided",
     "twitter": "Not Provided",
     "website": "http://www.rositasplace.net/",
@@ -1308,6 +1305,6 @@ User.create({username: 'test', email: 'test@test.com', password: 'password'})
 # Create Objects
 food_carts.each do |cart_obj|
   new_cart = FoodCart.create(cart_obj.except(:tags))
-  new_cart.tag_list.add(cart_obj.tags)
+  new_cart.tag_list.add(cart_obj[:tags])
   new_cart.save
 end
