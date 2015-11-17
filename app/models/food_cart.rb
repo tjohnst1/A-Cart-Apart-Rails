@@ -5,8 +5,9 @@ class FoodCart < ActiveRecord::Base
                            ignoring: [:accents],
                            associated_against: { tags: :name }
 
-  geocoded_by :address
-  after_validation :geocode
+  geocoded_by :portland_address
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+  # after_validation :geocode
 
   has_many :reviews
   acts_as_taggable
@@ -34,6 +35,10 @@ class FoodCart < ActiveRecord::Base
     self.friday_hours ||= "Closed"
     self.saturday_hours ||= "Closed"
     self.sunday.hours ||= "Closed"
+  end
+
+  def portland_address
+    "#{self.address}, Portland, OR, USA"
   end
 
 end

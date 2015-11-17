@@ -402,7 +402,7 @@ food_carts = [{
   },
   {
     "name": "Big Fat Weiners",
-    "address": "15th & Alberta",
+    "address": "NE 15th Ave & NE Alberta St.",
     "monday_hours": "11:00 am - 10:00 pm",
     "tuesday_hours": "11:00 am - 10:00 pm",
     "wednesday_hours": "11:00 am - 10:00 pm",
@@ -1266,7 +1266,7 @@ food_carts = [{
   },
   {
     "name": "Bridgetown Bagel Company",
-    "address": "NE 52nd and Sandy",
+    "address": "NE 52nd and NE Sandy Blvd",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "7:00 am - 2:00 pm",
