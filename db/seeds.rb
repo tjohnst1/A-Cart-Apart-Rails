@@ -236,7 +236,7 @@ food_carts = [{
     "sunday_hours": "8:00 am - 10:00 pm",
     "facebook": "https://www.facebook.com/backtoedenbakery",
     "twitter": "http://twitter.com/Back_To_Eden",
-    "website": "www.backtoedenbakery.com",
+    "website": "http://www.backtoedenbakery.com",
     "phone_number": "503-477-5022",
     "tags": ["Bakery"]
   },
@@ -252,7 +252,7 @@ food_carts = [{
     "sunday_hours": "12:00 am - 5:00 pm",
     "facebook": "https://www.facebook.com/503burger",
     "twitter": "Not Provided",
-    "website": "www.503burger.com/",
+    "website": "http://www.503burger.com/",
     "phone_number": "503-912-4294",
     "tags": ["Burgers, American"]
   },
@@ -332,7 +332,7 @@ food_carts = [{
     "sunday_hours": "2:30 pm - 9:00 pm",
     "facebook": "https://www.facebook.com/pages/Anythings-Pastable/835380383209723",
     "twitter": "http://twitter.com/ourpastabiz",
-    "website": "www.cartlandia.com",
+    "website": "http://www.cartlandia.com",
     "phone_number": "503-740-4805",
     "tags": ["Italian"]
   },
@@ -402,7 +402,7 @@ food_carts = [{
   },
   {
     "name": "Big Fat Weiners",
-    "address": "NE 15th Ave & NE Alberta St.",
+    "address": "NE 15th Avenue & NE Alberta Street",
     "monday_hours": "11:00 am - 10:00 pm",
     "tuesday_hours": "11:00 am - 10:00 pm",
     "wednesday_hours": "11:00 am - 10:00 pm",
@@ -492,7 +492,7 @@ food_carts = [{
     "sunday_hours": "Closed",
     "facebook": "https://www.facebook.com/bingmifoodcart/",
     "twitter": "https://twitter.com/bing_mi",
-    "website": "www.bingmiportland.com",
+    "website": "http://www.bingmiportland.com",
     "phone_number": "Not Provided",
     "tags": ["Chinese", "Creperies"]
   },
@@ -540,7 +540,7 @@ food_carts = [{
     "sunday_hours": "Closed",
     "facebook": "Not Provided",
     "twitter": "Not Provided",
-    "website": "www.spielmanbagels.com/",
+    "website": "http://www.spielmanbagels.com/",
     "phone_number": "503-477-9045",
     "tags": ["Bagels"]
   },
@@ -572,7 +572,7 @@ food_carts = [{
     "sunday_hours": "Closed",
     "facebook": "https://www.facebook.com/thehotboxca/timeline",
     "twitter": "https://twitter.com/thehotboxca",
-    "website": "www.thehotboxbbq.com",
+    "website": "http://www.thehotboxbbq.com",
     "phone_number": "707-223-2511",
     "tags": ["American", "Barbeque"]
   },
@@ -748,7 +748,7 @@ food_carts = [{
     "sunday_hours": "12:00 pm - 3:00 pm and 5:30 pm - 8:00 pm",
     "facebook": "https://www.facebook.com/EatAtEarthBurger",
     "twitter": "https://twitter.com/earthburgers",
-    "website": "www.earthburgerspdx.com/",
+    "website": "http://www.earthburgerspdx.com/",
     "phone_number": "Not Provided",
     "tags": ["Vegan", "Vegetarian"]
   },
@@ -812,7 +812,7 @@ food_carts = [{
     "sunday_hours": "Open 24 Hours",
     "facebook": "https://www.facebook.com/pages/Small-Pharoahs/481727731881287",
     "twitter": "https://twitter.com/small_pharoah",
-    "website": "www.smallpharaohfood.com/",
+    "website": "http://www.smallpharaohfood.com/",
     "phone_number": "917-500-9181",
     "tags": ["Egyptian", "Halal"]
   },
@@ -844,7 +844,7 @@ food_carts = [{
     "sunday_hours": "11:00 am - 7:30 pm",
     "facebook": "https://www.facebook.com/Namu-Korean-Hawaiian-168341903200758/",
     "twitter": "Not Provided",
-    "website": "www.namufoodcart.com",
+    "website": "http://www.namufoodcart.com",
     "phone_number": "503-828-4260",
     "tags": ["Korean", "Hawaiian"]
   },
@@ -1084,7 +1084,7 @@ food_carts = [{
     "sunday_hours": "Closed",
     "facebook": "https://www.facebook.com/Dalos-Ethiopian-Kitchen-164623730237485/",
     "twitter": "Not Provided",
-    "website": "www.dalos-kitchen.com/",
+    "website": "http://www.dalos-kitchen.com/",
     "phone_number": "503-740-0313",
     "tags": ["Ethiopian"]
   },
@@ -1100,7 +1100,7 @@ food_carts = [{
     "sunday_hours": "Closed",
     "facebook": "https://www.facebook.com/OleLatteCoffee",
     "twitter": "https://twitter.com/OleLatteCoffee",
-    "website": "www.olelatte.com",
+    "website": "http://www.olelatte.com",
     "phone_number": "971-221-6318",
     "tags": ["Coffee", "Tea"]
   },
@@ -1276,7 +1276,7 @@ food_carts = [{
     "sunday_hours": "8:00 am - 3:00 pm",
     "facebook": "https://www.facebook.com/bridgetownbagel",
     "twitter": "https://twitter.com/bridgetownbagel",
-    "website": "www.bridgetownbagel.com",
+    "website": "http://www.bridgetownbagel.com",
     "phone_number": "503-268-2522",
     "tags": ["Bagels"]
   },
@@ -1292,7 +1292,7 @@ food_carts = [{
     "sunday_hours": "9:00 am - 3:00 pm",
     "facebook": "http://facebook.com/friedegglove",
     "twitter": "http://twitter.com/friedegglove",
-    "website": "www.friedegglove.com",
+    "website": "http://www.friedegglove.com",
     "phone_number": "503-610-3447",
     "tags": ["Sandwiches", "Breakfast & Brunch"]
   }
