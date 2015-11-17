@@ -244,6 +244,7 @@ DEPENDENCIES
   geocoder
   gon
   jquery-rails
+  json
   launchy
   letter_opener
   pg
