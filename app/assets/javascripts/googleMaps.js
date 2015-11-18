@@ -156,6 +156,11 @@ function setMarkers(map) {
                       tagNames.push(data["tags"][i]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
+                  // } else if(key === "reviews") {
+                  //   var reviews = [];
+                  //   for (var i = 0; i < data["reviews"].length; i++){
+                  //     reviews.push('<div>' +  + '')
+                  //   }
                   } else if(key === "website") {
                     $('.' + key).html('<a href="' + data[key] + '">Link</a>');
                   } else if(key === "phone_number") {
