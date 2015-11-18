@@ -156,11 +156,6 @@ function setMarkers(map) {
                       tagNames.push(data["tags"][i]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
-                  // } else if(key === "reviews") {
-                  //   var reviews = [];
-                  //   for (var i = 0; i < data["reviews"].length; i++){
-                  //     reviews.push('<div>' +  + '')
-                  //   }
                   } else if(key === "website") {
                     $('.' + key).html('<a href="' + data[key] + '">Link</a>');
                   } else if(key === "phone_number") {
@@ -169,7 +164,14 @@ function setMarkers(map) {
                     $('.' + key).html(data[key]);
                   }
                 }
-              }
+              };
+              // } else if(key === "reviews") {
+              //   var reviews = [];
+              //   for (var i = 0; i < data["reviews"].length; i++){
+              //     reviews.push('<div>' +  + '')
+              //   }
+              var link = "<a href='/food_carts/" + id + "/reviews/new'>Add a Review</a>"
+              $('.reviews').append(link);
               if ($('#selected-food-cart-container').css('display') === 'none'){
                 $('#selected-food-cart-container').slideDown();
                 $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-up"></span> Hide Details');
