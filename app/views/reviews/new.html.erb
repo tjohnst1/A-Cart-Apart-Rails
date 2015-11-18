@@ -1,0 +1,7 @@
+<%= form_for [@food_cart, @review] do |f| %>
+  <%= f.label :rating %>
+  <%= f.text_area :rating %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.submit 'Submit' %>
+<% end %>

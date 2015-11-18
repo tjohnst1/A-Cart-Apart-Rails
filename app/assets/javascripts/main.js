@@ -56,6 +56,7 @@ ready = function() {
     $('#search-box-input').attr('value', '');
     $('#search-box-form').submit();
   });
+
 }
 
 $(document).ready(ready);

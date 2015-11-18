@@ -131,17 +131,17 @@ function setMarkers(map) {
         infoBoxClearance: new google.maps.Size(1, 1)
     });
 
-    google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox) {
+    google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox){
       return function () {
         if (currentWindow) { currentWindow.close() };
         if (currentMarker) { currentMarker.setVisible(true) };
         map.setCenter(marker.position);
         marker.setVisible(false);
-        // $('.food-carts').css("color", "black")
-        // $("#food-cart-" + id.toString()).css("color", "red");
         infobox.open(map, marker);
         currentWindow = infobox;
         currentMarker = marker;
+
+        // Ajax Call for Side Panel
         $.ajax({
             url:'/food_carts/' + id,
             dataType:'json',
@@ -165,13 +165,48 @@ function setMarkers(map) {
                   }
                 }
               };
+
               // } else if(key === "reviews") {
               //   var reviews = [];
               //   for (var i = 0; i < data["reviews"].length; i++){
               //     reviews.push('<div>' +  + '')
               //   }
-              var link = "<a href='/food_carts/" + id + "/reviews/new'>Add a Review</a>"
+
+              // var link = "<a href='/food_carts/" + id + "/reviews/new'>Add a Review</a>"
+
+              var link = '<button id="add-review-btn">Add a Review</button>'
               $('.reviews').append(link);
+
+              // Ajax Call for Adding Reviews
+              // $.ajax({
+              //     url:'/food_carts/' + id + '/reviews/new',
+              //     dataType:'json',
+              //     data: $(this).attr('id'),
+              //     type: 'get',
+              //     success:function(data){
+              //       console.log(data)
+              //     }
+              // });
+
+              $('#add-review-btn').on('click', function(){
+                $('#modal-form-title').html('Add a Review')
+                $('#modal-body').empty();
+                $('#modal-body').append(reviewForm);
+                $('#modal-form').modal('toggle');
+              });
+
+              var reviewForm = '<form id="new-review-form" action="/food_carts/' + id + '/reviews/new" method="post">' +
+                            '<div class="form-group">' +
+                              '<label for="rating">Star Rating</label>' +
+                              '<input type="text" name="rating"/>' +
+                              '<label for="content">Text</label>' +
+                              '<input type="text" name="content"/>' +
+                              '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
+                              '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
+                            '</div>' +
+                          '</form>'
+
+
               if ($('#selected-food-cart-container').css('display') === 'none'){
                 $('#selected-food-cart-container').slideDown();
                 $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-up"></span> Hide Details');
@@ -179,16 +214,18 @@ function setMarkers(map) {
                 $('.selected-food-cart').slideDown();
               }
             }
-        });
-      }
-    })(marker, i, foodCart.id, infobox));
+        }); //ajax
+      } //function
+    })(marker, i, foodCart.id, infobox)); //IIFE
 
     var url = '<div class="food-cart-list-item">' +
                 '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-cart-link">' +
                   foodCart.name +
                 '</a>' +
               '</div>'
+
     $('#cart-list').append(url);
+
   }
 
 }
@@ -298,3 +335,29 @@ function setMarkers(map) {
 var filterLink = $('.filter-link')
 google.maps.event.addDomListener(window, 'load', initMap);
 google.maps.event.addDomListener(filterLink, 'click', initMap)
+
+
+
+
+// Ajax Call for Adding Reviews
+// $.ajax({
+//     url:'/food_carts/' + id + '/reviews/new',
+//     dataType:'json',
+//     data: $(this).attr('id'),
+//     type: 'get',
+//     success:function(data){
+//       console.log(data)
+//     }
+// });
+// var form = '<form id="new-review-form" action="/food_carts/' + id + '/reviews/new" method="post">' +
+//               '<div class="form-group">' +
+//                 '<label for="rating">Star Rating</label>' +
+//                 '<input type="text" name="rating"/>' +
+//                 '<label for="content">Text</label>' +
+//                 '<input type="text" name="content"/>' +
+//                 '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
+//                 '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
+//               '</div>' +
+//             '</form>'
+// $('#modal-body').empty();
+// $('#modal-body').append(form);
