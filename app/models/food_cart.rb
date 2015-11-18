@@ -1,13 +1,12 @@
 class FoodCart < ActiveRecord::Base
   include PgSearch
-  pg_search_scope :search, against: [:name, :address ],
+  pg_search_scope :search, against: [:name, :address],
                            using: { tsearch: { prefix: true, dictionary: "english" }},
                            ignoring: [:accents],
                            associated_against: { tags: :name }
 
   geocoded_by :portland_address
   after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
-  # after_validation :geocode
 
   has_many :reviews
   acts_as_taggable
@@ -38,7 +37,7 @@ class FoodCart < ActiveRecord::Base
   end
 
   def portland_address
-    "#{self.address}, Portland, OR, USA"
+    "#{self.address}, Portland, Oregon, USA"
   end
 
 end

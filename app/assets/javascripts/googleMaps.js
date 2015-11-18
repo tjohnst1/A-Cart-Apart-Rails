@@ -78,20 +78,26 @@ var foodCarts = gon.food_carts
 var currentWindow;
 var currentMarker;
 
-function setMarkers(map) {
+function compareCoords(cartList, currentCart){
+  var offsetAmount = 0;
+  for (var z = 0; z < cartList.length; z++){
+    if ((currentCart.latitude === cartList[z].latitude) && (currentCart.longitude === cartList[z].longitude) && (cartList[z].offset === undefined) && (currentCart.name != cartList[z].name)){
+      if (cartList[z].offset === undefined){
+        offsetAmount += 0.00001;
+      }
+    }
+  }
+  if (offsetAmount > 0){
+    currentCart.latitude = Number(currentCart.latitude) + (offsetAmount);
+    currentCart.offset = true;
+  }
+}
 
-  // var image = {
-  //   url: '/FoodIcon.svg',
-  //   // This marker is 20 pixels wide by 32 pixels high.
-  //   size: new google.maps.Size(20, 32),
-  //   // The origin for this image is (0, 0).
-  //   origin: new google.maps.Point(0, 0),
-  //   // The anchor for this image is the base of the flagpole at (0, 32).
-  //   anchor: new google.maps.Point(0, 32)
-  // };
+function setMarkers(map) {
 
   for (var i = 0; i < foodCarts.length; i++) {
     var foodCart = foodCarts[i];
+    compareCoords(foodCarts, foodCart);
     var marker = new google.maps.Marker({
       // icon: image,
       position: {lat: Number(foodCart.latitude), lng: Number(foodCart.longitude)},
@@ -180,6 +186,8 @@ function setMarkers(map) {
   }
 
 }
+
+
 
 
 // function createEntry(foodCart){

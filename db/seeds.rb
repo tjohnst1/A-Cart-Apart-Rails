@@ -2,7 +2,7 @@
 
 food_carts = [{
     "name": "Pig ‘N A Pen",
-    "address": "NE 52nd and Sandy – Rose City Food Park",
+    "address": "NE 52nd Ave and Sandy Blvd",
     "monday_hours": "11:00 am - 7:00 pm",
     "tuesday_hours": "11:00 am - 7:00 pm",
     "wednesday_hours": "Closed",
@@ -18,7 +18,7 @@ food_carts = [{
   },
   {
     "name": "Rajah’s Hawaiian Grill",
-    "address": "SW 3rd and Washington",
+    "address": "SW 3rd and Washington St",
     "monday_hours": "10am - 4:00 pm",
     "tuesday_hours": "10am - 4:00 pm",
     "wednesday_hours": "10am - 4:00 pm",
@@ -34,7 +34,7 @@ food_carts = [{
   },
   {
     "name": "Mole Prehispanic Cuisine",
-    "address": "5885 NW St Helens Rd in the parking lot of Anderson Roofing",
+    "address": "5885 NW St Helens Rd",
     "monday_hours": "11:00 am - 4:00 pm",
     "tuesday_hours": "11:00 am - 4:00 pm",
     "wednesday_hours": "11:00 am - 4:00 pm",
@@ -50,7 +50,7 @@ food_carts = [{
   },
   {
     "name": "Grandpa Jimmy’s Southern Fried Fish",
-    "address": "NE 76th and Glisan",
+    "address": "NE 76th and Glisan St",
     "monday_hours": "Closed",
     "tuesday_hours": "11:00 am -2:30pm  and 4:30pm - 8:00 pm",
     "wednesday_hours": "11:00 am -2:30pm  and 4:30pm - 8:00 pm",
@@ -66,7 +66,7 @@ food_carts = [{
   },
   {
     "name": "Steve’s Dawg House",
-    "address": "NE 52nd and Sandy, Rose City Food Park",
+    "address": "NE 52nd and Sandy Blvd",
     "monday_hours": "11:00 am - 3pm and 5pm - 7:00 pm",
     "tuesday_hours": "Closed",
     "wednesday_hours": "Closed",
@@ -82,7 +82,7 @@ food_carts = [{
   },
   {
     "name": "Straits Kitchen",
-    "address": "SE 11th and Tacoma – Piknik Park",
+    "address": "SE 11th and Tacoma St",
     "monday_hours": "11:00 am - 7:00 pm",
     "tuesday_hours": "11:00 am - 7:00 pm",
     "wednesday_hours": "Closed",
@@ -98,7 +98,7 @@ food_carts = [{
   },
   {
     "name": "MF Tasty",
-    "address": "N Mississippi and Beech",
+    "address": "N Mississippi Ave and N Beech St",
     "monday_hours": "closed",
     "tuesday_hours": "closed",
     "wednesday_hours": "11:00 am - 8:00 pm",
@@ -130,7 +130,7 @@ food_carts = [{
   },
   {
     "name": "PDX Dönerländ",
-    "address": "NE 7th and Killingsworth at Piedmont Station",
+    "address": "NE 7th and Killingsworth",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "11:30 am - 2:30 pm",
@@ -162,7 +162,7 @@ food_carts = [{
   },
   {
     "name": "Chicharito’s Mexican Grill",
-    "address": "SW 3rd and Washington",
+    "address": "SW 3rd and Washington St",
     "monday_hours": "10:30 am - 4:00 pm",
     "tuesday_hours": "10:30 am - 4:00 pm",
     "wednesday_hours": "10:30 am - 4:00 pm",
@@ -178,7 +178,7 @@ food_carts = [{
   },
   {
     "name": "Mac & Trees",
-    "address": "SW 10th and Washington",
+    "address": "SW 10th and Washington St",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -194,7 +194,7 @@ food_carts = [{
   },
   {
     "name": "Rosita’s Place",
-    "address": "3405 SE 82nd, north of Powell",
+    "address": "3405 SE 82nd",
     "monday_hours": "Closed",
     "tuesday_hours": "11:00 am - 9:00 pm",
     "wednesday_hours": "11:00 am - 9:00 pm",
@@ -210,7 +210,7 @@ food_carts = [{
   },
   {
     "name": "Matt’s BBQ",
-    "address": "4709 NE MLK Blvd",
+    "address": "4709 NE Martin Luther King Jr Blvd",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "11:00 am - 7:00 pm",
@@ -226,7 +226,7 @@ food_carts = [{
   },
   {
     "name": "Back to Eden Bakery Cart",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "8:00 am - 10:00 pm",
     "tuesday_hours": "8:00 am - 10:00 pm",
     "wednesday_hours": "8:00 am - 10:00 pm",
@@ -242,7 +242,7 @@ food_carts = [{
   },
   {
     "name": "503 Burger Co.",
-    "address": "N Mississippi and Skidmore",
+    "address": "N Mississippi Ave and N Skidmore St",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -274,7 +274,7 @@ food_carts = [{
   },
   {
     "name": "Kelvin’s Döner",
-    "address": "SW 10th and Alder",
+    "address": "SW 10th Ave and SW Alder St",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -354,7 +354,7 @@ food_carts = [{
   },
   {
     "name": "In & Out Kitchen",
-    "address": "SE 82nd and Harney",
+    "address": "SE 82nd Ave & SE Harney St",
     "monday_hours": "11:00 am - 8:00 pm",
     "tuesday_hours": "11:00 am - 8:00 pm",
     "wednesday_hours": "11:00 am - 8:00 pm",
@@ -370,7 +370,7 @@ food_carts = [{
   },
   {
     "name": "Juniper",
-    "address": "SW Moody in South Waterfront at The Gantry",
+    "address": "3121 SW Moody Ave",
     "monday_hours": "8:00 am - 2:00 pm",
     "tuesday_hours": "8:00 am - 2:00 pm",
     "wednesday_hours": "8:00 am - 2:00 pm",
@@ -386,7 +386,7 @@ food_carts = [{
   },
   {
     "name": "Pyro’s Wicked Wiches",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "12:00 pm - 3:00 pm",
@@ -402,7 +402,7 @@ food_carts = [{
   },
   {
     "name": "Big Fat Weiners",
-    "address": "NE 15th Avenue & NE Alberta Street",
+    "address": "NE 15th Avenue and NE Alberta Street",
     "monday_hours": "11:00 am - 10:00 pm",
     "tuesday_hours": "11:00 am - 10:00 pm",
     "wednesday_hours": "11:00 am - 10:00 pm",
@@ -466,7 +466,7 @@ food_carts = [{
   },
   {
     "name": "Sam’s Saj",
-    "address": "SW 10th and Washington",
+    "address": "SW 10th and SW Washington St",
     "monday_hours": "11:00 am - 7:00 pm",
     "tuesday_hours": "11:00 am - 7:00 pm",
     "wednesday_hours": "11:00 am - 7:00 pm",
@@ -482,7 +482,7 @@ food_carts = [{
   },
   {
     "name": "Bing Mi!",
-    "address": "SW 9th and Alder",
+    "address": "SW 9th and SW Alder St",
     "monday_hours": "7:30 am - 3:00 pm",
     "tuesday_hours": "7:30 am - 3:00 pm",
     "wednesday_hours": "7:30 am - 3:00 pm",
@@ -498,7 +498,7 @@ food_carts = [{
   },
   {
     "name": "Dog Town Food Cart",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "Closed",
     "tuesday_hours": "12:00pm - 8:00pm",
     "wednesday_hours": "3:00pm - 8:30pm",
@@ -514,7 +514,7 @@ food_carts = [{
   },
   {
     "name": "Monk’s",
-    "address": "SE 43rd and Belmont",
+    "address": "SE 43rd and SE Belmont St.",
     "monday_hours": "11:30 am - 8:00 pm",
     "tuesday_hours": "11:30 am - 8:00 pm",
     "wednesday_hours": "11:30 am - 8:00 pm",
@@ -530,7 +530,7 @@ food_carts = [{
   },
   {
     "name": "Spielman Bagels Food Cart",
-    "address": "SW 10th and Alder",
+    "address": "SW 10th and SW Alder St.",
     "monday_hours": "7:30 am - 2:30 pm",
     "tuesday_hours": "7:30 am - 2:30 pm",
     "wednesday_hours": "7:30 am - 2:30 pm",
@@ -594,7 +594,7 @@ food_carts = [{
   },
   {
     "name": "Scout Beer Garden",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "12:00 pm - 9:00 pm",
     "tuesday_hours": "12:00 pm - 9:00 pm",
     "wednesday_hours": "12:00 pm - 9:00 pm",
@@ -626,7 +626,7 @@ food_carts = [{
   },
   {
     "name": "Garden Monsters",
-    "address": "SE 28th Pl. and Division",
+    "address": "SE Division St. and SE 28th Pl.",
     "monday_hours": "11:00 am - 8:00 pm",
     "tuesday_hours": "11:00 am - 8:00 pm",
     "wednesday_hours": "11:00 am - 8:00 pm",
@@ -642,7 +642,7 @@ food_carts = [{
   },
   {
     "name": "Chop Chop",
-    "address": "SW 10th and Washington",
+    "address": "SW 10th and SW Washington St.",
     "monday_hours": "11:30 am - 9:00 pm",
     "tuesday_hours": "11:30 am - 9:00 pm",
     "wednesday_hours": "11:30 am - 9:00 pm",
@@ -658,7 +658,7 @@ food_carts = [{
   },
   {
     "name": "Haan Ghin",
-    "address": "SW Park and Harrison at PSU Park Blocks",
+    "address": "1875 SW Park Ave",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -674,7 +674,7 @@ food_carts = [{
   },
   {
     "name": "IGPAY",
-    "address": "4631 N Albina, Portland",
+    "address": "4631 N Albina Ave",
     "monday_hours": "11:00 am - 6:00 pm",
     "tuesday_hours": "11:00 am - 6:00 pm",
     "wednesday_hours": "11:00 am - 6:00 pm",
@@ -690,7 +690,7 @@ food_carts = [{
   },
   {
     "name": "Buki",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "12:00 pm - 3:30 pm and 5:30 pm - 8:00 pm",
     "tuesday_hours": "Closed",
     "wednesday_hours": "12:00 pm - 3:30 pm and 5:30 pm - 8:00 pm",
@@ -706,7 +706,7 @@ food_carts = [{
   },
   {
     "name": "Neue Southern PDX",
-    "address": "3200 SW Moody",
+    "address": "3200 SW Moody Ave",
     "monday_hours": "11:30 am - 3:30 pm",
     "tuesday_hours": "11:30 am - 3:30 pm and 5:30 pm - 8:30 pm",
     "wednesday_hours": "11:30 am - 3:30 pm",
@@ -722,7 +722,7 @@ food_carts = [{
   },
   {
     "name": "Cackalack’s Hot Chicken Shack",
-    "address": "NE 52nd and Sandy, Rose City Food Park",
+    "address": "NE 52nd Ave and Sandy Blvd",
     "monday_hours": "11:30 am - 2:30 pm",
     "tuesday_hours": "11:30 am - 2:30 pm",
     "wednesday_hours": "11:30 am - 2:30 pm",
@@ -738,7 +738,7 @@ food_carts = [{
   },
   {
     "name": "Earth Burgers",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "12:00 pm - 3:00 pm and 5:30 pm - 8:00 pm",
@@ -754,7 +754,7 @@ food_carts = [{
   },
   {
     "name": "Ingrid’s Scandinavian Food",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "12:00 pm - 8:00 pm",
@@ -770,7 +770,7 @@ food_carts = [{
   },
   {
     "name": "Midwest Pizza Co.",
-    "address": "N Skidmore and Mississippi",
+    "address": "N Skidmore St and N Mississippi Ave",
     "monday_hours": "Closed",
     "tuesday_hours": "11:30 am - 4:00 pm",
     "wednesday_hours": "11:30 am - 4:00 pm",
@@ -786,7 +786,7 @@ food_carts = [{
   },
   {
     "name": "Luang Prabang",
-    "address": "SE 13th and Lexington St",
+    "address": "SE 13th Ave and SE Lexington St",
     "monday_hours": "11:00 am - 7:00 pm",
     "tuesday_hours": "11:00 am - 7:00 pm",
     "wednesday_hours": "11:00 am - 7:00 pm",
@@ -802,7 +802,7 @@ food_carts = [{
   },
   {
     "name": "Small Pharoah’s",
-    "address": "SW 5th and Stark",
+    "address": "SW 5th Ave and SW Stark St",
     "monday_hours": "Open 24 Hours",
     "tuesday_hours": "Open 24 Hours",
     "wednesday_hours": "Open 24 Hours",
@@ -850,7 +850,7 @@ food_carts = [{
   },
   {
     "name": "Azul Tequila Taqueria",
-    "address": "SE 28th Place and Division St",
+    "address": "SE Division St and SE 28th Pl",
     "monday_hours": "11:00 am - 9:00 pm",
     "tuesday_hours": "11:00 am - 9:00 pm",
     "wednesday_hours": "11:00 am - 9:00 pm",
@@ -866,7 +866,7 @@ food_carts = [{
   },
   {
     "name": "E-san Thai",
-    "address": "133 Southwest 2nd Ave and Pine",
+    "address": "133 Southwest 2nd Ave and Pine St",
     "monday_hours": "11:00 am - 11:00 pm",
     "tuesday_hours": "11:00 am - 11:00 pm",
     "wednesday_hours": "11:00 am - 11:00 pm",
@@ -882,7 +882,7 @@ food_carts = [{
   },
   {
     "name": "Holy Mole",
-    "address": "SE 33rd and Hawthorne",
+    "address": "SE 33rd Ave and SE Hawthorne Blvd",
     "monday_hours": "Closed",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -898,7 +898,7 @@ food_carts = [{
   },
   {
     "name": "Bacon PDX",
-    "address": "NE 52nd and Sandy, Rose City Food Park",
+    "address": "NE 52nd Ave and Sandy Blvd",
     "monday_hours": "Closed",
     "tuesday_hours": "11:00 am - 7:00 pm",
     "wednesday_hours": "11:00 am - 7:00 pm",
@@ -914,7 +914,7 @@ food_carts = [{
   },
   {
     "name": "Umai",
-    "address": "SE 33rd and Hawthorne",
+    "address": "SE 33rd Ave and SE Hawthorne Blvd",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "12:00 pm - 3:00 pm",
@@ -962,7 +962,7 @@ food_carts = [{
   },
   {
     "name": "ASH woodfired",
-    "address": "3200 SW Moody",
+    "address": "3200 SW Moody Ave",
     "monday_hours": "11:00 am - 9:00 pm",
     "tuesday_hours": "11:00 am - 9:00 pm",
     "wednesday_hours": "11:00 am - 9:00 pm",
@@ -978,7 +978,7 @@ food_carts = [{
   },
   {
     "name": "Gastro Mania",
-    "address": "NW 19th and Quimby",
+    "address": "NW 19th Ave and NW Quimby St",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -1026,7 +1026,7 @@ food_carts = [{
   },
   {
     "name": "Deutschland Curry",
-    "address": "SW 5th and Stark",
+    "address": "SW 5th Ave and SW Stark St.",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -1090,7 +1090,7 @@ food_carts = [{
   },
   {
     "name": "Olé Latte Coffee",
-    "address": "SW 5th and Harrison",
+    "address": "SW 5th and SW Harrison St",
     "monday_hours": "7:00 am - 5:00 pm",
     "tuesday_hours": "7:00 am - 5:00 pm",
     "wednesday_hours": "7:00 am - 5:00 pm",
@@ -1106,7 +1106,7 @@ food_carts = [{
   },
   {
     "name": "Mama Chow’s Kitchen",
-    "address": "SW 2nd and Stark",
+    "address": "SW 2nd Ave and SW Stark St",
     "monday_hours": "11:00 am - 3:00 pm",
     "tuesday_hours": "11:00 am - 3:00 pm",
     "wednesday_hours": "11:00 am - 3:00 pm",
@@ -1122,7 +1122,7 @@ food_carts = [{
   },
   {
     "name": "PDX Sliders",
-    "address": "8064 SE 17th",
+    "address": "8064 SE 17th Ave",
     "monday_hours": "11:00 am - 7:00 pm",
     "tuesday_hours": "11:00 am - 7:00 pm",
     "wednesday_hours": "11:00 am - 7:00 pm",
@@ -1138,7 +1138,7 @@ food_carts = [{
   },
   {
     "name": "Thick",
-    "address": "SW 9th and Washington",
+    "address": "SW 9th St and SW Washington St",
     "monday_hours": "11:30 am - 2:00 pm and 5:00 pm - 9:00 pm",
     "tuesday_hours": "11:30 am - 2:00 pm and 5:00 pm - 9:00 pm",
     "wednesday_hours": "11:30 am - 2:00 pm and 5:00 pm - 9:00 pm",
@@ -1154,7 +1154,7 @@ food_carts = [{
   },
   {
     "name": "El Pilón",
-    "address": "SW 2nd and Oak",
+    "address": "SW 2nd St and Oak St",
     "monday_hours": "10:00 am - 7:00 pm",
     "tuesday_hours": "10:00 am - 7:00 pm",
     "wednesday_hours": "10:00 am - 7:00 pm",
@@ -1202,7 +1202,7 @@ food_carts = [{
   },
   {
     "name": "Hapa Ramen",
-    "address": "SE 28th Pl. and Division",
+    "address": "SE 28th Pl. and Division St",
     "monday_hours": "5:00 pm - 8:30 pm",
     "tuesday_hours": "5:00 pm - 8:30 pm",
     "wednesday_hours": "5:00 pm - 8:30 pm",
@@ -1218,7 +1218,7 @@ food_carts = [{
   },
   {
     "name": "Plane Pastries",
-    "address": "SE 52nd and Foster",
+    "address": "SE Foster Rd and SE 52nd Ave",
     "monday_hours": "10:00 am - 3:00 pm",
     "tuesday_hours": "Closed",
     "wednesday_hours": "10:00 am - 3:00 pm",
@@ -1234,7 +1234,7 @@ food_carts = [{
   },
   {
     "name": "Brazilian House",
-    "address": "SE 43rd and Belmont, Good Food Here",
+    "address": "SE Belmont St & SE 43rd Ave",
     "monday_hours": "12:00 pm - 8:00 pm",
     "tuesday_hours": "Closed",
     "wednesday_hours": "12:00 pm - 8:00 pm",
@@ -1250,7 +1250,7 @@ food_carts = [{
   },
   {
     "name": "Pizza Contadino",
-    "address": "8218 N Lombard",
+    "address": "N. Richmond at N. Lombard",
     "monday_hours": "Closed",
     "tuesday_hours": "2:00 pm - 11:00 pm",
     "wednesday_hours": "2:00 pm - 11:00 pm",
@@ -1266,7 +1266,7 @@ food_carts = [{
   },
   {
     "name": "Bridgetown Bagel Company",
-    "address": "NE 52nd and NE Sandy Blvd",
+    "address": "NE Sandy Blvd & NE 52nd Ave",
     "monday_hours": "Closed",
     "tuesday_hours": "Closed",
     "wednesday_hours": "7:00 am - 2:00 pm",
@@ -1307,4 +1307,5 @@ food_carts.each do |cart_obj|
   new_cart = FoodCart.create(cart_obj.except(:tags))
   new_cart.tag_list.add(cart_obj[:tags])
   new_cart.save
+  sleep 0.25
 end

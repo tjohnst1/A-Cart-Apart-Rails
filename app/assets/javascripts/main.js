@@ -49,9 +49,13 @@ ready = function() {
 
   $("#new-account").on('click', function(){
     $('#login-modal').modal('hide');
-    $('#signup-modal').modal('show');  
+    $('#signup-modal').modal('show');
   })
 
+  $('#categories-clear').on('click', function(){
+    $('#search-box-input').attr('value', '');
+    $('#search-box-form').submit();
+  });
 }
 
 $(document).ready(ready);
