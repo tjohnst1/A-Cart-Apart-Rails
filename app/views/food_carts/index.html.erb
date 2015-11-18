@@ -1,28 +1,7 @@
 <div class="index-container">
     <%= render "side_panel" %>
     <div id="login-categories" class="tk-rucksack">
-      <div id="categories-container">
-        <div id="categories-header">
-          <a id="categories-header-link">Categories <span class="caret-left"></span></a>
-        </div>
-        <div id="categories-list">
-          <%= form_tag(food_carts_path, method: :get, id: 'filter-by-category') do %>
-            <% @tags.each do |tag| %>
-              <div class="checkbox">
-                <label>
-                <%= check_box_tag 'query', tag.name, false, {id: "#{tag.name}-filter" } %>
-                <%= tag.name %>
-                </label>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
-        <% if params[:query] %>
-          <div id="categories-clear">
-            <a href="#">Clear Filter</p>
-          </div>
-        <% end %>
-      </div>
+      <%= render 'categories_container' %>
       <div id="account-container">
         <div id="account-button-container">
           <div id="account-button" data-toggle="modal" data-target="#login-modal">

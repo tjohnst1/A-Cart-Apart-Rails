@@ -83,7 +83,7 @@ function compareCoords(cartList, currentCart){
   for (var z = 0; z < cartList.length; z++){
     if ((currentCart.latitude === cartList[z].latitude) && (currentCart.longitude === cartList[z].longitude) && (cartList[z].offset === undefined) && (currentCart.name != cartList[z].name)){
       if (cartList[z].offset === undefined){
-        offsetAmount += 0.00001;
+        offsetAmount += 0.000015;
       }
     }
   }
@@ -135,7 +135,6 @@ function setMarkers(map) {
       return function () {
         if (currentWindow) { currentWindow.close() };
         if (currentMarker) { currentMarker.setVisible(true) };
-        map.setZoom(15);
         map.setCenter(marker.position);
         marker.setVisible(false);
         // $('.food-carts').css("color", "black")
