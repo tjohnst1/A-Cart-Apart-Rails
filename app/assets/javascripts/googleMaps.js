@@ -196,15 +196,17 @@ function setMarkers(map) {
               });
 
               var reviewForm = '<form id="new-review-form" action="/food_carts/' + id + '/reviews/new" method="post">' +
-                            '<div class="form-group">' +
-                              '<label for="rating">Star Rating</label>' +
-                              '<input type="text" name="rating"/>' +
-                              '<label for="content">Text</label>' +
-                              '<input type="text" name="content"/>' +
-                              '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
-                              '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
-                            '</div>' +
-                          '</form>'
+                                 '<div class="form-group">' +
+                                   '<label for="rating">Rating</label>' +
+                                   '<input type="text" name="rating" class="form-control"/>' +
+                                 '</div>' +
+                                 '<div class="form-group">' +
+                                   '<label for="content">Text</label>' +
+                                   '<input type="text" name="content" class="form-control"/>' +
+                                 '</div>' +
+                                   '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
+                                   '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
+                               '</form>';
 
 
               if ($('#selected-food-cart-container').css('display') === 'none'){
