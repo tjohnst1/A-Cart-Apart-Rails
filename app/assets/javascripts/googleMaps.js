@@ -124,7 +124,6 @@ function createInfobox(foodCart){
   });
 
   return infobox;
-
 }
 
 function setMarkers(map) {
@@ -175,48 +174,40 @@ function setMarkers(map) {
                 }
               };
 
+              // Add the 'Add a Review' Link
               var link = '<button id="add-review-btn">Add a Review</button>'
               $('.reviews').append(link);
 
-              // } else if(key === "reviews") {
-              //   var reviews = [];
-              //   for (var i = 0; i < data["reviews"].length; i++){
-              //     reviews.push('<div>' +  + '')
-              //   }
-
-              // var link = "<a href='/food_carts/" + id + "/reviews/new'>Add a Review</a>"
-
-              // Ajax Call for Adding Reviews
-              // $.ajax({
-              //     url:'/food_carts/' + id + '/reviews/new',
-              //     dataType:'json',
-              //     data: $(this).attr('id'),
-              //     type: 'get',
-              //     success:function(data){
-              //       console.log(data)
-              //     }
-              // });
-
+              // Launch a New Review Modal
               $('#add-review-btn').on('click', function(){
-                $('#modal-form-title').html('Add a Review')
-                $('#modal-body').empty();
-                $('#modal-body').append(reviewForm);
-                $('#modal-form').modal('toggle');
+                $.ajax({
+                    url:'/food_carts/' + id + '/reviews/new',
+                    dataType:'html',
+                    type: 'get',
+                    success:function(data){
+                      $('#modal-form-title').html('Add a Review');
+                      $('#modal-body').empty();
+                      var parsed = $('<div/>').append(data);
+                      $('#modal-body').html($(parsed).find('#new-review-form-container').html());
+                      $('#modal-form').modal('toggle');
+                    }
+                 });
               });
 
-              var reviewForm = '<form id="new-review-form" action="/food_carts/' + id + '/reviews/new" method="post">' +
+              var reviewForm = '<form class="new_review" id="new_review" action="/food_carts/' + id + '/reviews" accept-charset="UTF-8" method="post">' +
                                  '<div class="form-group">' +
                                    '<label for="rating">Rating</label>' +
-                                   '<input type="text" name="rating" class="form-control"/>' +
+                                   '<input type="text" name="review[rating]" id="review_rating" class="form-control"/>' +
                                  '</div>' +
                                  '<div class="form-group">' +
                                    '<label for="content">Text</label>' +
-                                   '<input type="text" name="content" class="form-control"/>' +
+                                   '<input type="text" name="review[content]" id="review_content" class="form-control"/>' +
                                  '</div>' +
                                    '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
                                    '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
                                '</form>';
 
+               // Ajax Call for Getting Review ID + Post Route
 
               if ($('#selected-food-cart-container').css('display') === 'none'){
                 $('#selected-food-cart-container').slideDown();
@@ -240,16 +231,6 @@ function setMarkers(map) {
   }
 
 }
-
-
-
-
-// function createEntry(foodCart){
-//    '<div class="selected-food-cart" style="display:none">' +
-//      '<p class="food-cart-name">' + foodCart.name + '</p>' +
-//      '<p class="food-cart-categories"' + foodCart.tag_list + '</p>' +
-//    '</div>';
-// }
 
 // Map Stylings
 var style = [
@@ -343,27 +324,3 @@ var style = [
 ];
 
 google.maps.event.addDomListener(window, 'load', initMap);
-
-
-// Ajax Call for Adding Reviews
-// $.ajax({
-//     url:'/food_carts/' + id + '/reviews/new',
-//     dataType:'json',
-//     data: $(this).attr('id'),
-//     type: 'get',
-//     success:function(data){
-//       console.log(data)
-//     }
-// });
-// var form = '<form id="new-review-form" action="/food_carts/' + id + '/reviews/new" method="post">' +
-//               '<div class="form-group">' +
-//                 '<label for="rating">Star Rating</label>' +
-//                 '<input type="text" name="rating"/>' +
-//                 '<label for="content">Text</label>' +
-//                 '<input type="text" name="content"/>' +
-//                 '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
-//                 '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
-//               '</div>' +
-//             '</form>'
-// $('#modal-body').empty();
-// $('#modal-body').append(form);

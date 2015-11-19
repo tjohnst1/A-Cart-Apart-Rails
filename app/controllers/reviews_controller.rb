@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
   def new
     @food_cart = FoodCart.find(params[:food_cart_id])
     @review = Review.new
-    respond_to |format|
+    respond_to do |format|
       format.js
       format.html
       format.json { render json: @review }
@@ -13,10 +13,11 @@ class ReviewsController < ApplicationController
   def create
     @food_cart = FoodCart.find(params[:food_cart_id])
     @review = @food_cart.reviews.new(reviews_params)
-    respond_to |format|
-      format.js
-      format.html
-      format.json { render json: @create }
+    if @review.save
+      respond_to do |format|
+        format.js
+        format.html
+      end
     end
   end
 
