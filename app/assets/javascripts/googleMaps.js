@@ -1,3 +1,4 @@
+// Initialize the Map
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
@@ -16,6 +17,7 @@ function initMap() {
   zoomControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(zoomControlDiv);
 
+  // Hide the Side Bar When the Map Moves
   map.addListener('drag', function(){
     if ($('#selected-food-cart-container').css('display') !== 'none'){
       if ($('.selected-food-cart').css('display') !== 'none'){
@@ -27,6 +29,7 @@ function initMap() {
 
 }
 
+// Create the Zoom Controllers (Lower Left Size of the Screen)
 function ZoomControl(controlDiv, map) {
 
   // Creating divs & styles for custom zoom control
@@ -74,10 +77,10 @@ function ZoomControl(controlDiv, map) {
 }
 
 var foodCarts = gon.food_carts
-
 var currentWindow;
 var currentMarker;
 
+// Slightly Offsets Markers with the Same Coordinates
 function compareCoords(cartList, currentCart){
   var offsetAmount = 0;
   for (var z = 0; z < cartList.length; z++){
@@ -93,29 +96,19 @@ function compareCoords(cartList, currentCart){
   }
 }
 
-function setMarkers(map) {
 
+function setMarkers(map) {
   for (var i = 0; i < foodCarts.length; i++) {
     var foodCart = foodCarts[i];
     compareCoords(foodCarts, foodCart);
     var marker = new google.maps.Marker({
-      // icon: image,
       position: {lat: Number(foodCart.latitude), lng: Number(foodCart.longitude)},
       animation: google.maps.Animation.DROP,
       map: map,
       zIndex: i
     })
 
-    var contentString =
-    '<div class="info-window tk-rucksack">' +
-      '<div class="info-window-text-container">' +
-          '<h3 class="info-window-heading-text">' + '<a href="/food_carts/' + foodCart.id + '">' + foodCart.name + '</a>' + '</h3>' +
-      '</div>' +
-      '<div class="info-window-icon-container">' +
-        '<span class="glyphicon glyphicon-info-sign"></span>' +
-      '</div>' +
-    '</div>';
-
+    // Create Individual InfoBoxes
     var infobox = new InfoBox({
          content: contentString,
          disableAutoPan: false,
@@ -131,6 +124,16 @@ function setMarkers(map) {
         infoBoxClearance: new google.maps.Size(1, 1)
     });
 
+    var contentString =
+    '<div class="info-window tk-rucksack">' +
+      '<div class="info-window-text-container">' +
+          '<h3 class="info-window-heading-text">' + '<a href="/food_carts/' + foodCart.id + '">' + foodCart.name + '</a>' + '</h3>' +
+      '</div>' +
+      '<div class="info-window-icon-container">' +
+        '<span class="glyphicon glyphicon-info-sign"></span>' +
+      '</div>' +
+    '</div>';
+
     google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox){
       return function () {
         if (currentWindow) { currentWindow.close() };
@@ -141,7 +144,7 @@ function setMarkers(map) {
         currentWindow = infobox;
         currentMarker = marker;
 
-        // Ajax Call for Side Panel
+        // Ajax Call for Populating the Side Panel
         $.ajax({
             url:'/food_carts/' + id,
             dataType:'json',
@@ -166,6 +169,9 @@ function setMarkers(map) {
                 }
               };
 
+              var link = '<button id="add-review-btn">Add a Review</button>'
+              $('.reviews').append(link);
+
               // } else if(key === "reviews") {
               //   var reviews = [];
               //   for (var i = 0; i < data["reviews"].length; i++){
@@ -173,9 +179,6 @@ function setMarkers(map) {
               //   }
 
               // var link = "<a href='/food_carts/" + id + "/reviews/new'>Add a Review</a>"
-
-              var link = '<button id="add-review-btn">Add a Review</button>'
-              $('.reviews').append(link);
 
               // Ajax Call for Adding Reviews
               // $.ajax({
@@ -242,103 +245,98 @@ function setMarkers(map) {
 //    '</div>';
 // }
 
-
-
-	var style = [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "weight": "1.30"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#e0e0e0"
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    }
+// Map Stylings
+var style = [
+  {
+      "featureType": "administrative",
+      "elementType": "labels.text.fill",
+      "stylers": [
+          {
+              "color": "#444444"
+          }
+      ]
+  },
+  {
+      "featureType": "administrative",
+      "elementType": "labels.icon",
+      "stylers": [
+          {
+              "weight": "1.30"
+          }
+      ]
+  },
+  {
+      "featureType": "landscape",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#f2f2f2"
+          }
+      ]
+  },
+  {
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+          {
+              "saturation": -100
+          },
+          {
+              "lightness": 45
+          }
+      ]
+  },
+  {
+      "featureType": "road.highway",
+      "elementType": "all",
+      "stylers": [
+          {
+              "visibility": "simplified"
+          }
+      ]
+  },
+  {
+      "featureType": "road.arterial",
+      "elementType": "labels.icon",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+  },
+  {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#e0e0e0"
+          },
+          {
+              "visibility": "on"
+          }
+      ]
+  }
 ];
 
-var filterLink = $('.filter-link')
 google.maps.event.addDomListener(window, 'load', initMap);
-google.maps.event.addDomListener(filterLink, 'click', initMap)
-
-
 
 
 // Ajax Call for Adding Reviews
