@@ -6,13 +6,18 @@ class ReviewsController < ApplicationController
     respond_to |format|
       format.js
       format.html
-      format.json
+      format.json { render json: @review }
     end
   end
 
   def create
     @food_cart = FoodCart.find(params[:food_cart_id])
     @review = @food_cart.reviews.new(reviews_params)
+    respond_to |format|
+      format.js
+      format.html
+      format.json { render json: @create }
+    end
   end
 
   def destroy

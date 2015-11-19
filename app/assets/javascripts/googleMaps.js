@@ -96,8 +96,39 @@ function compareCoords(cartList, currentCart){
   }
 }
 
+// Function to Create Individual InfoBoxes
+function createInfobox(foodCart){
+  var contentString =
+  '<div class="info-window tk-rucksack">' +
+    '<div class="info-window-text-container">' +
+        '<h3 class="info-window-heading-text">' + '<a href="/food_carts/' + foodCart.id + '">' + foodCart.name + '</a>' + '</h3>' +
+    '</div>' +
+    '<div class="info-window-icon-container">' +
+      '<span class="glyphicon glyphicon-info-sign"></span>' +
+    '</div>' +
+  '</div>';
+
+  var infobox = new InfoBox({
+       content: contentString,
+       disableAutoPan: false,
+       maxWidth: 0,
+       pixelOffset: new google.maps.Size(0, -60),
+       zIndex: null,
+       closeBoxURL: "",
+       boxStyle: {
+          opacity: 1,
+          background: "url('/triangle.svg') no-repeat",
+          width: "180px",
+      },
+      infoBoxClearance: new google.maps.Size(1, 1)
+  });
+
+  return infobox;
+
+}
 
 function setMarkers(map) {
+  // Place Individual Markers
   for (var i = 0; i < foodCarts.length; i++) {
     var foodCart = foodCarts[i];
     compareCoords(foodCarts, foodCart);
@@ -108,33 +139,9 @@ function setMarkers(map) {
       zIndex: i
     })
 
-    // Create Individual InfoBoxes
-    var infobox = new InfoBox({
-         content: contentString,
-         disableAutoPan: false,
-         maxWidth: 0,
-         pixelOffset: new google.maps.Size(0, -60),
-         zIndex: null,
-         closeBoxURL: "",
-         boxStyle: {
-            opacity: 1,
-            background: "url('/triangle.svg') no-repeat",
-            width: "180px",
-        },
-        infoBoxClearance: new google.maps.Size(1, 1)
-    });
+    var infobox = createInfobox(foodCart);
 
-    var contentString =
-    '<div class="info-window tk-rucksack">' +
-      '<div class="info-window-text-container">' +
-          '<h3 class="info-window-heading-text">' + '<a href="/food_carts/' + foodCart.id + '">' + foodCart.name + '</a>' + '</h3>' +
-      '</div>' +
-      '<div class="info-window-icon-container">' +
-        '<span class="glyphicon glyphicon-info-sign"></span>' +
-      '</div>' +
-    '</div>';
-
-    google.maps.event.addListener(marker, 'click', (function (marker, i, id, infobox){
+    google.maps.event.addListener(marker, 'click', (function (marker, id, infobox){
       return function () {
         if (currentWindow) { currentWindow.close() };
         if (currentMarker) { currentMarker.setVisible(true) };
@@ -148,15 +155,14 @@ function setMarkers(map) {
         $.ajax({
             url:'/food_carts/' + id,
             dataType:'json',
-            data: $(this).attr('id'),
             type: 'get',
             success:function(data){
               for (var key in data){
                 if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
                   if (key === "tags"){
                     var tagNames = [];
-                    for (var i = 0; i < data["tags"].length; i++){
-                      tagNames.push(data["tags"][i]["name"]);
+                    for (var t = 0; t < data["tags"].length; t++){
+                      tagNames.push(data["tags"][t]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "website") {
@@ -221,7 +227,7 @@ function setMarkers(map) {
             }
         }); //ajax
       } //function
-    })(marker, i, foodCart.id, infobox)); //IIFE
+    })(marker, foodCart.id, infobox)); //IIFE
 
     var url = '<div class="food-cart-list-item">' +
                 '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-cart-link">' +
