@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
   def create
     @food_cart = FoodCart.find(params[:food_cart_id])
     @review = @food_cart.reviews.new(reviews_params)
+    @review.update_attribute(user_id: current_user.id)
     if @review.save
       respond_to do |format|
         format.js

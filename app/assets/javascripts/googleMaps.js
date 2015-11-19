@@ -176,7 +176,7 @@ function setMarkers(map) {
 
               // Add the 'Add a Review' Link
               var link = '<button id="add-review-btn">Add a Review</button>'
-              $('.reviews').append(link);
+              $('.reviews').after(link);
 
               // Launch a New Review Modal
               $('#add-review-btn').on('click', function(){
