@@ -164,6 +164,17 @@ function setMarkers(map) {
                       tagNames.push(data["tags"][t]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
+                  } else if(key === "reviews") {
+                    for (var r = 0; r < data["reviews"].length; r++){
+                      $('.' + key).append(
+                        '<div class="individual-review">' +
+                          '<h3>' + data["reviews"][r]["user_id"] + '</h3>' +
+                          '<p>' + data["reviews"][r]["rating"] + '</p>' +
+                          '<p>' + data["reviews"][r]["content"] + '</p>' +
+                        '</div>'
+                      );
+                    }
+
                   } else if(key === "website") {
                     $('.' + key).html('<a href="' + data[key] + '">Link</a>');
                   } else if(key === "phone_number") {
@@ -185,6 +196,7 @@ function setMarkers(map) {
                     dataType:'html',
                     type: 'get',
                     success:function(data){
+                      // Set the New Review Data in the Modal
                       $('#modal-form-title').html('Add a Review');
                       $('#modal-body').empty();
                       var parsed = $('<div/>').append(data);
