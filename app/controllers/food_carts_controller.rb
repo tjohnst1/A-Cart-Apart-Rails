@@ -11,10 +11,7 @@ class FoodCartsController < ApplicationController
 
   def show
     @tags = @food_cart.tag_list
-    respond_to do |format|
-      format.json{ render json: @food_cart, include: [:tags, :reviews] }
-      format.html
-    end
+    @reviews = @food_cart.reviews
   end
 
   def new

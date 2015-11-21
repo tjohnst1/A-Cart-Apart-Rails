@@ -17,7 +17,8 @@ gem 'geocoder'
 gem 'gon'
 gem 'acts-as-taggable-on'
 gem 'json'
-gem 'jbuilder'
+gem 'rabl'
+gem 'oj'
 
 group :development do
   gem 'byebug'
