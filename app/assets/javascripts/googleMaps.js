@@ -166,9 +166,15 @@ function setMarkers(map) {
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
                     for (var r = 0; r < data["food_cart"]["reviews"].length; r++){
+                      var editLink = '';
+                      var deleteLink = '';
+                      if (document.cookie){
+                        editLink = '<a href="#" class="edit-review">Edit</a>';
+                        deleteLink = '<a href="#" class="delete-review">Delete</a>';
+                      }
                       var filledStars = Number(data["food_cart"]["reviews"][r]["rating"]);
                       var outlineStars = 5 - filledStars;
-                      var starArr = []
+                      var starArr = [];
                       for (var s = 1; s <= 5; s++){
                         if (filledStars >= s){
                           starArr.push('<span class="star-review-filled"></span>');
@@ -181,6 +187,9 @@ function setMarkers(map) {
                           '<h3>' + data["food_cart"]["reviews"][r]["user"]["username"] + '</h3>' +
                           '<p>' + starArr.join('') + '</p>' +
                           '<p>' + data["food_cart"]["reviews"][r]["content"] + '</p>' +
+                          '<div class="edit-review-container">' +
+                           editLink + deleteLink +
+                          '</div>' +
                         '</div>'
                       );
                     }

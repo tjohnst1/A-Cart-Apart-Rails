@@ -6,7 +6,7 @@ child :tags, object_root: false do
 end
 
 child :reviews, object_root: false do
-  attributes :rating, :content
+  attributes :rating, :content, :id
   child :user do
     attributes :username
   end
