@@ -26,4 +26,5 @@ module ApplicationHelper
      "Tibetan", "Turkish", "Ukrainian", "Vegan", "Vegetarian", "Venezuelan", "Vietnamese", "Wings", "Wraps"
     ]
   end
+  
 end

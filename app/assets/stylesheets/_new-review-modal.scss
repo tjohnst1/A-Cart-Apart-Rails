@@ -23,3 +23,17 @@
 .star input[type="radio"]:checked + span ~ span {
     background: image-url('star-unselected.svg') no-repeat;
 }
+
+.star-review-filled {
+    background: image-url('star-selected.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.star-review-unfilled {
+    background: image-url('star-unselected.svg') no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}

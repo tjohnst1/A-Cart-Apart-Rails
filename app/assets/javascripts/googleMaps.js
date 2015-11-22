@@ -166,15 +166,24 @@ function setMarkers(map) {
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
                     for (var r = 0; r < data["food_cart"]["reviews"].length; r++){
+                      var filledStars = Number(data["food_cart"]["reviews"][r]["rating"]);
+                      var outlineStars = 5 - filledStars;
+                      var starArr = []
+                      for (var s = 1; s <= 5; s++){
+                        if (filledStars >= s){
+                          starArr.push('<span class="star-review-filled"></span>');
+                        } else {
+                          starArr.push('<span class="star-review-unfilled"></span>');
+                        }
+                      }
                       $('.individual-review-container').append(
                         '<div class="individual-review">' +
                           '<h3>' + data["food_cart"]["reviews"][r]["user"]["username"] + '</h3>' +
-                          '<p>' + data["food_cart"]["reviews"][r]["rating"] + '</p>' +
+                          '<p>' + starArr.join('') + '</p>' +
                           '<p>' + data["food_cart"]["reviews"][r]["content"] + '</p>' +
                         '</div>'
                       );
                     }
-
                   } else if(key === "website") {
                     $('.' + key).html('<a href="' + data["food_cart"][key] + '">Link</a>');
                   } else if(key === "phone_number") {
