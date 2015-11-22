@@ -89,6 +89,50 @@
         }
       }
     }
+    .reviews{
+      .reviews-header{
+        margin: 10px 0;
+        overflow: hidden;
+        h3{
+          display: inline-block;
+          font-size: 18px;
+          margin: 0;
+        }
+        #add-review{
+          #add-review-btn{
+            display: inline-block;
+            background: none;
+            border: 1px solid #eee;
+            padding: 5px 10px;
+            text-shadow: none;
+          }
+        }
+      }
+      .individual-review-container{
+        .individual-review{
+          margin: 10px 0;
+          border-bottom: 1px solid #eee;
+          padding: 10px 0;
+          h3{
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            font-size: 14px;
+          }
+          p{
+            margin: 0;
+            font-size: 12px;
+          }
+        }
+        .individual-review:first-child{
+          border-top: 2px solid #eee;
+        }
+        .individual-review:last-child{
+          border-bottom: 2px solid #eee;
+        }
+      }
+    }
     #selected-food-cart-details{
       margin: 10px 0;
       text-align: center;

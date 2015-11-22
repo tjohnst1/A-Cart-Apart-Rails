@@ -1,8 +1,11 @@
 <div id="new-review-form-container">
   <%= form_for [@food_cart, @review], remote: true do |f| %>
-    <div class="form-group">
+    <div class="form-group star">
       <%= f.label :rating %>
-      <%= f.text_field :rating, class:"form-control" %>
+      <%= f.radio_button :rating, "0", checked: true %><span class="hidden"></span>
+      <% (1..5).to_a.each do |num| %>
+        <%= f.radio_button :rating, num %><span></span>
+      <% end %>
     </div>
     <div class="form-group">
       <%= f.label :content %>

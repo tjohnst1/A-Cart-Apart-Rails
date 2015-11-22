@@ -1,0 +1,25 @@
+.star input[type="radio"] {
+    position:absolute;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity:0;
+    opacity:0;
+    cursor:pointer;
+    width:17px;
+}
+
+.star span {
+    width:24px;
+    height:16px;
+    line-height:16px;
+    padding:1px 22px 1px 0; /* 1px FireFox fix */
+    background: image-url('star-selected.svg') no-repeat;
+}
+
+.star input[type="radio"]:checked + span {
+    background: image-url('star-selected.svg') no-repeat;
+}
+
+.star input[type="radio"]:checked + span ~ span {
+    background: image-url('star-unselected.svg') no-repeat;
+}

@@ -156,38 +156,38 @@ function setMarkers(map) {
             dataType:'json',
             type: 'get',
             success:function(data){
-              for (var key in data){
+              for (var key in data["food_cart"]){
                 if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
                   if (key === "tags"){
                     var tagNames = [];
-                    for (var t = 0; t < data["tags"].length; t++){
-                      tagNames.push(data["tags"][t]["name"]);
+                    for (var t = 0; t < data["food_cart"]["tags"].length; t++){
+                      tagNames.push(data["food_cart"]["tags"][t]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
-                    for (var r = 0; r < data["reviews"].length; r++){
-                      $('.' + key).append(
+                    for (var r = 0; r < data["food_cart"]["reviews"].length; r++){
+                      $('.individual-review-container').append(
                         '<div class="individual-review">' +
-                          '<h3>' + data["reviews"][r]["user_id"] + '</h3>' +
-                          '<p>' + data["reviews"][r]["rating"] + '</p>' +
-                          '<p>' + data["reviews"][r]["content"] + '</p>' +
+                          '<h3>' + data["food_cart"]["reviews"][r]["user"]["username"] + '</h3>' +
+                          '<p>' + data["food_cart"]["reviews"][r]["rating"] + '</p>' +
+                          '<p>' + data["food_cart"]["reviews"][r]["content"] + '</p>' +
                         '</div>'
                       );
                     }
 
                   } else if(key === "website") {
-                    $('.' + key).html('<a href="' + data[key] + '">Link</a>');
+                    $('.' + key).html('<a href="' + data["food_cart"][key] + '">Link</a>');
                   } else if(key === "phone_number") {
-                    $('.phone-number').html(data[key]);
+                    $('.phone-number').html(data["food_cart"][key]);
                   } else {
-                    $('.' + key).html(data[key]);
+                    $('.' + key).html(data["food_cart"][key]);
                   }
                 }
               };
 
               // Add the 'Add a Review' Link
               var link = '<button id="add-review-btn">Add a Review</button>'
-              $('.reviews').after(link);
+              $('#add-review').empty().append(link);
 
               // Launch a New Review Modal
               $('#add-review-btn').on('click', function(){
@@ -198,28 +198,12 @@ function setMarkers(map) {
                     success:function(data){
                       // Set the New Review Data in the Modal
                       $('#modal-form-title').html('Add a Review');
-                      $('#modal-body').empty();
                       var parsed = $('<div/>').append(data);
-                      $('#modal-body').html($(parsed).find('#new-review-form-container').html());
+                      $('#modal-body').empty().html($(parsed).find('#new-review-form-container').html());
                       $('#modal-form').modal('toggle');
                     }
                  });
               });
-
-              var reviewForm = '<form class="new_review" id="new_review" action="/food_carts/' + id + '/reviews" accept-charset="UTF-8" method="post">' +
-                                 '<div class="form-group">' +
-                                   '<label for="rating">Rating</label>' +
-                                   '<input type="text" name="review[rating]" id="review_rating" class="form-control"/>' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="content">Text</label>' +
-                                   '<input type="text" name="review[content]" id="review_content" class="form-control"/>' +
-                                 '</div>' +
-                                   '<input type="submit" name="commit" value="Submit" class="btn btn-primary">' +
-                                   '<a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>' +
-                               '</form>';
-
-               // Ajax Call for Getting Review ID + Post Route
 
               if ($('#selected-food-cart-container').css('display') === 'none'){
                 $('#selected-food-cart-container').slideDown();
