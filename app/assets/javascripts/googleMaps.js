@@ -170,7 +170,7 @@ function setMarkers(map) {
                       var editLink = '';
                       var deleteLink = '';
                       if (document.cookie){
-                        editLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="edit-review-' + reviewId + '">Edit</a>';
+                        editLink = '<a href="#" id="edit-review-' + reviewId + '">Edit</a>';
                         deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
                       }
                       var filledStars = Number(data["food_cart"]["reviews"][r]["rating"]);
@@ -193,7 +193,24 @@ function setMarkers(map) {
                           '</div>' +
                         '</div>'
                       );
-                    }
+                      // Add click handler
+                      $('#edit-review-' + reviewId).on('click', (function(id, reviewId){
+                        return function(){
+                          $.ajax({
+                              url:'/food_carts/' + id + '/reviews/' + reviewId + '/edit',
+                              dataType:'html',
+                              type: 'get',
+                              success:function(data){
+                                // Set the New Review Data in the Modal
+                                $('#modal-form-title').html('Edit a Review');
+                                var parsed = $('<div/>').append(data);
+                                $('#modal-body').empty().html($(parsed).find('#edit-review-form-container').html());
+                                $('#modal-form').modal('toggle');
+                              }
+                          });
+                        };
+                      })(id, reviewId)); // click handler
+                    }; // /review loop
                   } else if(key === "website") {
                     $('.' + key).html('<a href="' + data["food_cart"][key] + '">Link</a>');
                   } else if(key === "phone_number") {

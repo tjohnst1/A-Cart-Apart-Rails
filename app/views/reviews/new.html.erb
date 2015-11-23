@@ -1,17 +1,3 @@
 <div id="new-review-form-container">
-  <%= form_for [@food_cart, @review], remote: true do |f| %>
-    <div class="form-group star">
-      <%= f.label :rating %>
-      <%= f.radio_button :rating, "0", checked: true %><span class="hidden"></span>
-      <% (1..5).to_a.each do |num| %>
-        <%= f.radio_button :rating, num %><span></span>
-      <% end %>
-    </div>
-    <div class="form-group">
-      <%= f.label :content %>
-      <%= f.text_area :content, class:"form-control" %>
-    </div>
-    <%= f.submit 'Submit', class: "btn btn-primary" %>
-    <a class="btn btn-default" data-dismiss="modal" href="#">Cancel</a>
-  <% end %>
+  <%= render "form" %>
 </div>
