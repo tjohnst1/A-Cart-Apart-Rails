@@ -166,11 +166,12 @@ function setMarkers(map) {
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
                     for (var r = 0; r < data["food_cart"]["reviews"].length; r++){
+                      var reviewId = data["food_cart"]["reviews"][r]["id"];
                       var editLink = '';
                       var deleteLink = '';
                       if (document.cookie){
-                        editLink = '<a href="#" class="edit-review">Edit</a>';
-                        deleteLink = '<a href="#" class="delete-review">Delete</a>';
+                        editLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="edit-review-' + reviewId + '">Edit</a>';
+                        deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
                       }
                       var filledStars = Number(data["food_cart"]["reviews"][r]["rating"]);
                       var outlineStars = 5 - filledStars;

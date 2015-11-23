@@ -23,7 +23,12 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = FoodCart.find(params[:id])
+    @review = Review.find(params[:id])
+    @review.destroy
+    respond_to do |format|
+      format.js
+      format.html { redirect_to food_carts_path }
+    end
   end
 
   private
