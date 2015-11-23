@@ -221,7 +221,12 @@ function setMarkers(map) {
                       $('.' + key).parent().show();
                     }
                   } else if(key === "phone_number") {
-                    $('.phone-number').html(data["food_cart"][key]);
+                    if (data["food_cart"][key] === "Not Provided"){
+                      $('.' + key).parent().hide();
+                    } else {
+                      $('.phone-number').html(data["food_cart"][key]);
+                      $('.' + key).parent().show();
+                    }
                   } else {
                     $('.' + key).html(data["food_cart"][key]);
                   }
