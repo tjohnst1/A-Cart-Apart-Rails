@@ -156,6 +156,7 @@ function setMarkers(map) {
             dataType:'json',
             type: 'get',
             success:function(data){
+              $('.individual-review-container').empty();
               for (var key in data["food_cart"]){
                 if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
                   if (key === "tags"){
@@ -193,7 +194,7 @@ function setMarkers(map) {
                           '</div>' +
                         '</div>'
                       );
-                      // Add click handler
+                      // Add Click Handler for
                       $('#edit-review-' + reviewId).on('click', (function(id, reviewId){
                         return function(){
                           $.ajax({
