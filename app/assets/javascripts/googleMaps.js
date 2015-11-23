@@ -224,7 +224,10 @@ function setMarkers(map) {
 
               // Add the 'Add a Review' Link
               var link = '<button id="add-review-btn">Add a Review</button>'
-              $('#add-review').empty().append(link);
+              $('#add-review').empty();
+              if (document.cookie){
+                $('#add-review').append(link);
+              }
 
               // Launch a New Review Modal
               $('#add-review-btn').on('click', function(){
@@ -243,7 +246,7 @@ function setMarkers(map) {
               });
 
               if ($('#selected-food-cart-container').css('display') === 'none'){
-                $('#selected-food-cart-container').slideDown();
+                $('#selected-food-cart-container').slideDown()
                 $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-up"></span> Hide Details');
               } else {
                 $('.selected-food-cart').slideDown();

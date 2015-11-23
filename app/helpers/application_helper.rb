@@ -26,5 +26,16 @@ module ApplicationHelper
      "Tibetan", "Turkish", "Ukrainian", "Vegan", "Vegetarian", "Venezuelan", "Vietnamese", "Wings", "Wraps"
     ]
   end
-  
+  def toStars(num)
+    outlineStars = 5 - num
+    starArr = [];
+    5.times do |i|
+      if num >= i + 1
+        starArr.push('<span class="star-review-filled"></span>');
+      else
+        starArr.push('<span class="star-review-unfilled"></span>');
+      end
+    end
+    return starArr.join('')
+  end
 end

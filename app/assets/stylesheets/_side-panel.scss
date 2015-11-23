@@ -35,7 +35,7 @@
       background-color: white;
       border: none;
       cursor: auto;
-      width: 310px;
+      width: 300px;
     }
     #search-box-submit{
       display: inline-block;
@@ -61,6 +61,8 @@
   #selected-food-cart-container{
     display: none;
     border-top: 1px solid #eee;
+    max-height: 80vh;
+    overflow-y: auto;
     .selected-food-cart{
       margin: 10px 10px 0 10px;
       padding: 0 10px;
