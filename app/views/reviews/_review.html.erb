@@ -2,4 +2,8 @@
   <h3><%= @review.user.username %></h3>
   <p><%= toStars(@review.rating.to_i).html_safe %></p>
   <p><%= @review.content %></p>
+  <% if current_user.id == @review.user_id %>
+    <%= link_to 'Edit', edit_food_cart_review_path(@food_cart, @review), id: "edit-review-#{@review.id}", remote: true %>
+    <%= link_to 'Delete', food_cart_review_path(@food_cart, @review), id: "delete-review-#{@review.id}", remote: true, method: 'delete' %>
+  <% end %>
 </div>

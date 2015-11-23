@@ -212,8 +212,14 @@ function setMarkers(map) {
                         };
                       })(id, reviewId)); // click handler
                     }; // /review loop
-                  } else if(key === "website") {
-                    $('.' + key).html('<a href="' + data["food_cart"][key] + '">Link</a>');
+                  } else if(key === "website" || key === "twitter" || key === "facebook") {
+                    if (data["food_cart"][key] === "Not Provided"){
+                      $('.' + key).parent().hide();
+                    } else {
+                      var linkPhrase = data["food_cart"][key].replace(/(https?:\/\/)|(www\.)|(\/$)/gi, "").toLowerCase();
+                      $('.' + key).html('<a href="' + data["food_cart"][key] + '">' + linkPhrase + '</a>');
+                      $('.' + key).parent().show();
+                    }
                   } else if(key === "phone_number") {
                     $('.phone-number').html(data["food_cart"][key]);
                   } else {
