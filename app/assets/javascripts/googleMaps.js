@@ -187,7 +187,7 @@ function setMarkers(map) {
                       $('.individual-review-container').append(
                         '<div class="individual-review">' +
                           '<h3>' + data["food_cart"]["reviews"][r]["user"]["username"] + '</h3>' +
-                          '<p>' + starArr.join('') + '</p>' +
+                          '<div class="star-container">' + starArr.join('') + '</div>' +
                           '<p>' + data["food_cart"]["reviews"][r]["content"] + '</p>' +
                           '<div class="edit-review-container">' +
                            editLink + deleteLink +

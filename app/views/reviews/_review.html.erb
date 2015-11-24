@@ -1,6 +1,6 @@
 <div class="individual-review">
   <h3><%= @review.user.username %></h3>
-  <p><%= toStars(@review.rating.to_i).html_safe %></p>
+  <div class="star-container"><%= toStars(@review.rating.to_i).html_safe %></div>
   <p><%= @review.content %></p>
   <% if current_user.id == @review.user_id %>
     <%= link_to 'Edit', edit_food_cart_review_path(@food_cart, @review), id: "edit-review-#{@review.id}", remote: true %>

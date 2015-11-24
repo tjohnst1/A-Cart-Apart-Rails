@@ -68,7 +68,7 @@
       padding: 0 10px;
       .name{
         margin: 0;
-        font-weight: 600;
+        font-weight: 800;
       }
       .address{
         padding: 0 0 8px 0;
@@ -92,29 +92,40 @@
       }
     }
     .reviews{
+      border-bottom: 1px solid #eee;
       .reviews-header{
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 5px 0;
         margin: 10px 0;
         overflow: hidden;
         h3{
           display: inline-block;
-          font-size: 18px;
+          font-size: 20px;
           margin: 0;
+          font-weight: 800;
         }
         #add-review{
           #add-review-btn{
             display: inline-block;
             background: none;
-            border: 1px solid #eee;
+            border: none;
             padding: 5px 10px;
             text-shadow: none;
+            font-size: 12px;
+            color: $md-blue;
+            font-weight: 600;
+            opacity: .75;
+          }
+          #add-review-btn:hover{
+            opacity: 1;
           }
         }
       }
       .individual-review-container{
         .individual-review{
           margin: 10px 0;
-          border-bottom: 1px solid #eee;
-          padding: 10px 0;
+          padding: 0;
           h3{
             font-weight: 800;
             text-transform: uppercase;
@@ -122,16 +133,27 @@
             margin: 0;
             font-size: 14px;
           }
+          .star-container{
+            margin: 0;
+          }
           p{
             margin: 0;
-            font-size: 12px;
+            font-size: 14px;
           }
-        }
-        .individual-review:first-child{
-          border-top: 2px solid #eee;
-        }
-        .individual-review:last-child{
-          border-bottom: 2px solid #eee;
+          .edit-review-container{
+            font-size: 12px;
+            a{
+              color: $md-blue;
+              opacity: .7;
+            }
+            a:first-child{
+              margin-right: 5px;
+            }
+            a:hover{
+              text-decoration: none;
+              opacity: 1;
+            }
+          }
         }
       }
     }
