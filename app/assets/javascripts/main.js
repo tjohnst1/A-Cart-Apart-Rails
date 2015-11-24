@@ -4,6 +4,13 @@ ready = function() {
   //       source: gon.searchCriteria,
   //       noResults: ''
   // });
+
+  $('#account-button').on('click', function(){
+    if (!document.cookie){
+      $("#login-modal").modal('toggle');
+    }
+  });
+
   $('.checkbox').on('click',function(){
     $('#filter-by-category').submit();
   });
@@ -56,6 +63,12 @@ ready = function() {
     $('#search-box-input').attr('value', '');
     $('#search-box-form').submit();
   });
+
+  if ($('#flash-messages')){
+    setTimeout(function(){
+      $('#flash-messages').fadeOut('slow')
+    }, 2000)
+  };
 
 }
 
