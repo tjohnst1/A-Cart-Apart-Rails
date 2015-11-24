@@ -132,6 +132,14 @@
             letter-spacing: 1px;
             margin: 0;
             font-size: 14px;
+            span{
+              font-size: 10px;
+              font-weight: 400;
+              text-transform: none;
+              margin: 0 0 0 5px;
+              color: #aaa;
+              letter-spacing: normal;
+            }
           }
           .star-container{
             margin: 0;

@@ -157,24 +157,25 @@ function setMarkers(map) {
             type: 'get',
             success:function(data){
               $('.individual-review-container').empty();
-              for (var key in data["food_cart"]){
+              var foodCart = data["food_cart"]
+              for (var key in foodCart){
                 if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
                   if (key === "tags"){
                     var tagNames = [];
-                    for (var t = 0; t < data["food_cart"]["tags"].length; t++){
-                      tagNames.push(data["food_cart"]["tags"][t]["name"]);
+                    for (var t = 0; t < foodCart["tags"].length; t++){
+                      tagNames.push(foodCart["tags"][t]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
-                    for (var r = 0; r < data["food_cart"]["reviews"].length; r++){
-                      var reviewId = data["food_cart"]["reviews"][r]["id"];
+                    for (var r = 0; r < foodCart["reviews"].length; r++){
+                      var reviewId = foodCart["reviews"][r]["id"];
                       var editLink = '';
                       var deleteLink = '';
                       if (document.cookie){
                         editLink = '<a href="#" id="edit-review-' + reviewId + '">Edit</a>';
                         deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
                       }
-                      var filledStars = Number(data["food_cart"]["reviews"][r]["rating"]);
+                      var filledStars = Number(foodCart["reviews"][r]["rating"]);
                       var outlineStars = 5 - filledStars;
                       var starArr = [];
                       for (var s = 1; s <= 5; s++){
@@ -186,9 +187,9 @@ function setMarkers(map) {
                       }
                       $('.individual-review-container').append(
                         '<div class="individual-review">' +
-                          '<h3>' + data["food_cart"]["reviews"][r]["user"]["username"] + '</h3>' +
+                          '<h3>' + foodCart["reviews"][r]["user"]["username"] + '<span class="updated_at">' + moment(foodCart["reviews"][r]["updated_at"]).fromNow() + '</span>' + '</h3>' +
                           '<div class="star-container">' + starArr.join('') + '</div>' +
-                          '<p>' + data["food_cart"]["reviews"][r]["content"] + '</p>' +
+                          '<p>' + foodCart["reviews"][r]["content"] + '</p>' +
                           '<div class="edit-review-container">' +
                            editLink + deleteLink +
                           '</div>' +
