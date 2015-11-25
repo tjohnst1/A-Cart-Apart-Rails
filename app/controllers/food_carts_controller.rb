@@ -3,10 +3,14 @@ class FoodCartsController < ApplicationController
 
   def index
     gon.searchCriteria = FoodCart.pluck(:name)
-    gon.food_carts = FoodCart.text_search(params[:query])
     gon.selectedFilter = params[:query]
     @food_carts = FoodCart.text_search(params[:query])
     @tags = Tag.all
+    gon.rabl as: 'food_carts'
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def show
@@ -66,9 +70,6 @@ class FoodCartsController < ApplicationController
 
   def account
     @food_carts = FoodCart.all
-    respond_to do |format|
-      format.json
-    end
   end
 
   private
