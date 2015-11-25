@@ -65,9 +65,9 @@ class FoodCartsController < ApplicationController
   end
 
   def account
+    @food_carts = FoodCart.all
     respond_to do |format|
-      format.js
-      format.html
+      format.json
     end
   end
 

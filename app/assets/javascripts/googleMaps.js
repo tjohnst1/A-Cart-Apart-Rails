@@ -26,7 +26,6 @@ function initMap() {
       }
     }
   });
-
 }
 
 // Create the Zoom Controllers (Lower Left Size of the Screen)
@@ -157,25 +156,24 @@ function setMarkers(map) {
             type: 'get',
             success:function(data){
               $('.individual-review-container').empty();
-              var foodCart = data["food_cart"]
-              for (var key in foodCart){
+              for (var key in data){
                 if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
                   if (key === "tags"){
                     var tagNames = [];
-                    for (var t = 0; t < foodCart["tags"].length; t++){
-                      tagNames.push(foodCart["tags"][t]["name"]);
+                    for (var t = 0; t < data["tags"].length; t++){
+                      tagNames.push(data["tags"][t]["name"]);
                     };
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
-                    for (var r = 0; r < foodCart["reviews"].length; r++){
-                      var reviewId = foodCart["reviews"][r]["id"];
+                    for (var r = 0; r < data["reviews"].length; r++){
+                      var reviewId = data["reviews"][r]["id"];
                       var editLink = '';
                       var deleteLink = '';
                       if (document.cookie){
                         editLink = '<a href="#" id="edit-review-' + reviewId + '">Edit</a>';
                         deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
                       }
-                      var filledStars = Number(foodCart["reviews"][r]["rating"]);
+                      var filledStars = Number(data["reviews"][r]["rating"]);
                       var outlineStars = 5 - filledStars;
                       var starArr = [];
                       for (var s = 1; s <= 5; s++){
@@ -187,9 +185,9 @@ function setMarkers(map) {
                       }
                       $('.individual-review-container').append(
                         '<div class="individual-review">' +
-                          '<h3>' + foodCart["reviews"][r]["user"]["username"] + '<span class="updated_at">' + moment(foodCart["reviews"][r]["updated_at"]).fromNow() + '</span>' + '</h3>' +
+                          '<h3>' + data["reviews"][r]["user"]["username"] + '<span class="updated_at">' + moment(data["reviews"][r]["updated_at"]).fromNow() + '</span>' + '</h3>' +
                           '<div class="star-container">' + starArr.join('') + '</div>' +
-                          '<p>' + foodCart["reviews"][r]["content"] + '</p>' +
+                          '<p>' + data["reviews"][r]["content"] + '</p>' +
                           '<div class="edit-review-container">' +
                            editLink + deleteLink +
                           '</div>' +
@@ -214,22 +212,22 @@ function setMarkers(map) {
                       })(id, reviewId)); // click handler
                     }; // /review loop
                   } else if(key === "website" || key === "twitter" || key === "facebook") {
-                    if (data["food_cart"][key] === "Not Provided"){
+                    if (data[key] === "Not Provided"){
                       $('.' + key).parent().hide();
                     } else {
-                      var linkPhrase = data["food_cart"][key].replace(/(https?:\/\/)|(www\.)|(\/$)/gi, "").toLowerCase();
-                      $('.' + key).html('<a href="' + data["food_cart"][key] + '">' + linkPhrase + '</a>');
+                      var linkPhrase = data[key].replace(/(https?:\/\/)|(www\.)|(\/$)/gi, "").toLowerCase();
+                      $('.' + key).html('<a href="' + data[key] + '">' + linkPhrase + '</a>');
                       $('.' + key).parent().show();
                     }
                   } else if(key === "phone_number") {
-                    if (data["food_cart"][key] === "Not Provided"){
+                    if (data[key] === "Not Provided"){
                       $('.' + key).parent().hide();
                     } else {
-                      $('.phone-number').html(data["food_cart"][key]);
+                      $('.phone-number').html(data[key]);
                       $('.' + key).parent().show();
                     }
                   } else {
-                    $('.' + key).html(data["food_cart"][key]);
+                    $('.' + key).html(data[key]);
                   }
                 }
               };
@@ -279,6 +277,19 @@ function setMarkers(map) {
   }
 
 }
+
+// function filterMarkers(foodCarts, query){
+//   for(var f = 0; i < foodCarts.length; i++){
+//     if foodCarts[i].
+//   }
+//
+// }
+
+
+
+
+
+
 
 // Map Stylings
 var style = [
