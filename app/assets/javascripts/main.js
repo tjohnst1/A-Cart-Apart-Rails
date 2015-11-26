@@ -59,18 +59,13 @@ ready = function() {
     $('#signup-modal').modal('show');
   })
 
-  $('#categories-clear').on('click', function(){
-    $('#search-box-input').attr('value', '');
-    $('#search-box-form').submit();
-  });
-
   if ($('#flash-messages')){
     setTimeout(function(){
       $('#flash-messages').fadeOut('slow')
     }, 2000)
   };
 
-  $('#search-box-test').change(function(){
+  $('#search-box-input').change(function(){
     filterMarkers(foodCarts, setMarkerCollection, $(this).val())
   });
 
