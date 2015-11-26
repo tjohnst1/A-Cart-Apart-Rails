@@ -1,0 +1,35 @@
+#filter-container{
+  width: 250px;
+  height: 100vh;
+  background: $dark-blue;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  clear: both;
+  display: none;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+  overflow-y: scroll;
+  .filter-close{
+    padding: 15px;
+    color: black;
+    #filter-x{
+      cursor: pointer;
+    }
+  }
+  .filter-header{
+    padding: 10px;
+    h2{
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      display: inline-block;
+      margin: 0;
+    }
+    #filter-clear{
+      display: inline-block;
+    }
+  }
+}

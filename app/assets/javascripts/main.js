@@ -121,19 +121,25 @@ ready = function() {
   // Filter the markers with the provided search parameters
   var currentQuery = [];
   function filterMarkersByCat(foodCarts, setMarkers, category){
-    for (var i = 0; i < foodCarts.length; i++){
-      currentQuery.push(category);
-      var tags = [];
-      for (var j = 0; j < foodCarts[i].tags.length; j++){
-        tags.push(foodCarts[i].tags[j].name);
+    if (category === ""){
+      for (var i = 0; i < foodCarts.length; i++){
+        setMarkers[i].setVisible(true);
       }
-      for (var k = 0; k < currentQuery.length; k++){
-        if (tags.indexOf(currentQuery[k]) !== -1){
-          console.log(currentQuery[k])
-          setMarkers[i].setVisible(true);
-          break
-        } else {
-          setMarkers[i].setVisible(false);
+    } else {
+      currentQuery.push(category);
+      for (var i = 0; i < foodCarts.length; i++){
+        var tags = [];
+        for (var j = 0; j < foodCarts[i].tags.length; j++){
+          tags.push(foodCarts[i].tags[j].name);
+        }
+        for (var k = 0; k < currentQuery.length; k++){
+          if (tags.indexOf(currentQuery[k]) !== -1){
+            console.log(currentQuery[k])
+            setMarkers[i].setVisible(true);
+            break
+          } else {
+            setMarkers[i].setVisible(false);
+          }
         }
       }
     }
@@ -145,7 +151,17 @@ ready = function() {
 
   $('.category-checkbox').on('click', function(){
     filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());
-    $(this).css("color", "red");
+    $(this).parent().css("color", "red");
+  });
+
+  $('#filter-clear').on('click', function(){
+    currentQuery = []
+    filterMarkersByCat(foodCarts, setMarkerCollection, "");
+    $('.category-checkbox').parent().css("color", "white");
+  });
+
+  $('#filter-x').on('click', function(){
+    $('#filter-container').toggle("slide", { direction: "right" }, 300);
   });
 
 }
