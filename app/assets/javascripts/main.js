@@ -70,6 +70,11 @@ ready = function() {
     }, 2000)
   };
 
+  $('#search-box-test').change(function(){
+    filterMarkers(foodCarts, setMarkerCollection, $(this).val())
+  });
+
+
 }
 
 $(document).ready(ready);
