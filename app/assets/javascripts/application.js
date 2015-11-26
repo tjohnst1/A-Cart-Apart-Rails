@@ -17,5 +17,6 @@
 //= require moment.js
 //= require googleMaps
 //= require bootstrap-sprockets
+//= require autocomplete
 //= require main
 //= require_tree .

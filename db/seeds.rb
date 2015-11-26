@@ -62,7 +62,7 @@ food_carts = [{
     "twitter": "Not Provided",
     "website": "Not Provided",
     "phone_number": "Not Provided",
-    "tags": ["Southern, American"]
+    "tags": ["Southern", "American"]
   },
   {
     "name": "Steve’s Dawg House",
@@ -254,7 +254,7 @@ food_carts = [{
     "twitter": "Not Provided",
     "website": "http://www.503burger.com/",
     "phone_number": "503-912-4294",
-    "tags": ["Burgers, American"]
+    "tags": ["Burgers", "American"]
   },
   {
     "name": "The 9 Food & Drink",

@@ -65,10 +65,39 @@ ready = function() {
     }, 2000)
   };
 
+//////// Search Box Functions ////////
+
+  function autocompleteSearchArr(foodCarts){
+    var autocompleteHash = [];
+    var tagNames = [];
+    for (var i = 0; i < foodCarts.length; i++) {
+      var newNameHash = {value: foodCarts[i]["name"], data: { category: 'Food Cart Name' }};
+      for (var t = 0; t < foodCarts[i]["tags"].length; t++){
+        var tag = foodCarts[i]["tags"][t]["name"];
+        if (tagNames.indexOf(tag) === -1){
+          tagNames.push(tag);
+        };
+      };
+      autocompleteHash.push(newNameHash);
+    }
+    for (var n = 0; n < tagNames.length; n++){
+      autocompleteHash.push({value: tagNames[n], data: { category: 'Categories' }});
+    }
+    return autocompleteHash;
+  }
+
+  var autocompleteLookup = autocompleteSearchArr(foodCarts)
+
+  $('#search-box-input').autocomplete({
+    lookup: autocompleteLookup,
+    showNoSuggestionNotice: true,
+    noSuggestionNotice: 'Sorry, no matching results',
+    groupBy: 'category'
+  });
+
   $('#search-box-input').change(function(){
     filterMarkers(foodCarts, setMarkerCollection, $(this).val())
   });
-
 
 }
 
