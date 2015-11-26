@@ -1,9 +1,5 @@
 var ready;
 ready = function() {
-  // $("#query").autocomplete({
-  //       source: gon.searchCriteria,
-  //       noResults: ''
-  // });
 
   $('#account-button').on('click', function(){
     if (!document.cookie){
@@ -65,38 +61,75 @@ ready = function() {
     }, 2000)
   };
 
-//////// Search Box Functions ////////
+  //////// Search Box Functions ////////
 
+  var foodCartNames = [];
+  var tagNames = [];
+
+  for (var i = 0; i < foodCarts.length; i++) {
+    foodCartNames.push(foodCarts[i].name);
+    for (var t = 0; t < foodCarts[i]["tags"].length; t++){
+      var tag = foodCarts[i]["tags"][t]["name"];
+      if (tagNames.indexOf(tag) === -1){
+        tagNames.push(tag);
+      };
+    };
+  };
+
+  // Creates suggestions for the autocomplete portion of the searchbox
   function autocompleteSearchArr(foodCarts){
     var autocompleteHash = [];
-    var tagNames = [];
-    for (var i = 0; i < foodCarts.length; i++) {
-      var newNameHash = {value: foodCarts[i]["name"], data: { category: 'Food Cart Name' }};
-      for (var t = 0; t < foodCarts[i]["tags"].length; t++){
-        var tag = foodCarts[i]["tags"][t]["name"];
-        if (tagNames.indexOf(tag) === -1){
-          tagNames.push(tag);
-        };
-      };
-      autocompleteHash.push(newNameHash);
+    for (var i = 0; i < foodCartNames.length; i++) {
+      autocompleteHash.push({value: foodCartNames[i], data: { category: 'Food Cart Name' }});
     }
-    for (var n = 0; n < tagNames.length; n++){
-      autocompleteHash.push({value: tagNames[n], data: { category: 'Categories' }});
+    for (var i = 0; i < tagNames.length; i++) {
+      autocompleteHash.push({value: tagNames[i], data: { category: 'Categories' }});
     }
     return autocompleteHash;
-  }
+  };
 
-  var autocompleteLookup = autocompleteSearchArr(foodCarts)
+  var autocompleteLookup = autocompleteSearchArr(foodCarts);
 
   $('#search-box-input').autocomplete({
     lookup: autocompleteLookup,
-    showNoSuggestionNotice: true,
-    noSuggestionNotice: 'Sorry, no matching results',
-    groupBy: 'category'
+    groupBy: 'category',
+    onSelect: function (suggestion) {
+      filterMarkers(foodCarts, foodCartNames, setMarkerCollection, suggestion.value)
+    }
   });
 
-  $('#search-box-input').change(function(){
-    filterMarkers(foodCarts, setMarkerCollection, $(this).val())
+  // Filter the markers with the provided search parameters
+  function filterMarkers(foodCarts, foodCartNames, setMarkers, query){
+    if (foodCartNames.indexOf(query) !== -1 ){
+      for (var i = 0; i < foodCarts.length; i++){
+        if (foodCarts[i].name === query){
+          setMarkers[i].setVisible(true);
+        } else {
+          setMarkers[i].setVisible(false);
+        }
+      }
+    } else {
+      var queryRegEx = new RegExp(query, 'gi');
+      for (var i = 0; i < foodCarts.length; i++){
+        if (foodCarts[i].name.search(queryRegEx) !== -1 || query.length === 0){
+          setMarkers[i].setVisible(true);
+        } else {
+          for (var t = 0; t < foodCarts[i].tags.length; t++){
+            if (foodCarts[i].tags[t].name.search(queryRegEx) !== -1){
+              setMarkers[i].setVisible(true);
+              break
+            } else if(t === (foodCarts[i].tags.length - 1)){
+              // This only runs if neither the tags nor the name of the food cart match
+              setMarkers[i].setVisible(false);
+            };
+          };
+        };
+      };
+    };
+  };
+
+  $('#search-box-input').keyup(function(event){
+    filterMarkers(foodCarts, foodCartNames, setMarkerCollection, $(this).val())
   });
 
 }

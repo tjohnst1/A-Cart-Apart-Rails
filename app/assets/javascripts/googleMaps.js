@@ -284,25 +284,6 @@ function setMarkers(map) {
 
 }
 
-function filterMarkers(foodCarts, setMarkers, query){
-  var queryRegEx = new RegExp(query, 'gi');
-  for (var i = 0; i < foodCarts.length; i++){
-    if (foodCarts[i].name.search(queryRegEx) !== -1 || query.length === 0){
-      setMarkers[i].setVisible(true);
-    } else {
-      for (var t = 0; t < foodCarts[i].tags.length; t++){
-        if (foodCarts[i].tags[t].name.search(queryRegEx) !== -1){
-          setMarkers[i].setVisible(true);
-          break
-        } else if(t === (foodCarts[i].tags.length - 1)){
-          // This only runs if neither the tags nor the name of the food cart match
-          setMarkers[i].setVisible(false);
-        }
-      }
-    }
-  }
-}
-
 
 
 
