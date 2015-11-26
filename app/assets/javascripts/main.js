@@ -7,10 +7,6 @@ ready = function() {
     }
   });
 
-  $('.checkbox').on('click',function(){
-    $('#filter-by-category').submit();
-  });
-
   if (gon.selectedFilter !== undefined){
     $('#' + gon.selectedFilter + '-filter').parent().addClass('selected-filter');
   };
@@ -118,6 +114,38 @@ ready = function() {
 
   $('#search-box-input').keyup(function(event){
     filterMarkers(foodCarts, foodCartNames, setMarkerCollection, $(this).val())
+  });
+
+  //////// Filter Container Functions ////////
+
+  // Filter the markers with the provided search parameters
+  var currentQuery = [];
+  function filterMarkersByCat(foodCarts, setMarkers, category){
+    for (var i = 0; i < foodCarts.length; i++){
+      currentQuery.push(category);
+      var tags = [];
+      for (var j = 0; j < foodCarts[i].tags.length; j++){
+        tags.push(foodCarts[i].tags[j].name);
+      }
+      for (var k = 0; k < currentQuery.length; k++){
+        if (tags.indexOf(currentQuery[k]) !== -1){
+          console.log(currentQuery[k])
+          setMarkers[i].setVisible(true);
+          break
+        } else {
+          setMarkers[i].setVisible(false);
+        }
+      }
+    }
+  };
+
+  $('#categories-container').on('click', function(){
+    $('#filter-container').toggle("slide", { direction: "right" }, 300);
+  });
+
+  $('.category-checkbox').on('click', function(){
+    filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());
+    $(this).css("color", "red");
   });
 
 }
