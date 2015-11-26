@@ -15,18 +15,6 @@ ready = function() {
     $('#' + gon.selectedFilter + '-filter').parent().addClass('selected-filter');
   };
 
-  $('#categories-header').on('click', function(){
-    $('#categories-list').slideToggle('slow');
-    var caret = $('#categories-header span').attr('class')
-    if (caret === 'caret-left'){
-      $('#categories-header span').removeClass('caret-left')
-      $('#categories-header span').addClass('caret-down')
-    } else {
-      $('#categories-header span').removeClass('caret-down')
-      $('#categories-header span').addClass('caret-left')
-    }
-  });
-
   $('#tab-view button').on('click', function(){
     var btnText = $('#tab-view button').html()
     if (btnText === 'Tab View'){
