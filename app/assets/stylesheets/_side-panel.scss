@@ -171,3 +171,23 @@
     }
   }
 }
+
+.autocomplete-suggestions{
+  width: 350px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0 10px 10px;
+  .autocomplete-group{
+    color: #bbb;
+    border-bottom: 1px solid #eee;
+    margin: 10px 0 10px 0;
+    padding: 0 0 5px 0;
+    span{
+      font-weight: 300;
+    }
+  }
+  .autocomplete-suggestion{
+    span{
+      color: $red;
+    }
+  }
+}
