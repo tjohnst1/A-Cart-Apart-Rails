@@ -1,8 +1,5 @@
-<div id="categories-container">
-  <div id="categories-header">
-    <a id="categories-header-link">Categories <span class="caret-left"></span></a>
-  </div>
-  <div id="categories-list">
+<div id="filter-container">
+  <div id="filter-list">
     <%= form_tag(food_carts_path, method: :get, id: 'filter-by-category') do %>
       <% @tags.each do |tag| %>
         <div class="checkbox">

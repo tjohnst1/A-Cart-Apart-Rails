@@ -307,7 +307,7 @@ function setCurrentLocationMarker(map){
   }
 
   function error(){
-    alert('error!')
+    alert('Your current location will not be shown.')
   }
 
 }

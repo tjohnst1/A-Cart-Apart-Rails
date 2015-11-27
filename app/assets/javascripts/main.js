@@ -145,7 +145,7 @@ ready = function() {
     }
   };
 
-  $('#categories-container').on('click', function(){
+  $('#filter-btn').on('click', function(){
     $('#filter-container').toggle("slide", { direction: "right" }, 300);
   });
 

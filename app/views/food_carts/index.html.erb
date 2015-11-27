@@ -1,16 +1,14 @@
 <div class="index-container">
     <%= render "side_panel" %>
-    <div id="login-categories" class="tk-rucksack">
-      <%= render 'categories_container' %>
-      <div id="account-container">
-        <div id="account-button-container">
-          <div id="account-button">
-            <% if !current_user %>
-              <a href="#" >Log In</a>
-            <% else %>
-              <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
-            <% end %>
-          </div>
+    <div id="login-filters" class="tk-rucksack">
+      <div id="filter-btn"><%= image_tag("filter-icon.svg", :alt => "filter button") %></div>
+      <div id="account-button-container">
+        <div id="account-button">
+          <% if !current_user %>
+            <a href="#" >Log In</a>
+          <% else %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+          <% end %>
         </div>
       </div>
     </div>

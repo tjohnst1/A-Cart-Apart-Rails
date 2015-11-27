@@ -1,5 +1,5 @@
-#login-categories{
-  display: flex;
+#login-filters{
+  display: block;
   position: absolute;
   z-index: 1;
   background: none;
@@ -7,30 +7,27 @@
   top: 0;
   text-align: right;
   margin: 20px 40px;
-  width: 200px;
   font-family: 'Rucksack', 'sans-serif'
 }
 
-#categories-container{
-  width: 150px;
-  margin: 5px 0 0 0;
+#filter-btn{
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
   display: inline-block;
 }
 
-#categories-header{
+#filter-header{
   text-align: left;
   display: inline-block;
-  background: $dark-blue;
   font-size: 16px;
   cursor: pointer;
   margin: 0;
-  border-radius: 16px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
   a{
     margin: 0;
     color: white;
-    font-size: 15px;
     padding: 5px 15px;
   }
   a:hover{
@@ -42,7 +39,7 @@
   }
 }
 
-#categories-list{
+#filter-list{
   text-align: left;
   height: 100px;
   overflow-y: scroll;
@@ -61,27 +58,4 @@
 
 .selected-filter{
   font-weight: 700 !important;
-}
-
-.caret-left{
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid white;
-  border-top: 5px solid transparent;
-  border-radius: 2px;
-}
-.caret-down{
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 5px solid white;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-radius: 2px;
 }
