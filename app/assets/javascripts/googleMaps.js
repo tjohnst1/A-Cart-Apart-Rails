@@ -26,6 +26,10 @@ function initMap() {
       }
     }
   });
+
+  // Add Marker for the Current Location
+  setCurrentLocationMarker(map);
+
 }
 
 // Create the Zoom Controllers (Lower Left Size of the Screen)
@@ -284,11 +288,29 @@ function setMarkers(map) {
 
 }
 
+//////// Current Location Functions ////////
+function setCurrentLocationMarker(map){
 
+  navigator.geolocation.getCurrentPosition(success, error);
 
+  function success(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
 
+    var marker = new google.maps.Marker({
+      position: {lat: latitude, lng: longitude},
+      animation: google.maps.Animation.DROP,
+      icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+      map: map,
+      zIndex: 500
+    })
+  }
 
+  function error(){
+    alert('error!')
+  }
 
+}
 
 // Map Stylings
 var style = [
