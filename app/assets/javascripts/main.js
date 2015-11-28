@@ -119,7 +119,6 @@ ready = function() {
   //////// Filter Container Functions ////////
 
   // Filter the markers with the provided search parameters
-  var currentQuery = [];
   function filterMarkersByCat(foodCarts, setMarkers, category){
     if (category === "clear"){
       for (var i = 0; i < foodCarts.length; i++){
@@ -150,12 +149,21 @@ ready = function() {
   });
 
   $('.category-checkbox').on('click', function(){
-    filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());
+    if($('.category-checkbox:checked').length === 0){
+      $('.category-checkbox:checked').attr('checked', false);
+      filterMarkersByCat(foodCarts, setMarkerCollection, "clear");
+    } else {
+      filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());  
+    }
   });
 
-  $('#filter-clear').on('click', function(){
+  function resetMarkers(){
     filterMarkersByCat(foodCarts, setMarkerCollection, "clear");
     $('.category-checkbox:checked').attr('checked', false);
+  }
+
+  $('#filter-clear').on('click', function(){
+    resetMarkers();
   });
 
   $('#filter-x').on('click', function(){
