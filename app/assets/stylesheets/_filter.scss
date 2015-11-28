@@ -1,35 +1,53 @@
 #filter-container{
   width: 250px;
   height: 100vh;
-  background: $dark-blue;
-  color: white;
+  background: white;
+  color: black;
   z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
   clear: both;
   display: none;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.10);
   overflow-y: scroll;
-  .filter-close{
-    padding: 15px;
-    color: black;
-    #filter-x{
-      cursor: pointer;
-    }
-  }
   .filter-header{
     padding: 10px;
+    background: $dark-blue;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
     h2{
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: .5px;
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
       display: inline-block;
       margin: 0;
     }
+    #filter-x{
+      cursor: pointer;
+      color: #1B2025;
+    }
+    #filter-x:hover{
+      color: black;
+    }
+  }
+  #filter-checkbox-container{
+    padding: 0px 10px 0 15px;
+  }
+  .filter-footer{
+    background: white;
+    padding: 0 10px 10px 15px;
     #filter-clear{
       display: inline-block;
+      background-color: $red;
+      color: white;
+    }
+    #filter-clear:hover{
+      text-transform: none;
+      background-color: $dark-red;
     }
   }
 }

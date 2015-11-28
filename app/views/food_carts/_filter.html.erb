@@ -1,12 +1,9 @@
 <div id="filter-container">
-  <div class="filter-close">
-    <span class="glyphicon glyphicon-remove pull-right" id="filter-x"></span>
-  </div>
   <div class="filter-header">
     <h2>Categories</h2>
-    <a href="#" id="filter-clear" class="pull-right">Clear</a>
+    <span class="glyphicon glyphicon-remove pull-right" id="filter-x"></span>
   </div>
-  <%= form_tag(food_carts_path, method: :get, id: 'filter-by-category') do %>
+  <div id="filter-checkbox-container">
     <% @tags.each do |tag| %>
       <div class="checkbox">
         <label>
@@ -15,5 +12,8 @@
         </label>
       </div>
     <% end %>
-  <% end %>
+  </div>
+  <div class="filter-footer">
+    <a href="#" class="btn" id="filter-clear">Clear</a>
+  </div>
 </div>

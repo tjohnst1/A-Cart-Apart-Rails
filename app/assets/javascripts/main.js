@@ -121,12 +121,12 @@ ready = function() {
   // Filter the markers with the provided search parameters
   var currentQuery = [];
   function filterMarkersByCat(foodCarts, setMarkers, category){
-    if (category === ""){
+    if (category === "clear"){
       for (var i = 0; i < foodCarts.length; i++){
         setMarkers[i].setVisible(true);
       }
     } else {
-      currentQuery.push(category);
+      var currentQuery = $('.category-checkbox:checked').map(function(){return $(this).val()});
       for (var i = 0; i < foodCarts.length; i++){
         var tags = [];
         for (var j = 0; j < foodCarts[i].tags.length; j++){
@@ -134,7 +134,6 @@ ready = function() {
         }
         for (var k = 0; k < currentQuery.length; k++){
           if (tags.indexOf(currentQuery[k]) !== -1){
-            console.log(currentQuery[k])
             setMarkers[i].setVisible(true);
             break
           } else {
@@ -145,19 +144,18 @@ ready = function() {
     }
   };
 
+  // Make the filter panel slide out on click
   $('#filter-btn').on('click', function(){
     $('#filter-container').toggle("slide", { direction: "right" }, 300);
   });
 
   $('.category-checkbox').on('click', function(){
     filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());
-    $(this).parent().css("color", "red");
   });
 
   $('#filter-clear').on('click', function(){
-    currentQuery = []
-    filterMarkersByCat(foodCarts, setMarkerCollection, "");
-    $('.category-checkbox').parent().css("color", "white");
+    filterMarkersByCat(foodCarts, setMarkerCollection, "clear");
+    $('.category-checkbox:checked').attr('checked', false);
   });
 
   $('#filter-x').on('click', function(){

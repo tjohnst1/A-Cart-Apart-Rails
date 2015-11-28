@@ -307,7 +307,12 @@ function setCurrentLocationMarker(map){
   }
 
   function error(){
-    alert('Your current location will not be shown.')
+    $('#modal-form-title').html("Error!");
+    $('#modal-body').html("<div class='modal-body-content'>" + 
+                            "Sorry, geolocation is not supported in your browser." +
+                          "</div>"
+                          );
+    $('#modal-form').modal("toggle");
   }
 
 }
