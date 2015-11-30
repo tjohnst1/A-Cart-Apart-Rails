@@ -175,52 +175,61 @@ function setMarkers(map) {
                     };
                     $(".categories").html(tagNames.join(', '));
                   } else if(key === "reviews") {
-                    for (var r = 0; r < data["reviews"].length; r++){
-                      var reviewId = data["reviews"][r]["id"];
-                      var editLink = '';
-                      var deleteLink = '';
-                      if (document.cookie){
-                        editLink = '<a href="#" id="edit-review-' + reviewId + '">Edit</a>';
-                        deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
-                      }
-                      var filledStars = Number(data["reviews"][r]["rating"]);
-                      var outlineStars = 5 - filledStars;
-                      var starArr = [];
-                      for (var s = 1; s <= 5; s++){
-                        if (filledStars >= s){
-                          starArr.push('<span class="star-review-filled"></span>');
-                        } else {
-                          starArr.push('<span class="star-review-unfilled"></span>');
+                    if (data["reviews"].length > 0){
+                      for (var r = 0; r < data["reviews"].length; r++){
+                        var reviewId = data["reviews"][r]["id"];
+                        var editLink = '';
+                        var deleteLink = '';
+                        if (document.cookie){
+                          editLink = '<a href="#" id="edit-review-' + reviewId + '">Edit</a>';
+                          deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
                         }
-                      }
+                        var filledStars = Number(data["reviews"][r]["rating"]);
+                        var outlineStars = 5 - filledStars;
+                        var starArr = [];
+                        for (var s = 1; s <= 5; s++){
+                          if (filledStars >= s){
+                            starArr.push('<span class="star-review-filled"></span>');
+                          } else {
+                            starArr.push('<span class="star-review-unfilled"></span>');
+                          }
+                        }
+                        $('.individual-review-container').append(
+                          '<div class="individual-review">' +
+                            '<h3>' + data["reviews"][r]["user"]["username"] + '<span class="updated_at">' + moment(data["reviews"][r]["updated_at"]).fromNow() + '</span>' + '</h3>' +
+                            '<div class="star-container">' + starArr.join('') + '</div>' +
+                            '<p>' + data["reviews"][r]["content"] + '</p>' +
+                            '<div class="edit-review-container">' +
+                             editLink + deleteLink +
+                            '</div>' +
+                          '</div>'
+                        );
+
+                        // Add Click Handler for
+                        $('#edit-review-' + reviewId).on('click', (function(id, reviewId){
+                          return function(){
+                            $.ajax({
+                                url:'/food_carts/' + id + '/reviews/' + reviewId + '/edit',
+                                dataType:'html',
+                                type: 'get',
+                                success:function(data){
+                                  // Set the New Review Data in the Modal
+                                  $('#modal-form-title').html('Edit a Review');
+                                  var parsed = $('<div/>').append(data);
+                                  $('#modal-body').empty().html($(parsed).find('#edit-review-form-container').html());
+                                  $('#modal-form').modal('toggle');
+                                }
+                            });
+                          };
+                        })(id, reviewId)); // click handler
+                      }; // /review loop
+                    } else {
                       $('.individual-review-container').append(
-                        '<div class="individual-review">' +
-                          '<h3>' + data["reviews"][r]["user"]["username"] + '<span class="updated_at">' + moment(data["reviews"][r]["updated_at"]).fromNow() + '</span>' + '</h3>' +
-                          '<div class="star-container">' + starArr.join('') + '</div>' +
-                          '<p>' + data["reviews"][r]["content"] + '</p>' +
-                          '<div class="edit-review-container">' +
-                           editLink + deleteLink +
-                          '</div>' +
+                        '<div class="individual-review no-review">' +
+                          '<p>There are no reviews for this food cart yet!</p>' +
                         '</div>'
                       );
-                      // Add Click Handler for
-                      $('#edit-review-' + reviewId).on('click', (function(id, reviewId){
-                        return function(){
-                          $.ajax({
-                              url:'/food_carts/' + id + '/reviews/' + reviewId + '/edit',
-                              dataType:'html',
-                              type: 'get',
-                              success:function(data){
-                                // Set the New Review Data in the Modal
-                                $('#modal-form-title').html('Edit a Review');
-                                var parsed = $('<div/>').append(data);
-                                $('#modal-body').empty().html($(parsed).find('#edit-review-form-container').html());
-                                $('#modal-form').modal('toggle');
-                              }
-                          });
-                        };
-                      })(id, reviewId)); // click handler
-                    }; // /review loop
+                    }
                   } else if(key === "website" || key === "twitter" || key === "facebook") {
                     if (data[key] === "Not Provided"){
                       $('.' + key).parent().hide();
@@ -308,7 +317,7 @@ function setCurrentLocationMarker(map){
 
   function error(){
     $('#modal-form-title').html("Error!");
-    $('#modal-body').html("<div class='modal-body-content'>" + 
+    $('#modal-body').html("<div class='modal-body-content'>" +
                             "Sorry, geolocation is not supported in your browser." +
                           "</div>"
                           );

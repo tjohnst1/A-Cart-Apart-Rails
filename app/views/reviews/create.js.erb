@@ -1,2 +1,5 @@
+if ($('.no-review').length > 0){
+  $('.no-review').remove();
+}
 $('.individual-review-container').append('<%= j render "review" %>')
 $('#modal-form').modal('hide');
