@@ -150,21 +150,20 @@ ready = function() {
 
   $('.category-checkbox').on('click', function(){
     if($('.category-checkbox:checked').length === 0){
-      $('.category-checkbox:checked').attr('checked', false);
-      filterMarkersByCat(foodCarts, setMarkerCollection, "clear");
+      resetMarkers();
     } else {
-      filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());  
+      filterMarkersByCat(foodCarts, setMarkerCollection, $(this).val());
     }
+  });
+
+  $('#filter-clear').on('click', function(){
+    resetMarkers();
   });
 
   function resetMarkers(){
     filterMarkersByCat(foodCarts, setMarkerCollection, "clear");
     $('.category-checkbox:checked').attr('checked', false);
   }
-
-  $('#filter-clear').on('click', function(){
-    resetMarkers();
-  });
 
   $('#filter-x').on('click', function(){
     $('#filter-container').toggle("slide", { direction: "right" }, 300);

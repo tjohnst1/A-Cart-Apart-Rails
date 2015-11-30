@@ -19,5 +19,6 @@
 //= require googleMaps
 //= require bootstrap-sprockets
 //= require autocomplete
+//= require velocity
 //= require main
 //= require_tree .
