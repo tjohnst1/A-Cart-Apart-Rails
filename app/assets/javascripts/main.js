@@ -25,10 +25,10 @@ ready = function() {
   $('#selected-food-cart-details').on('click', function(){
     if ($('#selected-food-cart-container').css('display') !== 'none'){
       if ($('.selected-food-cart').css('display') === 'none'){
-        $('.selected-food-cart').slideDown();
+        $('.selected-food-cart').velocity('slideDown', { duration:600, easing: "easeInOutCubic" });
         $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-up"></span> Hide Details');
       } else {
-        $('.selected-food-cart').slideUp();
+        $('.selected-food-cart').velocity('slideUp', { duration:600, easing: "easeInOutCubic" });
         $('#selected-food-cart-details').html('<span class="glyphicon glyphicon-chevron-down"></span> Show Details');
       }
     }
@@ -41,7 +41,7 @@ ready = function() {
 
   if ($('#flash-messages')){
     setTimeout(function(){
-      $('#flash-messages').fadeOut('slow')
+      $('#flash-messages').velocity('fadeOut', { duration:600, easing: "easeInOutCubic" });
     }, 2000)
   };
 
