@@ -14,8 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require turbolinks
-//= require infobox.js
-//= require moment.js
+//= require moment
 //= require googleMaps
 //= require bootstrap-sprockets
 //= require autocomplete

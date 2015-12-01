@@ -80,8 +80,6 @@ function ZoomControl(controlDiv, map) {
 }
 
 var foodCarts = gon.food_carts
-var currentWindow;
-var currentMarker;
 
 // Slightly Offsets Markers with the Same Coordinates
 function compareCoords(cartList, currentCart){
@@ -104,10 +102,7 @@ function createInfobox(foodCart){
   var contentString =
   '<div class="info-window tk-rucksack">' +
     '<div class="info-window-text-container">' +
-        '<h3 class="info-window-heading-text">' + '<a href="/food_carts/' + foodCart.id + '">' + foodCart.name + '</a>' + '</h3>' +
-    '</div>' +
-    '<div class="info-window-icon-container">' +
-      '<span class="glyphicon glyphicon-info-sign"></span>' +
+        '<h3 class="info-window-heading-text">' + foodCart.name + '</h3>' +
     '</div>' +
   '</div>';
 
@@ -129,6 +124,7 @@ function createInfobox(foodCart){
   return infobox;
 }
 
+var currentMarker;
 var setMarkerCollection = [];
 
 function setMarkers(map) {
@@ -152,12 +148,10 @@ function setMarkers(map) {
 
     google.maps.event.addListener(marker, 'click', (function (marker, id, infobox){
       return function () {
-        if (currentWindow) { currentWindow.close() };
-        if (currentMarker) { currentMarker.setVisible(true) };
+        // Change the color of the currently selected pin
+        if (currentMarker) { currentMarker.setIcon({ url: '/FoodPin.svg', size: new google.maps.Size(26, 32) }) };
         map.setCenter(marker.position);
-        marker.setVisible(false);
-        infobox.open(map, marker);
-        currentWindow = infobox;
+        marker.setIcon({ url: '/FoodPin-orange.svg', size: new google.maps.Size(26, 32) })
         currentMarker = marker;
 
         // Ajax Call for Populating the Side Panel
