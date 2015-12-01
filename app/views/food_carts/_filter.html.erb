@@ -5,11 +5,9 @@
   </div>
   <div id="filter-checkbox-container">
     <% @tags.each do |tag| %>
-      <div class="checkbox">
-        <label>
-        <%= check_box_tag 'query', tag.name, false, {class: "category-checkbox" } %>
-        <%= tag.name %>
-        </label>
+      <div class="checkbox checkbox-circle">
+        <%= check_box_tag 'query', tag.name, false, { class: "category-checkbox styled" } %>
+        <label for="<%= tag.name %>" class="category-checkbox-label"><%= tag.name %></label>
       </div>
     <% end %>
   </div>

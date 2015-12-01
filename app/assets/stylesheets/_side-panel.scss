@@ -37,6 +37,9 @@
       cursor: auto;
       width: 300px;
     }
+    #search-box-input:focus{
+      outline: none;
+    }
     #search-box-submit{
       display: inline-block;
       border: 0;

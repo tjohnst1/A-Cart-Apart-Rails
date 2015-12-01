@@ -20,6 +20,9 @@ $dark-grey: #333333;
 @import 'new-review-modal';
 @import 'alerts';
 @import 'filter';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import 'checkboxes';
 
 #flash-messages{
   margin: 0;

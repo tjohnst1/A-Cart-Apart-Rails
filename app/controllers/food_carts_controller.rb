@@ -4,7 +4,7 @@ class FoodCartsController < ApplicationController
   def index
     gon.searchCriteria = FoodCart.pluck(:name)
     gon.selectedFilter = params[:query]
-    @food_carts = FoodCart.text_search(params[:query])
+    @food_carts = FoodCart.all
     @tags = Tag.all.sort { |x, y| x.name <=> y.name }
     gon.rabl as: 'food_carts'
     respond_to do |format|
