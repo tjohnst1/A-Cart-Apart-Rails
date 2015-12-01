@@ -76,6 +76,7 @@ ready = function() {
 
   $('#search-box-input').autocomplete({
     lookup: autocompleteLookup,
+    lookupLimit: 10,
     groupBy: 'category',
     onSelect: function (suggestion) {
       filterMarkers(foodCarts, foodCartNames, setMarkerCollection, suggestion.value)

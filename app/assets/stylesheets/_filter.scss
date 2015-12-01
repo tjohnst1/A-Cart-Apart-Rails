@@ -13,16 +13,10 @@
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.10);
   overflow-y: scroll;
   .filter-header{
-    padding: 10px;
-    background: $dark-blue;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    margin: 10px 0 5px 10px;
     h2{
-      color: white;
-      font-size: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 800;
+      font-size: 16px;
+      font-weight: 600;
       display: inline-block;
       margin: 0;
     }
@@ -35,7 +29,17 @@
     }
   }
   #filter-checkbox-container{
-    padding: 0px 10px 0 15px;
+    padding: 0px 0 0 20px;
+    .checkbox{
+      margin: 0 0 2.5px 0;
+      label:before{
+        display: none;
+      }
+      label{
+        min-height: inherit;
+        font-size: 12px;
+      }
+    }
   }
   .filter-footer{
     background: white;
