@@ -36,17 +36,20 @@ html, body{
 }
 
 #zoom-container{
-  margin: 0 20px 0 0;
+  margin: 0 35px 0 0;
   .zoom-button{
-    background-color: $dark-blue;
+    background-color: $dark-grey;
     display: block;
     width: 32px;
     height: 32px;
     color: white;
     border-radius: 20px;
+    opacity: .9;
   }
-
   .zoom-button:first-child{
     margin-bottom: 5px;
+  }
+  .zoom-button:hover{
+    opacity: 1;
   }
 }

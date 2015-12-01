@@ -139,6 +139,7 @@ function setMarkers(map) {
     var marker = new google.maps.Marker({
       position: {lat: Number(foodCart.latitude), lng: Number(foodCart.longitude)},
       animation: google.maps.Animation.DROP,
+      icon: { url: '/FoodPin.svg', size: new google.maps.Size(26, 32) },
       map: map,
       zIndex: i
     })
@@ -309,7 +310,7 @@ function setCurrentLocationMarker(map){
     var marker = new google.maps.Marker({
       position: {lat: latitude, lng: longitude},
       animation: google.maps.Animation.DROP,
-      icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+      icon: { url: '/UserPin.svg', size: new google.maps.Size(26, 32) },
       map: map,
       zIndex: 500
     })
