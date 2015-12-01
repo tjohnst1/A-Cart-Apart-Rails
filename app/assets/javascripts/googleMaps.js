@@ -97,33 +97,6 @@ function compareCoords(cartList, currentCart){
   }
 }
 
-// Function to Create Individual InfoBoxes
-function createInfobox(foodCart){
-  var contentString =
-  '<div class="info-window tk-rucksack">' +
-    '<div class="info-window-text-container">' +
-        '<h3 class="info-window-heading-text">' + foodCart.name + '</h3>' +
-    '</div>' +
-  '</div>';
-
-  var infobox = new InfoBox({
-       content: contentString,
-       disableAutoPan: false,
-       maxWidth: 0,
-       pixelOffset: new google.maps.Size(0, -60),
-       zIndex: null,
-       closeBoxURL: "",
-       boxStyle: {
-          opacity: 1,
-          background: "url('/triangle.svg') no-repeat",
-          width: "180px",
-      },
-      infoBoxClearance: new google.maps.Size(1, 1)
-  });
-
-  return infobox;
-}
-
 var currentMarker;
 var setMarkerCollection = [];
 
@@ -143,10 +116,7 @@ function setMarkers(map) {
     // Push the marker into the setMarkerCollection for use in the filtering mechanism
     setMarkerCollection.push(marker);
 
-    // Create an Infobox for the Marker
-    var infobox = createInfobox(foodCart);
-
-    google.maps.event.addListener(marker, 'click', (function (marker, id, infobox){
+    google.maps.event.addListener(marker, 'click', (function (marker, id){
       return function () {
         // Change the color of the currently selected pin
         if (currentMarker) { currentMarker.setIcon({ url: '/FoodPin.svg', size: new google.maps.Size(26, 32) }) };
@@ -278,7 +248,7 @@ function setMarkers(map) {
             }
         }); //ajax
       } //function
-    })(marker, foodCart.id, infobox)); //IIFE
+    })(marker, foodCart.id)); //IIFE
 
     var url = '<div class="food-cart-list-item">' +
                 '<a href="/food_carts/' + foodCart.id.toString() + '" id="food-cart-' + foodCart.id + '" class="food-cart-link">' +
