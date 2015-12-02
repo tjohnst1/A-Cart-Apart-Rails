@@ -22,7 +22,7 @@ Note: This is very much still a work in progress.
 
 ## Technologies Used
 
-Ruby, Rails, jQuery, JavaScript, Google Maps API, Bootstrap, PostgreSQL, Capybara, PhantomJS, rSpec
+Ruby, Rails, jQuery, VelocityJS, JavaScript, Google Maps API, Twitter Bootstrap, PostgreSQL, Capybara, PhantomJS, rSpec
 
 ### Legal
 

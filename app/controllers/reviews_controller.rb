@@ -30,9 +30,10 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review_id = @review.id
     @review.destroy
     respond_to do |format|
-      format.js
+      format.js { render layout: false }
       format.html { redirect_to food_carts_path }
     end
   end
