@@ -3,7 +3,7 @@ if ($('.no-review').length > 0){
 }
 $('.individual-review-container').append('<%= j render "review" %>')
 $('.average_review').html(numToStars(<%= @food_cart.average_review %>));
-if (<%= @food_cart.reviews.length > 1 %>){
+if (<%= @food_cart.reviews.length %> > 1){
   $('.review-num').html("<%= "#{@food_cart.reviews.length} reviews" %>");
 } else {
   $('.review-num').html("1 review");

@@ -1,22 +1,28 @@
+var selectedReview = $("#delete-review-<%= @review.id %>").closest(".individual-review")
 if ($('.individual-review').length === 1){
-  $("#delete-review-<%= @review.id %>").closest(".individual-review")
-                                       .html('<div class="individual-review no-review"><p>There are no reviews for this food cart yet!</p></div>');
+  selectedReview.html('<div class="individual-review no-review"><p>There are no reviews for this food cart yet!</p></div>');
 } else {
-  $("#delete-review-<%= @review.id %>").closest(".individual-review")
-                                       .velocity('slideUp', { duration:600,
-                                                              easing: "easeInOutCubic",
-                                                              complete: function(element){ return $(element).remove() }
-                                                            });
+  selectedReview.slideToggle("slow").remove();
+  })
 }
 
-$('.average_review').html(numToStars(<%= @food_cart.average_review %>));
 
-if (<%= @food_cart.reviews.length < 1 %>){
+
+
+
+
+
+if (Number(<%= @food_cart.reviews.length %>) < 1){
+  $('.average_review').empty();
   $('.review-num').html("No Reviews");
-} else if (<%= @food_cart.reviews.length == 1 %>){
-  $('.review-num').html("<%= "#{@food_cart.reviews.length} reviews" %>");
 } else {
-  $('.review-num').html("1 review");
+  if (Number(<%= @food_cart.reviews.length %>) === 1){
+    $('.average_review').html(numToStars(<%= @food_cart.average_review %>));
+    $('.review-num').html("1 review");
+  } else {
+    $('.average_review').html(numToStars(<%= @food_cart.average_review %>));
+    $('.review-num').html("<%= "#{@food_cart.reviews.length} reviews" %>");
+  }
 }
 
 function numToStars(num){

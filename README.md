@@ -1,5 +1,5 @@
 # A Cart Apart
-https://quiet-dusk-8959.herokuapp.com/
+https:/a-cart-apart.herokuapp.com/
 
 ##### A JavaScript/Rails Application that Helps Users Find Food Carts in Portland
 

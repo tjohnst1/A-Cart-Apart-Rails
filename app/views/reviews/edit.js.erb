@@ -1,3 +1,26 @@
 $('#modal-form-title').html('Edit a Review');
 $('#modal-body').empty().html("<%= j render 'form' %>");
+
+$('.average_review').html(numToStars(<%= @food_cart.average_review %>));
+
+if (<%= @food_cart.reviews.length == 1 %>){
+  $('.review-num').html("<%= "#{@food_cart.reviews.length} reviews" %>");
+} else {
+  $('.review-num').html("1 review");
+}
+
 $('#modal-form').modal('toggle');
+
+function numToStars(num){
+  var filledStars = Number(num);
+  var outlineStars = 5 - filledStars;
+  var starArr = [];
+  for (var s = 1; s <= 5; s++){
+    if (filledStars >= s){
+      starArr.push('<span class="star-review-filled"></span>');
+    } else {
+      starArr.push('<span class="star-review-unfilled"></span>');
+    }
+  }
+  return starArr.join('')
+}
