@@ -132,7 +132,7 @@ function setMarkers(map) {
             success:function(data){
               $('.individual-review-container').empty();
               for (var key in data){
-                if (key !== ("id" || "created_at" || "updated_at" || "longitude" || "latitude")){
+                if (key !== "id"){
                   if (key === "tags"){
                     var tagNames = [];
                     for (var t = 0; t < data["tags"].length; t++){
@@ -149,20 +149,11 @@ function setMarkers(map) {
                           editLink = '<a href="#" id="edit-review-' + reviewId + '">Edit</a>';
                           deleteLink = '<a href="/food_carts/' + id + '/reviews/' + reviewId + '" id="delete-review-' + reviewId + '" data-remote="true" data-method="delete" rel="nofollow">Delete</a>';
                         }
-                        var filledStars = Number(data["reviews"][r]["rating"]);
-                        var outlineStars = 5 - filledStars;
-                        var starArr = [];
-                        for (var s = 1; s <= 5; s++){
-                          if (filledStars >= s){
-                            starArr.push('<span class="star-review-filled"></span>');
-                          } else {
-                            starArr.push('<span class="star-review-unfilled"></span>');
-                          }
-                        }
+                        var stars = numToStars(data["reviews"][r]["rating"]);
                         $('.individual-review-container').append(
                           '<div class="individual-review">' +
                             '<h3>' + data["reviews"][r]["user"]["username"] + '<span class="updated_at">' + moment(data["reviews"][r]["updated_at"]).fromNow() + '</span>' + '</h3>' +
-                            '<div class="star-container">' + starArr.join('') + '</div>' +
+                            '<div class="star-container">' + stars + '</div>' +
                             '<p>' + data["reviews"][r]["content"] + '</p>' +
                             '<div class="edit-review-container">' +
                              editLink + deleteLink +
@@ -170,7 +161,7 @@ function setMarkers(map) {
                           '</div>'
                         );
 
-                        // Add Click Handler for
+                        // Add Click Handler
                         $('#edit-review-' + reviewId).on('click', (function(id, reviewId){
                           return function(){
                             $.ajax({
@@ -209,6 +200,18 @@ function setMarkers(map) {
                     } else {
                       $('.phone-number').html(data[key]);
                       $('.' + key).parent().show();
+                    }
+                  } else if(key === "average_review") {
+                    if (data[key] === "No Reviews"){
+                      $('.' + key).empty();
+                      $('.review-num').empty();
+                    } else {
+                      $('.' + key).html(numToStars(data[key]));
+                      if (data["reviews"].length === 1){
+                        $('.review-num').html('1 Review')
+                      } else {
+                        $('.review-num').html(data["reviews"].length + ' Reviews')
+                      }
                     }
                   } else {
                     $('.' + key).html(data[key]);
@@ -261,6 +264,24 @@ function setMarkers(map) {
   }
 
 }
+
+
+// Number to Stars Utility Function (Used in side panel)
+function numToStars(num){
+  var filledStars = Number(num);
+  var outlineStars = 5 - filledStars;
+  var starArr = [];
+  for (var s = 1; s <= 5; s++){
+    if (filledStars >= s){
+      starArr.push('<span class="star-review-filled"></span>');
+    } else {
+      starArr.push('<span class="star-review-unfilled"></span>');
+    }
+  }
+  return starArr.join('')
+}
+
+
 
 //////// Current Location Functions ////////
 function setCurrentLocationMarker(map){

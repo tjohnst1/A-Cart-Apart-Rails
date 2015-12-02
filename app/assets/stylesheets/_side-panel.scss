@@ -73,9 +73,18 @@
         margin: 0;
         font-weight: 800;
       }
-      .address{
+      .review-stats{
         padding: 0 0 8px 0;
         border-bottom: 1px solid #eee;
+        margin: 0 0 5px 0;
+        p{
+          display: inline-block;
+          margin: 0;
+        }
+        .review-num{
+          color: #ABABAB;
+          margin: 0 0 0 5px;
+        }
       }
       .metadata{
         margin: 0;
@@ -143,6 +152,7 @@
           }
           .star-container{
             margin: 0;
+            display: inline-block;
           }
           p{
             margin: 0;

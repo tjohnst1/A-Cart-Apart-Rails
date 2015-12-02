@@ -14,7 +14,7 @@ class FoodCart < ActiveRecord::Base
   validates :name, presence: true
   validates :address, presence: true
 
-  def review_average
+  def average_review
     if self.reviews.length > 0
       reviewTotal = 0
       self.reviews.each do |review|
@@ -22,12 +22,11 @@ class FoodCart < ActiveRecord::Base
       end
       (reviewTotal / self.reviews.length).round
     else
-      nil
+      "No Reviews"
     end
   end
+
   private
-
-
   def default_values
     self.phone_number ||= "Not Provided"
     self.website ||= "Not Provided"
