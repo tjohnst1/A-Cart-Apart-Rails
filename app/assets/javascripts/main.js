@@ -170,7 +170,6 @@ ready = function() {
     $('#filter-container').toggle("slide", { direction: "right" }, 300);
   });
 
-
 }
 
 $(document).ready(ready);

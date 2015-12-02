@@ -204,8 +204,9 @@ function setMarkers(map) {
                   } else if(key === "average_review") {
                     if (data[key] === "No Reviews"){
                       $('.' + key).empty();
-                      $('.review-num').empty();
+                      $('.review-num').css("margin", 0).html('No Reviews')
                     } else {
+                      $('.review-stats').addClass('review-stats-styled');
                       $('.' + key).html(numToStars(data[key]));
                       if (data["reviews"].length === 1){
                         $('.review-num').html('1 Review')
