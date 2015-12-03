@@ -1138,7 +1138,7 @@ food_carts = [{
   },
   {
     "name": "Thick",
-    "address": "SW 9th St and SW Washington St",
+    "address": "SW Washington St & SW 9th Ave",
     "monday_hours": "11:30 am - 2:00 pm and 5:00 pm - 9:00 pm",
     "tuesday_hours": "11:30 am - 2:00 pm and 5:00 pm - 9:00 pm",
     "wednesday_hours": "11:30 am - 2:00 pm and 5:00 pm - 9:00 pm",
