@@ -9,8 +9,8 @@
   right: 0;
   clear: both;
   display: none;
-  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.10);
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.15);
   overflow-y: scroll;
   .filter-header{
     margin: 10px 0 5px 10px;
@@ -19,13 +19,23 @@
       font-weight: 600;
       display: inline-block;
       margin: 0;
+      color: #828282;
+      border-bottom: 2px solid #eee;
+      padding: 0 0 10px 5px;
+      width: 80%;
+      span{
+        margin: 0 0 0 10px;
+        font-size: 10px;
+        color: #DADADA;
+      }
     }
     #filter-x{
       cursor: pointer;
-      color: #1B2025;
+      color: #CCCCCC;
+      opacity: .7;
     }
     #filter-x:hover{
-      color: black;
+      opacity: 1;
     }
   }
   #filter-checkbox-container{

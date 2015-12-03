@@ -11,17 +11,6 @@ ready = function() {
     $('#' + gon.selectedFilter + '-filter').parent().addClass('selected-filter');
   };
 
-  $('#tab-view button').on('click', function(){
-    var btnText = $('#tab-view button').html()
-    if (btnText === 'Tab View'){
-      $('#tab-view button').html('Map View')
-    } else {
-      $('#tab-view button').html('Tab View')
-    }
-    $('#map').slideToggle("slow");
-    $('#cart-list').fadeToggle("slow");
-  });
-
   $('#selected-food-cart-details').on('click', function(){
     if ($('#selected-food-cart-container').css('display') !== 'none'){
       if ($('.selected-food-cart').css('display') === 'none'){

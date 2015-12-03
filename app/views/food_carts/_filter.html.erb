@@ -1,13 +1,15 @@
 <div id="filter-container">
   <div class="filter-header">
-    <h2>Categories</h2>
+    <h2>Categories<span class="glyphicon glyphicon-chevron-down"></span></h2>
     <span class="glyphicon glyphicon-remove pull-right" id="filter-x"></span>
   </div>
   <div id="filter-checkbox-container">
     <% @tags.each do |tag| %>
-      <div class="checkbox checkbox-circle">
-        <%= check_box_tag 'query', tag.name, false, { class: "category-checkbox styled" } %>
-        <label for="<%= tag.name %>" class="category-checkbox-label"><%= tag.name %></label>
+      <div class="checkbox">
+        <label for="<%= tag.name %>" class="category-checkbox-label">
+          <%= check_box_tag 'query', tag.name, false, { class: "category-checkbox styled" } %>
+          <%= tag.name %>
+        </label>
       </div>
     <% end %>
   </div>
