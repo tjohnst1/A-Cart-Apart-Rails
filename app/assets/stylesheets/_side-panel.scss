@@ -23,8 +23,28 @@
     #side-panel-logo:hover{
       text-decoration: none;
     }
-    p{
+    #filter-btn{
       display: inline-block;
+      border: 1px solid #170706;
+      border-radius: 12px;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: #170706;
+      opacity: .5;
+      img{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      p{
+        display: inline-block;
+        margin: 0;
+      }
+    }
+    #filter-btn:hover{
+      opacity: 1
     }
   }
   #search-box-container{

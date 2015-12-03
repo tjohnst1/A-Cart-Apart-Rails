@@ -1,6 +1,10 @@
 <div id="side-panel-container" class="tk-rucksack">
   <div id="side-panel-logo-container">
     <%= link_to "A Cart Apart", food_carts_path, id: "side-panel-logo" %>
+    <div id="filter-btn" class="pull-right">
+      <%= image_tag("filter-icon-dark.svg", :alt => "filter button", id: "filter-icon") %>
+      <p>Filter</p>
+    </div>
   </div>
   <div id="search-box-container">
     <%= text_field_tag :query, params[:query], id:"search-box-input", placeholder:"Search" %>
