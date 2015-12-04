@@ -19,7 +19,6 @@ gem 'acts-as-taggable-on'
 gem 'json'
 gem 'rabl'
 gem 'oj'
-gem 'font-awesome-sass'
 
 group :development do
   gem 'byebug'

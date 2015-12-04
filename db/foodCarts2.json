@@ -1,0 +1,1060 @@
+{
+    "region": {
+        "span": {
+            "latitude_delta": 0.096406967131756,
+            "longitude_delta": 0.11205270011649304
+        },
+        "center": {
+            "latitude": 45.510796251303745,
+            "longitude": -122.66213166057449
+        }
+    },
+    "total": 266,
+    "businesses": [
+        {
+            "is_claimed": false,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/nongs-khao-man-gai-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 627,
+            "name": "Nong's Khao Man Gai",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/nongs-khao-man-gai-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Thai",
+                    "thai"
+                ]
+            ],
+            "phone": "9712553480",
+            "snippet_text": "Omg chicken and rice!!! This dish seems so simple with steamed chicken and plain rice, but the flavors are out of this world. You'll find this place amongst...",
+            "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/C7wSKnKnENVJmTCOEI8cyw/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/rmHlRIVE8Bbqh4cMb8zuPA/ms.jpg",
+            "display_phone": "+1-971-255-3480",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "nongs-khao-man-gai-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SW 10th &amp; Alder St",
+                    "Southwest Portland",
+                    "Portland, OR 97205"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97205",
+                "country_code": "US",
+                "address": [
+                    "SW 10th &amp; Alder St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5209478380669,
+                    "longitude": -122.682119777895
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/chicken-and-guns-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 58,
+            "name": "Chicken and Guns",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/chicken-and-guns-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ]
+            ],
+            "menu_date_updated": 1449064699,
+            "phone": "5032347236",
+            "snippet_text": "If you visit Portland, this place is a MUST!\n\nTheir chicken and potatoes are one of the best I've had in my whole life. The chicken and potatoes are...",
+            "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/CnswZ2mwcuvL3Q35ue7yDw/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/-vgaXs0HOM9T9ujzd4P1og/ms.jpg",
+            "display_phone": "+1-503-234-7236",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "menu_provider": "single_platform",
+            "id": "chicken-and-guns-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "1207 SE Hawthorne Blvd",
+                    "Buckman",
+                    "Portland, OR 97214"
+                ],
+                "geo_accuracy": 8.0,
+                "neighborhoods": [
+                    "Buckman",
+                    "Southeast Portland"
+                ],
+                "postal_code": "97214",
+                "country_code": "US",
+                "address": [
+                    "1207 SE Hawthorne Blvd"
+                ],
+                "coordinate": {
+                    "latitude": 45.51244,
+                    "longitude": -122.65335
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 5.0,
+            "mobile_url": "http://m.yelp.com/biz/the-fried-onion-portland",
+            "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png",
+            "review_count": 78,
+            "name": "The Fried Onion",
+            "rating_img_url_small": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/c7623205d5cd/ico/stars/v1/stars_small_5.png",
+            "url": "http://www.yelp.com/biz/the-fried-onion-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Hot Dogs",
+                    "hotdog"
+                ]
+            ],
+            "phone": "5039612534",
+            "snippet_text": "Hidden Gem! Fantastic find. I had the Pastrami Burger! My friend had the Chicago Dog. OMG! Outstanding! \n\nKicks Ass and Balls!",
+            "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/g1sRXJ2sYNmtldfLByT6pw/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/JjJiJ3fclsA1r87Hek-zMA/ms.jpg",
+            "display_phone": "+1-503-961-2534",
+            "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/22affc4e6c38/ico/stars/v1/stars_large_5.png",
+            "id": "the-fried-onion-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SE 3rd &amp; Alder",
+                    "Industrial District",
+                    "Portland, OR 97214"
+                ],
+                "geo_accuracy": 7.0,
+                "neighborhoods": [
+                    "Industrial District",
+                    "Buckman",
+                    "Southeast Portland",
+                    "Central Eastside"
+                ],
+                "postal_code": "97214",
+                "country_code": "US",
+                "address": [
+                    "SE 3rd &amp; Alder"
+                ],
+                "coordinate": {
+                    "latitude": 45.51795,
+                    "longitude": -122.66278
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/the-whole-bowl-cart-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 92,
+            "name": "The Whole Bowl Cart",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/the-whole-bowl-cart-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Vegetarian",
+                    "vegetarian"
+                ]
+            ],
+            "phone": "9712125849",
+            "snippet_text": "This is a tiny little food cart randomly plopped on the sidewalk that sells essentially one item and it's vegetarian. But oh boy, is it tasty. Oftentimes, I...",
+            "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/8bOCQb1HWNWmR5pjp75C7A/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/FRRbZ9zpuJ1N7To_eH1IBg/ms.jpg",
+            "display_phone": "+1-971-212-5849",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "the-whole-bowl-cart-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "1100 NW Glisan St",
+                    "Pearl District",
+                    "Portland, OR 97209"
+                ],
+                "geo_accuracy": 8.0,
+                "neighborhoods": [
+                    "Pearl District"
+                ],
+                "postal_code": "97209",
+                "country_code": "US",
+                "address": [
+                    "1100 NW Glisan St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5262909,
+                    "longitude": -122.6825485
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/rip-city-grill-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 102,
+            "name": "Rip City Grill",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/rip-city-grill-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Caterers",
+                    "catering"
+                ]
+            ],
+            "phone": "5035442374",
+            "snippet_text": "I wrote my original review for this place shortly after moving to Portland. I had only visited the Rip City Grill two or three times at that point and was...",
+            "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/L9W_cRO8XjcSDwdTwDpOnw/ms.jpg",
+            "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/WaOnNz3T1kh8M1rhH6qgwA/ms.jpg",
+            "display_phone": "+1-503-544-2374",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "rip-city-grill-portland",
+            "is_closed": false,
+            "location": {
+                "cross_streets": "SW Moody Ave &amp; Abernathy St",
+                "city": "Portland",
+                "display_address": [
+                    "Abernathy St",
+                    "South Portland",
+                    "Portland, OR 97239"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "South Portland",
+                    "Southwest Portland"
+                ],
+                "postal_code": "97239",
+                "country_code": "US",
+                "address": [
+                    "Abernathy St"
+                ],
+                "coordinate": {
+                    "latitude": 45.4951047348829,
+                    "longitude": -122.672052383423
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/noy-viet-lao-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 101,
+            "name": "Noy Viet Lao",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/noy-viet-lao-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ], 
+                [
+                    "Vietnamese",
+                    "vietnamese"
+                ],
+                [
+                    "Laotian",
+                    "laotian"
+                ]
+            ],
+            "phone": "5036869367",
+            "snippet_text": "More like Noy Viet WOW! \n\nAnd now they have... wait for it... VEGAN PHO!\n\nYeah, this place is simply the best. We love their Pho, but do not miss their...",
+            "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/PTEjcif7wxzlgU7zZdAlgg/ms.jpg",
+            "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/8qpCIuphBTdRYGOhv9ywTQ/ms.jpg",
+            "display_phone": "+1-503-686-9367",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "noy-viet-lao-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "3530 SW Multnomah Blvd",
+                    "Southwest Portland",
+                    "Portland, OR 97219"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Multnomah Village"
+                ],
+                "postal_code": "97219",
+                "country_code": "US",
+                "address": [
+                    "3530 SW Multnomah Blvd"
+                ],
+                "coordinate": {
+                    "latitude": 45.4669749026075,
+                    "longitude": -122.713064706082
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": false,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/good-food-here-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 69,
+            "name": "Good Food Here",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/good-food-here-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ]
+            ],
+            "snippet_text": "One of my favorite food cart pods in PDX. So it has made me very sad to see many carts leave before the official close at the end of this year. Fishbox is...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/7E_D-N0G49xhoQ0xKWXuHw/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/EK1VEBUMEKh7gG7AoyXVvg/ms.jpg",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "good-food-here-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "4262 SE Belmont St",
+                    "Sunnyside",
+                    "Portland, OR 97215"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Sunnyside",
+                    "Southeast Portland",
+                    "Belmont"
+                ],
+                "postal_code": "97215",
+                "country_code": "US",
+                "address": [
+                    "4262 SE Belmont St"
+                ],
+                "coordinate": {
+                    "latitude": 45.516597,
+                    "longitude": -122.618307
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.0,
+            "mobile_url": "http://m.yelp.com/biz/phat-cart-portland",
+            "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+            "review_count": 50,
+            "name": "Phat Cart",
+            "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+            "url": "http://www.yelp.com/biz/phat-cart-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Asian Fusion",
+                    "asianfusion"
+                ]
+            ],
+            "phone": "9715705007",
+            "snippet_text": "Didn't even look at Yelp until I'd already ordered the avocado chicken salad. +1 point to indecisive me for making the best decision ever. Had a bite of the...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/kCaITolvZA-VwR5swRSh9w/ms.jpg",
+            "snippet_image_url": "http://s3-media2.fl.yelpcdn.com/photo/Iqq46XU41AtF0QL1MIRRrA/ms.jpg",
+            "display_phone": "+1-971-570-5007",
+            "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+            "id": "phat-cart-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "4th and College",
+                    "Southwest Portland",
+                    "Portland, OR 97201"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97201",
+                "country_code": "US",
+                "address": [
+                    "4th and College"
+                ],
+                "coordinate": {
+                    "latitude": 45.509564,
+                    "longitude": -122.680647
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.0,
+            "mobile_url": "http://m.yelp.com/biz/808-grinds-portland-6",
+            "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+            "review_count": 139,
+            "name": "808 Grinds",
+            "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+            "url": "http://www.yelp.com/biz/808-grinds-portland-6",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Hawaiian",
+                    "hawaiian"
+                ],
+                [
+                    "Food Trucks",
+                    "foodtrucks"
+                ]
+            ],
+            "phone": "5037138008",
+            "snippet_text": "I didn't eat my full lunch from this place, but everything there looked incredible. I was just walking by and saw spam musubi (onigiri) on the menu and...",
+            "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/-bCPjCU38otEImBQu7ukiA/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/7oDJUWAeYgnDY-9XQzIxLQ/ms.jpg",
+            "display_phone": "+1-503-713-8008",
+            "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+            "id": "808-grinds-portland-6",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SW 9th Ave &amp; SW Washington St",
+                    "Southwest Portland",
+                    "Portland, OR 97205"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97205",
+                "country_code": "US",
+                "address": [
+                    "SW 9th Ave &amp; SW Washington St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5210921,
+                    "longitude": -122.6804345
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/kim-jong-grillin-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 115,
+            "name": "Kim Jong Grillin'",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/kim-jong-grillin-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Korean",
+                    "korean"
+                ],
+                [
+                    "Food Trucks",
+                    "foodtrucks"
+                ]
+            ],
+            "phone": "5039290522",
+            "snippet_text": "Really, really good food. High quality, great tasting, good service, and large enough portions to save some for later. I can't say enough good things about...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/7Yz2r9BIUASRk8Ct4dnO-g/ms.jpg",
+            "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/MRIWgsFNm4P0obTbTpor_A/ms.jpg",
+            "display_phone": "+1-503-929-0522",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "kim-jong-grillin-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "46 SE Division St",
+                    "Richmond",
+                    "Portland, OR 97206"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Richmond",
+                    "Clinton",
+                    "Southeast Portland"
+                ],
+                "postal_code": "97206",
+                "country_code": "US",
+                "address": [
+                    "46 SE Division St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5051844843201,
+                    "longitude": -122.614762075245
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": false,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/dosirak-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 57,
+            "name": "Dosirak",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/dosirak-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Japanese",
+                    "japanese"
+                ]
+            ],
+            "phone": "5038963493",
+            "snippet_text": "Normally when someone says, \"Let's go get teriyaki.\" I say no. I don't like teriyaki. At all.\n\nSo why then is DoSiRak one of my favorite carts? \n\nThis place...",
+            "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/g2qVcw93Vdr1WwnIy3QOHg/ms.jpg",
+            "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/cc4afe21892e/assets/img/default_avatars/user_medium_square.png",
+            "display_phone": "+1-503-896-3493",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "dosirak-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "Sw 4th Ave and Sw College St",
+                    "Southwest Portland",
+                    "Portland, OR 97201"
+                ],
+                "geo_accuracy": 7.0,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97201",
+                "country_code": "US",
+                "address": [
+                    "Sw 4th Ave and Sw College St"
+                ],
+                "coordinate": {
+                    "latitude": 45.509201,
+                    "longitude": -122.6816025
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/the-local-grind-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 39,
+            "name": "The Local Grind",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/the-local-grind-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Hawaiian",
+                    "hawaiian"
+                ]
+            ],
+            "phone": "5038530807",
+            "snippet_text": "Our company attorney's brought in lunch today and had the Local Grind cater. \nOh my word!! That mac salad is probably the best I've ever had i! Even better...",
+            "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/Q8XwtpFwMxmQMxoN0p5L_w/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/UhB5W7jlW-ahArLnPWzYkQ/ms.jpg",
+            "display_phone": "+1-503-853-0807",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "the-local-grind-portland",
+            "is_closed": false,
+            "location": {
+                "cross_streets": "SW Park and Montgomery St",
+                "city": "Portland",
+                "display_address": [
+                    "Southwest Portland",
+                    "Portland, OR 97201"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97201",
+                "country_code": "US",
+                "address": [],
+                "coordinate": {
+                    "latitude": 45.512456,
+                    "longitude": -122.685088
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": false,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/altengartz-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 75,
+            "name": "Altengartz",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/altengartz-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "German",
+                    "german"
+                ]
+            ],
+            "phone": "5039752549",
+            "snippet_text": "Just saw the Altengartz Bratwurst truck pull out of their long-time spot on Alder, and the tables are gone as well. Anybody know what's up?",
+            "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/0CWPznQtzqfyQQhzRy89tA/ms.jpg",
+            "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/cc4afe21892e/assets/img/default_avatars/user_medium_square.png",
+            "display_phone": "+1-503-975-2549",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "altengartz-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SW 10th &amp; Alder",
+                    "Southwest Portland",
+                    "Portland, OR 97205"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97205",
+                "country_code": "US",
+                "address": [
+                    "SW 10th &amp; Alder"
+                ],
+                "coordinate": {
+                    "latitude": 45.5206576748116,
+                    "longitude": -122.68161714077
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/the-portland-soup-company-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 140,
+            "name": "The Portland Soup Company",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/the-portland-soup-company-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Sandwiches",
+                    "sandwiches"
+                ],
+                [
+                    "Soup",
+                    "soup"
+                ]
+            ],
+            "phone": "5039870217",
+            "snippet_text": "This place is not only good but quick with your food order.  I had the grilled cheese and it was super yummy and just the right amount of food.  The cookies...",
+            "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/BZdLup3q4rXichDvEoJfXA/ms.jpg",
+            "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/O34nCKWyxsSvQmSaYoTQRg/ms.jpg",
+            "display_phone": "+1-503-987-0217",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "the-portland-soup-company-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SW 4th and SW Hall",
+                    "Southwest Portland",
+                    "Portland, OR 97201"
+                ],
+                "geo_accuracy": 7.0,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97201",
+                "country_code": "US",
+                "address": [
+                    "SW 4th and SW Hall"
+                ],
+                "coordinate": {
+                    "latitude": 45.5098739027672,
+                    "longitude": -122.681232784938
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/tiffin-asha-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 50,
+            "name": "Tiffin Asha",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/tiffin-asha-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Indian",
+                    "indpak"
+                ]
+            ],
+            "phone": "5039367663",
+            "snippet_text": "Phenomenally executed South Indian Cuisine, well adapted for western palates. The dosa was not the slightest bit greasy, the vada holes were divine, and the...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/acXutQQ6fsEu3Zp6Ohh2_Q/ms.jpg",
+            "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/8ymq_JMSmwwz0-fDJ173Wg/ms.jpg",
+            "display_phone": "+1-503-936-7663",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "tiffin-asha-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "3710 N Mississippi Ave",
+                    "North Portland",
+                    "Portland, OR 97227"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "North Portland",
+                    "Mississippi",
+                    "Boise"
+                ],
+                "postal_code": "97227",
+                "country_code": "US",
+                "address": [
+                    "3710 N Mississippi Ave"
+                ],
+                "coordinate": {
+                    "latitude": 45.5496420012225,
+                    "longitude": -122.675455134393
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": false,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/sonny-bowl-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 89,
+            "name": "Sonny Bowl",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/sonny-bowl-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Vegan",
+                    "vegan"
+                ],
+                [
+                    "Gluten-Free",
+                    "gluten_free"
+                ]
+            ],
+            "phone": "9712856713",
+            "snippet_text": "This food is perfect. I loved my black-eyed pea/kale/tahini bowl so much that I cooked my own version of it at home the next day, and then ordered it again...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/TA7D5HtmTgaCbp7K1Bwa_Q/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/zYUMkW8orTEy-S_oRDplCw/ms.jpg",
+            "display_phone": "+1-971-285-6713",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "sonny-bowl-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SW 3rd Ave &amp; SW Washington St",
+                    "Southwest Portland",
+                    "Portland, OR 97204"
+                ],
+                "geo_accuracy": 7.0,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97204",
+                "country_code": "US",
+                "address": [
+                    "SW 3rd Ave &amp; SW Washington St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5195800960064,
+                    "longitude": -122.67480969429
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": false,
+            "rating": 4.0,
+            "mobile_url": "http://m.yelp.com/biz/noodle-house-portland-2",
+            "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+            "review_count": 79,
+            "name": "Noodle House",
+            "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+            "url": "http://www.yelp.com/biz/noodle-house-portland-2",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ]
+            ],
+            "phone": "5039981019",
+            "snippet_text": "When I saw hand pulled noodles, I just had to have some.  Decided to order the seafood noodles (no spice, of course) and it was nothing short of phenomenal....",
+            "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/OHcbAiDUyrK7QlikOnrqUw/ms.jpg",
+            "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/bdQLZfOyA7O2vqEKknFRyA/ms.jpg",
+            "display_phone": "+1-503-998-1019",
+            "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+            "id": "noodle-house-portland-2",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "950 SW Washington St",
+                    "Southwest Portland",
+                    "Portland, OR 97205"
+                ],
+                "geo_accuracy": 8.0,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97205",
+                "country_code": "US",
+                "address": [
+                    "950 SW Washington St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5211793631315,
+                    "longitude": -122.680929154158
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/native-bowl-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 115,
+            "name": "Native Bowl",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/native-bowl-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Vegetarian",
+                    "vegetarian"
+                ],
+                [
+                    "Vegan",
+                    "vegan"
+                ]
+            ],
+            "phone": "5033307616",
+            "snippet_text": "Great food made with a real passion. If you have never tried soy curls before you really need to order the Mississippi. Owners are super cool and friendly....",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/qaeXfOiUSzxKBswQfedq6g/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/chR-_uc3KRoth6Q8w-v9Cg/ms.jpg",
+            "display_phone": "+1-503-330-7616",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "native-bowl-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "N Mississippi Ave &amp; N Skidmore St",
+                    "North Portland",
+                    "Portland, OR 97217"
+                ],
+                "geo_accuracy": 7.0,
+                "neighborhoods": [
+                    "North Portland"
+                ],
+                "postal_code": "97217",
+                "country_code": "US",
+                "address": [
+                    "N Mississippi Ave &amp; N Skidmore St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5546188,
+                    "longitude": -122.6755219
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/aybla-grill-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 153,
+            "name": "Aybla Grill",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/aybla-grill-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Mediterranean",
+                    "mediterranean"
+                ],
+                [
+                    "Middle Eastern",
+                    "mideastern"
+                ]
+            ],
+            "menu_date_updated": 1448490029,
+            "phone": "5032221531",
+            "snippet_text": "On a whim, and while the girls were nursing their hangovers, my bestie picked us up some gyros from this little cart.  Who knows how she came to find it...",
+            "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/XNms7vOQIPgkoSorviH8Qw/ms.jpg",
+            "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/Dr6H3uLljzT5MqG7nWmyeg/ms.jpg",
+            "display_phone": "+1-503-222-1531",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "menu_provider": "eat24",
+            "id": "aybla-grill-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SW 10th Ave &amp; SW Alder St",
+                    "Southwest Portland",
+                    "Portland, OR 97205"
+                ],
+                "geo_accuracy": 7.0,
+                "neighborhoods": [
+                    "Southwest Portland",
+                    "Downtown"
+                ],
+                "postal_code": "97205",
+                "country_code": "US",
+                "address": [
+                    "SW 10th Ave &amp; SW Alder St"
+                ],
+                "coordinate": {
+                    "latitude": 45.5206795,
+                    "longitude": -122.6817474
+                },
+                "state_code": "OR"
+            }
+        },
+        {
+            "is_claimed": true,
+            "rating": 4.5,
+            "mobile_url": "http://m.yelp.com/biz/a-la-carts-food-pavillion-portland",
+            "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+            "review_count": 29,
+            "name": "A La Carts Food Pavillion",
+            "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+            "url": "http://www.yelp.com/biz/a-la-carts-food-pavillion-portland",
+            "categories": [
+                [
+                    "Food Stands",
+                    "foodstands"
+                ],
+                [
+                    "Food Trucks",
+                    "foodtrucks"
+                ],
+                [
+                    "Street Vendors",
+                    "streetvendors"
+                ]
+            ],
+            "phone": "5038941987",
+            "snippet_text": "This gathering of food carts is fantastic. So much is brought to eat in the burgeoning neighborhood. A fire is lit and a television with sports on is...",
+            "image_url": "http://s3-media4.fl.yelpcdn.com/bphoto/ELbXZfLRLIGh4V7Old8HIA/ms.jpg",
+            "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/_9jWL78VGjGRFF-lDonoFg/ms.jpg",
+            "display_phone": "+1-503-894-1987",
+            "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+            "id": "a-la-carts-food-pavillion-portland",
+            "is_closed": false,
+            "location": {
+                "city": "Portland",
+                "display_address": [
+                    "SE 50th and Division",
+                    "Richmond",
+                    "Portland, OR 97206"
+                ],
+                "geo_accuracy": 9.5,
+                "neighborhoods": [
+                    "Richmond",
+                    "Clinton",
+                    "Southeast Portland"
+                ],
+                "postal_code": "97206",
+                "country_code": "US",
+                "address": [
+                    "SE 50th and Division"
+                ],
+                "coordinate": {
+                    "latitude": 45.5046541422832,
+                    "longitude": -122.611198615067
+                },
+                "state_code": "OR"
+            }
+        }
+    ]
+}
