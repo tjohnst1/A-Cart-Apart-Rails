@@ -1,11 +1,4 @@
-$dark-blue: #2C3E50;
-$red: #E74C3C;
-$dark-red: #b83c30;
-$neon-blue: #3498DB;
-$md-blue: #2980B9;
-$off-white: #ECF0F1;
-$dark-grey: #333333;
-
+@import 'variables';
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'index';
@@ -20,7 +13,3 @@ $dark-grey: #333333;
 @import 'new-review-modal';
 @import 'alerts';
 @import 'filter';
-
-#flash-messages{
-  margin: 0;
-}

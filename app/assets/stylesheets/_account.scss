@@ -16,14 +16,13 @@
     span{
       color: #F2F2F2;
     }
+    &:hover{
+      text-decoration: none;
+    }
   }
-  a:hover{
-    text-decoration: none;
+  &:hover{
+    opacity: 1;
   }
-}
-
-#account-button:hover{
-  opacity: 1;
 }
 
 #account-container{

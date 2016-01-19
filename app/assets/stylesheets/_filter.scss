@@ -33,9 +33,9 @@
       cursor: pointer;
       color: #CCCCCC;
       opacity: .7;
-    }
-    #filter-x:hover{
-      opacity: 1;
+      &:hover{
+        opacity: 1;
+      }
     }
   }
   #filter-checkbox-container{
@@ -48,10 +48,10 @@
       display: inline-block;
       background-color: $red;
       color: white;
-    }
-    #filter-clear:hover{
-      text-transform: none;
-      background-color: $dark-red;
+      &:hover{
+        text-transform: none;
+        background-color: $dark-red;
+      }
     }
   }
 }

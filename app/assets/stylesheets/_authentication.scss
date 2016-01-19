@@ -1,6 +1,5 @@
 .authentication{
   text-align: center;
-  // font-family: "rucksack";
   font-weight: 800;
   background-color: $dark-blue;
   height: 100%;
@@ -23,4 +22,8 @@
 .authentication-links{
   color: $off-white;
   display: inline-block;
+}
+
+#flash-messages{
+  margin: 0;
 }

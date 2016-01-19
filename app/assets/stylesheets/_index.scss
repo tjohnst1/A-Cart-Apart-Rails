@@ -45,11 +45,11 @@ html, body{
     color: white;
     border-radius: 20px;
     opacity: .9;
-  }
-  .zoom-button:first-child{
-    margin-bottom: 5px;
-  }
-  .zoom-button:hover{
-    opacity: 1;
+    &:first-child{
+      margin-bottom: 5px;
+    }
+    &:hover{
+      opacity: 1;
+    }
   }
 }

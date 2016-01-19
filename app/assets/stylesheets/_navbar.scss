@@ -13,26 +13,26 @@
     color: #E0E0E0;
     font-size: 35px;
     font-weight: 300;
-  }
-  .navbar-brand:hover{
-    color: white;
+    &:hover{
+      color: white;
+    }
   }
 }
 
 .navbar-default .navbar-nav > li > a{
   color: #E0E0E0;
+  &:hover{
+    color: white;
+  }
 }
-.navbar-default .navbar-nav > li > a:hover{
-  color: white;
-}
+
 
 #add-food-cart{
   border: 1px solid #E0E0E0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-}
-
-#add-food-cart:hover{
-  border: 1px solid #E74C3C;
+  &:hover{
+    border: 1px solid #E74C3C;
+  }
 }
